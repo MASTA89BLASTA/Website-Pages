@@ -3,7 +3,7 @@
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
-
+@import "modules/header.scss";
 
 html {
   line-height: $mainLineHeight;
@@ -93,6 +93,13 @@ section, .section {
 }
 
 
+.icon__logo_container {
+  position: absolute;
+  fill: #1F2041;
+  fill-opacity: .25;
+  left: 101px;
+  top: 27px;
+}
 
 
 
