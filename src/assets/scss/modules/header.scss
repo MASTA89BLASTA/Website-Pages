@@ -1,49 +1,115 @@
-// header style
-
 /*header*/
-.menu {
+/*Menu Standard Nav Bar*/
+.menu_standard-navbar {
   position: absolute;
-  width: 100%;
+  width: 1600px;
   height: 70px;
   left: 0px;
-  top: 147px;
+  top: 144px;
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
-.menu_logo-gradient{
-  position: absolute;
-  width: 105.69px;
-  height: 40px;
-  left: 212px;
-  top: 15px;
+/*Left section menu nav bar*/
+.menu-navbar_section-left {
+  display: block;
+  position: relative;
+  float: left;
+  width: 1150px;
+  .menu_logo-gradient{
+    position: absolute;    
+    width: 105.69px;
+    height: 40px;
+    left: 212px;
+    float: left;
+    top: 16px;
+  }
+  
+  .menu_list {
+    position: relative;    
+    left: 616px;  
+    li {
+      display: inline-block;
+      //font-size: 14px;
+      line-height: 17px;
+      font-family: $mainFont;
+      padding-top: 28px;
+      padding-left: 29px;
+      font-weight: normal;
+      color: rgba(31, 32, 65, 0.5);
+    }
+    .menu_item-elem1 {
+      font-weight: 900;
+      padding-left: 0;
+    }
+  
+    .menu_item-elem3 {
+      padding-right: 1px;
+    }
+  
+    .menu_item-img{
+      position: relative;
+      left: 4px;
+    }
+  }
 }
 
-.menu_list {
-  position: absolute;
-  left: 615px;
-  
-  li {
-    display: inline-block;
-    //font-size: 14px;
-    line-height: 17px;
-    font-family: $mainFont;
-    padding-top: 28px;
-    padding-left: 29px;
-    font-weight: normal;
-    color: rgba(31, 32, 65, 0.5);
-  }
-  .menu_item-elem1 {
-    font-weight: 900;
-    padding-left: 0;
-  }
+/*Right section menu nav bar*/
+.menu_navbar_section-right {
+  display: block;
+  position: relative;
+  float: right;
+  width: 200px;
+  right: 210px;
+  top: 28px;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+  //align-items: center;
+  .btn-login {
+    position: relative;
+    right: 18px;
+    color: #BC9CFF;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    padding: 9px 2px 9px 2px;
+    .btn-login_text {
+      background-color: white;
+      padding: 7px 19px 7px 19px;
+      border-radius: 22px; 
+    }
 
-  .menu_item-elem3 {
-    padding-right: 1px;
   }
-
-  .menu_item-img{
+  .btn-register {
     position: relative;
     left: 4px;
-  }  
+    color: #FFFFFF;
+    @include kerning(1);
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    padding: 10px 18px 10px 18px;
+  }
+}
+
+/*Menu Logged Nav Bar*/  
+.menu_logged-navbar {
+  position: absolute;
+  width: 1600px;
+  height: 70px;
+  left: 0px;
+  top: 254px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.menu-logged-navbar_section-left {
+  .menu_logo-gradient{
+    position: absolute;    
+    width: 105.69px;
+    height: 40px;
+    left: 212px;
+    float: left;
+    top: 16px;
+  }
 }
