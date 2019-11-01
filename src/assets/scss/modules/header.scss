@@ -11,11 +11,12 @@
 }
 
 /*Left section menu nav bar*/
-.menu-navbar_section-left {
+.menu_standard-navbar_section-left {
   display: block;
   position: relative;
   float: left;
   width: 1150px;
+  height: 70px;
   .menu_logo-gradient{
     position: absolute;    
     width: 105.69px;
@@ -25,7 +26,7 @@
     top: 16px;
   }
   
-  .menu_list {
+  .menu_standard-navbar_menu-list {
     position: relative;    
     left: 616px;  
     li {
@@ -38,16 +39,16 @@
       font-weight: normal;
       color: rgba(31, 32, 65, 0.5);
     }
-    .menu_item-elem1 {
+    .menu_standard-navbar_item-elem1 {
       font-weight: 900;
       padding-left: 0;
     }
   
-    .menu_item-elem3 {
+    .menu_standard-navbar_item-elem3 {
       padding-right: 1px;
     }
   
-    .menu_item-img{
+    .menu_standard-navbar_item-img{
       position: relative;
       left: 4px;
     }
@@ -55,41 +56,45 @@
 }
 
 /*Right section menu nav bar*/
-.menu_navbar_section-right {
+.menu_standard-navbar_section-right {
   display: block;
   position: relative;
   float: right;
-  width: 200px;
-  right: 210px;
-  top: 28px;
+  width: 445px;
+  height: 70px;
+
   font-weight: bold;
   font-size: 11px;
   line-height: 15px;
   text-transform: uppercase;
-  //align-items: center;
-  .btn-login {
+  .menu_standard-navbar_buttons {
     position: relative;
-    right: 18px;
-    color: #BC9CFF;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
-    padding: 9px 2px 9px 2px;
-    .btn-login_text {
-      background-color: white;
-      padding: 7px 19px 7px 19px;
-      border-radius: 22px; 
+    top: 28px;
+    left: 35px;
+    .btn-login {
+      position: relative;
+      right: 18px;
+      color: #BC9CFF;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      border-radius: 22px;
+      padding: 9px 2px 9px 2px;
+      .btn-login_text {
+        background-color: white;
+        padding: 7px 19px 7px 19px;
+        border-radius: 22px; 
+      }
+  
     }
-
-  }
-  .btn-register {
-    position: relative;
-    left: 4px;
-    color: #FFFFFF;
-    @include kerning(1);
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
-    padding: 10px 18px 10px 18px;
-  }
+    .btn-register {
+      position: relative;
+      left: 4px;
+      color: #FFFFFF;
+      @include kerning(1);
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      border-radius: 22px;
+      padding: 10px 18px 10px 18px;
+    }
+  }  
 }
 
 /*Menu Logged Nav Bar*/  

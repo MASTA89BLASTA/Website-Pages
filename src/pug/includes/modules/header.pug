@@ -2,33 +2,37 @@
 //-header
 header
   nav
+    //-Menu Standard nav Bar
     .menu_standard-navbar
-        .menu-navbar_section-left
-          include logo_menu
-            ul
-              .menu_list 
-                li.menu_item-elem1  Home
-                li  About Us
-                li.menu_item-elem3
-                  | Services
-                  span.menu_item-img
-                    img(src='assets/img/expand_more.png')
-                li  Careers
-                li  News
-                li  Documentation
-        .menu_navbar_section-right
+      .menu_standard-navbar_section-left
+        include logo_menu
+          ul
+            .menu_standard-navbar_menu-list 
+              li.menu_standard-navbar_item-elem1  Home
+              li  About Us
+              li.menu_standard-navbar_item-elem3
+                | Services
+                span.menu_standard-navbar_item-img
+                  img(src='assets/img/expand_more.png')
+              li  Careers
+              li  News
+              li  Documentation
+      .menu_standard-navbar_section-right
+        .menu_standard-navbar_buttons
           a#login.btn-login(href='#')
             span.btn-login_text Login
           a#register.btn-register(href='#') Register
 
+    //-Menu logged nav Bar
     .menu_logged-navbar
       .menu-logged-navbar_section-left
-        include logo_menu      
+        include logo_menu
 
-        
-   
 
-     
+
+
+
+
 
 
 
