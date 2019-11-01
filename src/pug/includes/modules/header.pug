@@ -6,8 +6,8 @@ header
     .menu_standard-navbar
       .menu_standard-navbar_section-left
         include logo_menu
-          ul
-            .menu_standard-navbar_menu-list 
+          .menu_standard-navbar_menu-list
+            ul 
               li.menu_standard-navbar_item-elem1  Home
               li  About Us
               li.menu_standard-navbar_item-elem3
@@ -25,8 +25,24 @@ header
 
     //-Menu logged nav Bar
     .menu_logged-navbar
-      .menu-logged-navbar_section-left
+      .menu_logged-navbar_section-left
         include logo_menu
+          .menu_logged-navbar_menu-list
+            ul 
+              li.menu_logged-navbar_item-elem1  Home
+              li  About Us
+              li.menu_logged-navbar_item-elem3
+                | Services
+                span.menu_logged-navbar_item-img
+                  img(src='assets/img/expand_more.png')
+              li  Careers
+              li  News
+              li  Documentation
+
+      .menu_logged-navbar_section-right
+        .menu_logged-navbar_user
+          p  
+            span.navbar_user-text  Cosmin Negoita  
 
 
 
