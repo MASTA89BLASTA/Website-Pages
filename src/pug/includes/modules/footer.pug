@@ -1,0 +1,59 @@
+//-footer
+.footer-block.footer-bg
+  .footer-block_flex
+    .footer-block_item
+      include logo_menu
+        .footer-block_text
+          p
+            span.block_text
+              | Lorem ipsum dolor sit amet
+              | consectetur adipiscing elit aliquam
+              | eget nullam pellentesque aliquam
+              | curabitur cociis.
+
+    .footer-menu_block
+      .footer-menu_item        
+        .footer-block_nav
+          .footer-block_navigation
+            h3.footer-block_title Navigation
+            .footer-block_content
+              ul.footer-menu
+                li.footer-menu_item About Us
+                li.footer-menu_item News
+                li.footer-menu_item Support
+                li.footer-menu_item Products
+
+      .footer-menu_item        
+        .footer-block_nav
+          .footer-block_about
+            h3.footer-block_title About Us
+            .footer-block_content
+              ul.footer-menu
+                li.footer-menu_item Who we are
+                li.footer-menu_item Our team
+                li.footer-menu_item Careers
+                li.footer-menu_item Investors
+
+      .footer-menu_item        
+        .footer-block_nav
+          .footer-block_support
+            h3.footer-block_title Support
+            .footer-block_content
+              ul.footer-menu
+                li.footer-menu_item Documentation
+                li.footer-menu_item Community
+                li.footer-menu_item Get in Touch
+
+      .footer-menu_item        
+        .footer-block_nav
+          .footer-block-subscribe
+            h3.footer-block_title Subscribe to our newsletter
+            .footer-block_content
+              p
+                span.footer-block_content-text
+                  | Receive our latest news and promotions in your inbox!
+            .footer-block_form-email 
+              form#contact-email_1.contact-email(action='', method='POST')
+                .contact-email__input-wrapper
+                  input.contact-email__input(name='email', type='email', placeholder='Your email address', required='')      
+
