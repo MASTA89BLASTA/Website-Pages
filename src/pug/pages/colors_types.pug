@@ -1,8 +1,66 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='utf=8')
-    title UI Kit Colors and Type
-  body
-    .container
-      h1 sadfklmf
+extends ../layout/main
+block variables
+  - var pageTitle = "UI Kit Colors and Types"
+
+block colors_types
+  include ../includes/modules/logo
+  .container
+    .colors_types
+      .colors-types_flex
+        .color-block
+
+          .color-block_item
+            .color-block_item-color.bg_dark100
+            .color-block_item-text
+              h2.item-text_h2-full Dark Shade 100%
+              p 
+                span.item-text_p #1F2041
+
+          .color-block_item
+            .color-block_item-color.bg_dark75
+            .color-block_item-text
+              h2.item-text_h2-rgba Dark Shade 75%
+              p 
+                span.item-text_p #1F2041
+
+          .color-block_item
+            .color-block_item-color.bg_dark50
+            .color-block_item-text
+              h2.item-text_h2-rgba Dark Shade 50%
+              p 
+                span.item-text_p #1F2041
+
+          .color-block_item
+            .color-block_item-color.bg_dark25
+            .color-block_item-text
+              h2.item-text_h2-rgba Dark Shade 25%
+              p 
+                span.item-text_p #1F2041
+
+          .color-block_item
+            .color-block_item-color.bg_dark5
+            .color-block_item-text
+              h2.item-text_h2-5 Dark Shade 5%
+              p 
+                span.item-text_p #1F2041
+
+          .color-block_item
+            .color-block_item-color.bg_purple
+            .color-block_item-text
+              h2.item-text_h2-purple Purple
+              p 
+                span.item-text_p #BC9CFF;
+
+          .color-block_item
+            .color-block_item-color.bg_green
+            .color-block_item-text
+              h2.item-text_h2-green Green
+              p 
+                span.item-text_p #6FCF97;                  
+
+        .types-block
+          .type-block_h1
+            h1.h1_title H1
+          .type-block_h1-text
+            p
+              span.h1_text This one is the sub-section or widget title  
