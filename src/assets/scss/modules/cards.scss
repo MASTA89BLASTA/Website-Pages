@@ -1,0 +1,43 @@
+.cards_block {
+  position: absolute;
+  left: 172px;
+  top: 110px;
+  width: 1240px;
+  height: 1140px;
+}
+
+.bg-cards_settings {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.cards_block-number_settings {
+  position: relative;
+  width: 380px;
+  height: 374px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.cards_block-settings_text {
+  width: 320px;
+  height: 60px;
+  padding-top: 39px;
+  padding-left: 30px;  
+}
+.cards_block-setting-title_h1{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: 'Open Sans';
+  color: #1F2041;
+}
+
+.cards_block-settings {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
