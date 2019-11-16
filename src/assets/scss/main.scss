@@ -6,6 +6,7 @@
 @import "modules/header.scss";
 @import "modules/footer.scss";
 @import "modules/colors_types.scss";
+@import "modules/cards.scss";
 
 
 html {
@@ -30,7 +31,7 @@ body {
   padding: 0;
   background-size: 100% auto;
   max-width: 1600px;
-  height: 100%; 
+  max-height: 100%; 
   min-width: 320px;
   font-family: $mainFont;
 	font-size: $mainFontSize;
@@ -69,7 +70,8 @@ section, .section {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 150vh;
+  min-height: 100%;
+  min-height: 190vh;
   background-color: #F4F4F6;
   max-width: 1600px;
 }
@@ -110,7 +112,7 @@ section, .section {
   position: absolute;
   fill: #1F2041;
   fill-opacity: .25;
-  left: 30px;
+  left: 102px;
   top: 30px;
 }
 
