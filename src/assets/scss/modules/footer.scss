@@ -111,13 +111,13 @@
 }
 .footer_contact-email {
   padding: 12px 0px 12px 14px;
-  
+  @include placeholder {
+    color: rgba(31, 32, 65, 0.25);
+    @include kerning(1);
+  }  
 }
 
-@include placeholder {
-  color: rgba(31, 32, 65, 0.25);
-  @include kerning(1);
-}
+
 .footer_contact-btn {
   position: relative;
   background-color: #fff;

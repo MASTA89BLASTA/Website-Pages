@@ -7,14 +7,16 @@
 @import "modules/footer.scss";
 @import "modules/colors_types.scss";
 @import "modules/cards.scss";
+@import "modules/form_elements.scss";
 
 
 html {
   line-height: $mainLineHeight;
 	font-size: $mainFontSize;
 	color: $mainFontColor;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
+  margin: 0;
   @media screen and (max-width: $desktopWidth) {
 		font-size: 14px;
   }
@@ -31,7 +33,8 @@ body {
   padding: 0;
   background-size: 100% auto;
   max-width: 1600px;
-  max-height: 100%; 
+  min-height: 1853px;
+  height: 100vh; 
   min-width: 320px;
   font-family: $mainFont;
 	font-size: $mainFontSize;
@@ -54,7 +57,9 @@ ul, li {
 
 section, .section {
   position: relative;
-  padding: 40px 0;
+  //padding: 40px 0;
+  width: 100%;
+  height: 100%;
   @media screen and (max-width: $desktopWidth) {
     padding: 36px 0;
   }
