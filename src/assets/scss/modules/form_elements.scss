@@ -1,0 +1,98 @@
+.form_elements {
+  max-width: 85%;
+  height: 100%;
+  margin: 141px auto;
+  display: grid;
+  justify-items: center;
+}
+
+//Секции
+.form_elements-section_left {
+  margin-left: 94px;
+  width: 320px;
+  height: 100%;  
+}
+
+
+.form_elements-section-center {
+  width: 320px;
+  height: 100%;
+}
+.form_elements-section-rigth {
+  width: 320px;
+  height: 100%;
+}
+
+.form_elements-item {
+  margin-bottom: 18px;
+}
+
+.form_elements-head{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  height: 15px;
+}
+.form_elements-title{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $h-color;
+  float: left;
+  padding-top: 3px;
+}
+
+.form_elements-descr {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-shade50;
+  float: right;
+  margin-top: 2px;
+}
+
+.form_elements_input-wrapper {
+  width: 100%;
+  height: 44px;
+}
+
+.email_input {
+  padding: 13px 15px;
+  border: 1px solid $dark-shade25;
+  width: 100%;
+  border-radius: 4px;
+  @include placeholder {
+    color: $dark-shade25;
+    @include kerning(1);
+  }  
+}
+
+.email_input-hover:hover {
+  border: 1px solid $dark-shade50;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  @include placeholder {
+    color: $dark-shade75;
+  }  
+}
+
+.email_input-guests {
+  @include placeholder {
+    @include kerning(1);
+    color: $dark-shade75;
+  } 
+}
+
+.email_input-btn {
+  position: relative;
+  background-color: #fff;
+  left: 285px;
+  bottom: 31px;
+}
+
+
+
+

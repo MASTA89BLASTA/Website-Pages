@@ -1,0 +1,49 @@
+extends ../layout/main
+block variables
+  - var pageTitle = "UI Kit Form Elements"
+
+block form_elements
+  include ../includes/modules/logo
+  .form_elements
+    section
+      .form_elements-section_left
+        .form_elements-item
+          .form_elements-head
+            h3.form_elements-title Text Field
+            p
+              span.form_elements-descr Default
+          .form_elements_input-wrapper
+            input.email_input(name='email', type='email', placeholder='Email', required='')
+
+        .form_elements-item          
+          .form_elements-head
+            h3.form_elements-title Text Field
+            p
+              span.form_elements-descr Hover / Focus
+          .form_elements_input-wrapper
+            input.email_input.email_input-hover(name='email', type='email', placeholder='Email', required='')
+
+        .form_elements-item
+          .form_elements-head
+            h3.form_elements-title Dropdown
+            p
+              span.form_elements-descr Default
+          .form_elements_input-wrapper
+            input.email_input.email_input-guests(name='email', type='email', placeholder='Сколько гостей')
+            button.email_input-btn(type='submit')
+              img(src='assets/img/svg/expand_more.svg')
+
+        .form_elements-item          
+          .form_elements-head
+            h3.form_elements-title Masked text field
+            p
+              span.form_elements-descr Default
+          .form_elements_input-wrapper
+            input.email_input(name='email', type='email', placeholder='Email', required='')            
+
+      .form_elements-section-center
+
+      .form_elements-section-right
+
+
+
