@@ -13,27 +13,58 @@
   height: 100%;  
 }
 
-
 .form_elements-section-center {
   width: 320px;
   height: 100%;
 }
-.form_elements-section-rigth {
+.form_elements-section-right {
   width: 320px;
   height: 100%;
 }
-
+.form-elements_container {
+  width: 266px;
+  height: 66px;
+}
+//Blocks
 .form_elements-item {
   margin-bottom: 18px;
 }
+.form_elements-item_dropdown {
+  margin-bottom: 18px;
+}
+.container-space {
+  margin-bottom: 98px;
+}
 
+.form_elements-item_space {
+  width: 100%;
+  height: 66px;
+  margin-top: 38px;
+}
+.form_elements-item_space-subscription {
+  margin-top: 40px;
+}
+
+
+.form_elements-date_dropdown-left {
+  width: 47%;
+  height: 100%;
+  float: left;
+}
+.form_elements-date_dropdown-right {
+  width: 47%;
+  height: 100%;
+  float: right;
+}
 .form_elements-head{
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
   margin-bottom: 7px;
   height: 15px;
+  width: 100%;
 }
+
 .form_elements-title{
   font-weight: 700;
   font-size: 12px;
@@ -58,6 +89,46 @@
   height: 44px;
 }
 
+.form_elements-title_masked {
+  padding-top: 6px;
+}
+.form_elements-head_masked {
+  height: 17px;
+  margin-bottom: 8px;
+}
+
+.form_dropdown-menu {
+  position: relative;
+  bottom: 19px;
+  width: 266px;
+  height: 119px; 
+}
+
+.form_dropdown-menu_wrapper {
+  border: 1px solid $dark-shade50;
+  border-top: none;
+  border-radius: 0px 0px 4px 4px;
+  height: 100%;
+  width: 100%;
+}
+
+.form_dropdown-menu_item {
+  width: 100%;
+  height: 31%;
+  padding-left: 13px;
+}
+.form_dropdown-title {
+  padding-top: 12px;
+  float: left;
+}
+
+.form_dropdown-configuration_controls {
+  width: 92px;
+  height: 30px;
+  float: right;
+}
+
+//инпуты
 .email_input {
   padding: 13px 15px;
   border: 1px solid $dark-shade25;
@@ -65,7 +136,7 @@
   border-radius: 4px;
   @include placeholder {
     color: $dark-shade25;
-    @include kerning(1);
+    font-family: $mainFont;
   }  
 }
 
@@ -86,12 +157,81 @@
   } 
 }
 
+.email_input-date {
+  @include placeholder {
+    color: $dark-shade25;
+    font-size: 14px;
+    line-height: 18px;
+  } 
+}
+
+.email_input-dropdown {
+  width: 150px;
+  height: 44px;
+}
+
+.email_input-filter, .email_input-suscription{
+  width: 266px;
+  &:hover {
+    border: 1px solid $dark-shade50;
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include placeholder {
+      color: $dark-shade75;
+      font-family: $mainFont;
+    } 
+  }
+}
+.email_input-filter {
+  @include placeholder {
+    @include kerning(0);
+    color: $dark-shade75;
+  }
+}
+
+.email_input-dropdown_group {
+  width: 266px;
+  border-radius: 4px 4px 0px 0px;
+  border: 1px solid $dark-shade50;
+  @include placeholder {
+    color: $dark-shade75;
+    @include kerning(0.1);
+    line-height: 24px;
+  }
+}
+
+//buttons
 .email_input-btn {
   position: relative;
   background-color: #fff;
   left: 285px;
   bottom: 31px;
 }
+
+.email_input-btn_filter-date, .email_input-btn_subscription {
+  position: relative;
+  top: 1px;
+  right: 34px;
+  background-color: #fff;
+}
+
+.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group {
+  position: relative;
+  bottom: 30px;
+  left: 115px;
+  background-color: #fff;
+}
+
+.email_input-btn_subscription {
+  top: -32px;
+  left: 229px;
+}
+
+.email_input-btn_date-dropdown_group {
+  left: 230px;
+  bottom: 32px;
+}
+
 
 
 

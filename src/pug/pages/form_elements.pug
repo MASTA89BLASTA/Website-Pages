@@ -23,7 +23,7 @@ block form_elements
           .form_elements_input-wrapper
             input.email_input.email_input-hover(name='email', type='email', placeholder='Email', required='')
 
-        .form_elements-item
+        .form_elements-item.form_elements-item_dropdown
           .form_elements-head
             h3.form_elements-title Dropdown
             p
@@ -33,13 +33,80 @@ block form_elements
             button.email_input-btn(type='submit')
               img(src='assets/img/svg/expand_more.svg')
 
-        .form_elements-item          
-          .form_elements-head
-            h3.form_elements-title Masked text field
+        .form_elements-item         
+          .form_elements-head.form_elements-head_masked
+            h3.form_elements-title.form_elements-title_masked Masked text field
             p
               span.form_elements-descr Default
           .form_elements_input-wrapper
-            input.email_input(name='email', type='email', placeholder='Email', required='')            
+            input.email_input.email_input-date(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
+
+        .form_elements-item.form_elements-item_space
+          .form_elements-date_dropdown-left
+            .form_elements-head
+              h3.form_elements-title Date dropdown
+            .form_elements_input-wrapper
+              input.email_input.email_input-dropdown(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
+              button.email_input-btn_date-dropdown(type='submit')
+                img(src='assets/img/svg/expand_more.svg')
+
+          .form_elements-date_dropdown-right
+            .form_elements-head
+              h3.form_elements-title Date dropdown 
+            .form_elements_input-wrapper
+              input.email_input.email_input-dropdown(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
+              button.email_input-btn_date-dropdown(type='submit')
+                img(src='assets/img/svg/expand_more.svg')
+
+        .form_elements-item.form_elements-item_space.form-elements_container
+          .form_elements-head
+            h3.form_elements-title Filter date dropdown
+          .form_elements_input-wrapper
+            input.email_input.email_input-filter(name='date', type='text', placeholder='19 авг - 23 авг')
+            button.email_input-btn_filter-date(type='submit')
+              img(src='assets/img/svg/expand_more.svg')
+
+        .form_elements-item.form_elements-item_space-subscription.form-elements_container.container-space
+          .form_elements-head
+            h3.form_elements-title subscription text field    
+          .form_elements_input-wrapper
+            input.email_input.email_input-suscription(name='email', type='email', placeholder='Email')
+            button.email_input-btn_subscription(type='submit')
+              img(src='assets/img/svg/arrow_forward.svg')               
+
+        .form_elements-item.form_elements-item_space-dropdown.form-elements_container
+          .form_elements-head
+            h3.form_elements-title dropdown
+            p
+              span.form_elements-descr Default
+          .form_elements_input-wrapper
+            input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
+            button.email_input-btn_date-dropdown_group(type='submit')
+              img(src='assets/img/svg/expand_more.svg')
+
+        .form_elements-item.form_elements-item_space-dropdown.form-elements_container
+          .form_elements-head
+            h3.form_elements-title dropdown
+            p
+              span.form_elements-descr Expanded
+          .form_elements_input-wrapper
+            input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
+            button.email_input-btn_date-dropdown_group(type='submit')
+              img(src='assets/img/svg/expand_more.svg')
+            .form_dropdown-menu
+              .form_dropdown-menu_wrapper
+                .form_dropdown-menu_item
+                  h3.form_elements-title.form_dropdown-title Спальни 
+                  .form_dropdown-configuration_controls
+                .form_dropdown-menu_item
+                  h3.form_elements-title.form_dropdown-title Кровати 
+                  .form_dropdown-configuration_controls
+                .form_dropdown-menu_item
+                  h3.form_elements-title.form_dropdown-title Ванные комнаты 
+                  .form_dropdown-configuration_controls
+                    .configuration_controls-button -
+                    .configuration_controls-button_count 2
+                    .configuration_controls-button +                 
 
       .form_elements-section-center
 
