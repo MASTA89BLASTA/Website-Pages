@@ -123,9 +123,17 @@
 }
 
 .form_dropdown-configuration_controls {
+  margin-top: 6px;
+  margin-right: 7px;
   width: 92px;
   height: 30px;
   float: right;
+}
+
+.configuration_controls-block {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 //инпуты
@@ -230,6 +238,35 @@
 .email_input-btn_date-dropdown_group {
   left: 230px;
   bottom: 32px;
+}
+
+.configuration_controls {
+  width: 30px;
+  height: 30px;
+  border-radius: 22px;
+  border: 1px solid $dark-shade25;
+  background: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  color: $dark-shade50;
+  text-align: center;
+}
+
+.configuration_controls-button_left {
+  float: left;
+}
+
+.configuration_controls-button_count {
+  float: left;
+  padding-left: 13px;
+  padding-top: 6px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.configuration_controls-button_right {
+  float: right;
 }
 
 
