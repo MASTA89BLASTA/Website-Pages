@@ -84,7 +84,8 @@ block form_elements
             button.email_input-btn_date-dropdown_group(type='submit')
               img(src='assets/img/svg/expand_more.svg')
 
-        .form_elements-item.form_elements-item_space-dropdown.form-elements_container
+        //-написать на jquery dropdown
+        .form_elements-item.form_elements-item_space-dropdown.form-elements_container.form-elements_container-expanded
           .form_elements-head
             h3.form_elements-title dropdown
             p
@@ -112,7 +113,62 @@ block form_elements
                   .form_dropdown-configuration_controls
                     button.configuration_controls.configuration_controls-button_left -
                     .configuration_controls-button_count 0
-                    button.configuration_controls.configuration_controls-button_right +                 
+                    button.configuration_controls.configuration_controls-button_right + 
+
+        .form_elements-item.form_elements-item_space-checkbox.form-elements_container-checkbox
+          .form_elements-head
+            h3.form_elements-title expandable checkbox list
+            button.email_input-btn_checkbox(type='submit')
+              img(src='assets/img/svg/expand_more.svg')
+
+        .form_elements-item.form_elements-item_space-checkbox_expanded.form-elements_container-checkbox
+          .form_elements-head.head_checkbox-space
+            h3.form_elements-title expandable checkbox list
+            button.email_input-btn_checkbox(type='submit')
+              img(src='assets/img/svg/expand_more.svg')
+          .form_elements-checkbox_wrapper      
+            .form_elements-checkbox
+              label.checkbox_label(for='breakfast')
+                input.checkbox_input(name='option1', type='checkbox' id='breakfast')
+                span.checkbox_mark
+                | Завтрак
+            .form_elements-checkbox
+              label.checkbox_label(for='desk')
+                input.checkbox_input(name='option2', type='checkbox' id='desk')
+                span.checkbox_mark
+                | Письменный стол   
+            .form_elements-checkbox
+              label.checkbox_label(for='feeding_chair')
+                input.checkbox_input(name='option3', type='checkbox' id='feeding_chair')
+                span.checkbox_mark
+                | Стул для кормления
+            .form_elements-checkbox
+              label.checkbox_label(for='crib')
+                input.checkbox_input(name='option4', type='checkbox' id='crib')
+                span.checkbox_mark
+                | Кроватка
+            .form_elements-checkbox
+              label.checkbox_label(for='tv')
+                input.checkbox_input(name='option5', type='checkbox' id='tv')
+                span.checkbox_mark
+                | Телевизор
+            .form_elements-checkbox
+              label.checkbox_label(for='shampoo')
+                input.checkbox_input(name='option6', type='checkbox' id='shampoo')
+                span.checkbox_mark
+                | Шампунь
+            .form_elements-checkbox
+              label.checkbox_label(for='tv2')
+                input.checkbox_input(name='option7', type='checkbox' id='tv2')
+                span.checkbox_mark
+                | Телевизор
+            .form_elements-checkbox
+              label.checkbox_label(for='shampoo2')
+                input.checkbox_input(name='option8', type='checkbox' id='shampoo2')
+                span.checkbox_mark
+                | Шампунь                           
+
+        
 
       .form_elements-section-center
 

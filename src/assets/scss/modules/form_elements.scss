@@ -25,6 +25,16 @@
   width: 266px;
   height: 66px;
 }
+.form-elements_container-expanded {
+  width: 266px;
+  height: 185px;
+}
+
+.form-elements_container-checkbox {
+  width: 266px;
+  height: 44px;
+}
+
 //Blocks
 .form_elements-item {
   margin-bottom: 18px;
@@ -43,6 +53,12 @@
 }
 .form_elements-item_space-subscription {
   margin-top: 40px;
+}
+.form_elements-item_space-checkbox {
+  margin-top: 51px;
+}
+.form_elements-item_space-checkbox_expanded {
+  margin-top: 20px;
 }
 
 
@@ -63,6 +79,10 @@
   margin-bottom: 7px;
   height: 15px;
   width: 100%;
+}
+
+.head_checkbox-space {
+  margin-bottom: 20px;
 }
 
 .form_elements-title{
@@ -130,11 +150,15 @@
   float: right;
 }
 
-.configuration_controls-block {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+.form_elements-checkbox_wrapper {
+  width: 222px;
+  height: 230.56px;
 }
+.form_elements-checkbox {
+  margin-bottom: 11px;
+}
+
+
 
 //инпуты
 .email_input {
@@ -208,6 +232,35 @@
   }
 }
 
+.checkbox_label {
+  padding-left: 29px;
+  width: 100%;
+  height: 100%;
+  color: $dark-shade50;
+}
+.checkbox_input {
+  position: absolute;
+  appearance: none;  
+}
+
+.checkbox_mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $dark-shade25;
+  border-radius: 4px;
+  margin-left: -30px;
+  transition: 0.2s;
+}
+
+.checkbox_input:checked + .checkbox_mark {
+  border: 1px solid #BC9CFF;
+  background-image: url('/assets/img/svg/mark_check.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: 0.2s;
+}
+
 //buttons
 .email_input-btn {
   position: relative;
@@ -223,7 +276,7 @@
   background-color: #fff;
 }
 
-.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group {
+.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group{
   position: relative;
   bottom: 30px;
   left: 115px;
@@ -238,6 +291,13 @@
 .email_input-btn_date-dropdown_group {
   left: 230px;
   bottom: 32px;
+}
+
+.email_input-btn_checkbox {
+  position: relative;
+  top: 1px;
+  right: 10px;
+  background-color: #fff;
 }
 
 .configuration_controls {
