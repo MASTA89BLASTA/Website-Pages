@@ -1,19 +1,23 @@
 .form_elements {
   max-width: 85%;
   height: 100%;
-  margin: 141px auto;
+  margin-top: 141px;
+  margin-left: 213px;
+  //margin: 141px auto;
   display: grid;
-  justify-items: center;
+  grid-template-columns: 320px 380px 320px;
+  grid-column-gap: 69px;
 }
 
 //Секции
 .form_elements-section_left {
-  margin-left: 94px;
+  //margin-left: 92px;
   width: 320px;
   height: 100%;  
 }
 
 .form_elements-section-center {
+  margin-left: 58px;
   width: 320px;
   height: 100%;
 }
@@ -390,4 +394,10 @@
 .checkbox_text {
   position: relative;
   top: 2px;
+}
+
+.checkbox_text-guests {
+  float: right;
+  position: relative;
+  right: 84px;
 }

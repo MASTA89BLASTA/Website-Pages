@@ -4,193 +4,213 @@ block variables
 
 block form_elements
   include ../includes/modules/logo
-  .form_elements
-    section
-      .form_elements-section_left
-        .form_elements-item
-          .form_elements-head
-            h3.form_elements-title Text Field
-            p
-              span.form_elements-descr Default
-          .form_elements_input-wrapper
-            input.email_input(name='email', type='email', placeholder='Email', required='')
+  section.form_elements
+    .form_elements-section_left
+      .form_elements-item
+        .form_elements-head
+          h3.form_elements-title Text Field
+          p
+            span.form_elements-descr Default
+        .form_elements_input-wrapper
+          input.email_input(name='email', type='email', placeholder='Email', required='')
 
-        .form_elements-item          
-          .form_elements-head
-            h3.form_elements-title Text Field
-            p
-              span.form_elements-descr Hover / Focus
-          .form_elements_input-wrapper
-            input.email_input.email_input-hover(name='email', type='email', placeholder='Email', required='')
+      .form_elements-item          
+        .form_elements-head
+          h3.form_elements-title Text Field
+          p
+            span.form_elements-descr Hover / Focus
+        .form_elements_input-wrapper
+          input.email_input.email_input-hover(name='email', type='email', placeholder='Email', required='')
 
-        .form_elements-item.form_elements-item_dropdown
+      .form_elements-item.form_elements-item_dropdown
+        .form_elements-head
+          h3.form_elements-title Dropdown
+          p
+            span.form_elements-descr Default
+        .form_elements_input-wrapper
+          input.email_input.email_input-guests(name='email', type='email', placeholder='Сколько гостей')
+          button.email_input-btn(type='submit')
+            img(src='assets/img/svg/expand_more.svg')
+
+      .form_elements-item         
+        .form_elements-head.form_elements-head_masked
+          h3.form_elements-title.form_elements-title_masked Masked text field
+          p
+            span.form_elements-descr Default
+        .form_elements_input-wrapper
+          input.email_input.email_input-date(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
+
+      .form_elements-item.form_elements-item_space
+        .form_elements-date_dropdown-left
           .form_elements-head
-            h3.form_elements-title Dropdown
-            p
-              span.form_elements-descr Default
+            h3.form_elements-title Date dropdown
           .form_elements_input-wrapper
-            input.email_input.email_input-guests(name='email', type='email', placeholder='Сколько гостей')
-            button.email_input-btn(type='submit')
+            input.email_input.email_input-dropdown(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
+            button.email_input-btn_date-dropdown(type='submit')
               img(src='assets/img/svg/expand_more.svg')
 
-        .form_elements-item         
-          .form_elements-head.form_elements-head_masked
-            h3.form_elements-title.form_elements-title_masked Masked text field
-            p
-              span.form_elements-descr Default
-          .form_elements_input-wrapper
-            input.email_input.email_input-date(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
-
-        .form_elements-item.form_elements-item_space
-          .form_elements-date_dropdown-left
-            .form_elements-head
-              h3.form_elements-title Date dropdown
-            .form_elements_input-wrapper
-              input.email_input.email_input-dropdown(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
-              button.email_input-btn_date-dropdown(type='submit')
-                img(src='assets/img/svg/expand_more.svg')
-
-          .form_elements-date_dropdown-right
-            .form_elements-head
-              h3.form_elements-title Date dropdown 
-            .form_elements_input-wrapper
-              input.email_input.email_input-dropdown(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
-              button.email_input-btn_date-dropdown(type='submit')
-                img(src='assets/img/svg/expand_more.svg')
-
-        .form_elements-item.form_elements-item_space.form-elements_container
+        .form_elements-date_dropdown-right
           .form_elements-head
-            h3.form_elements-title Filter date dropdown
+            h3.form_elements-title Date dropdown 
           .form_elements_input-wrapper
-            input.email_input.email_input-filter(name='date', type='text', placeholder='19 авг - 23 авг')
-            button.email_input-btn_filter-date(type='submit')
+            input.email_input.email_input-dropdown(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
+            button.email_input-btn_date-dropdown(type='submit')
               img(src='assets/img/svg/expand_more.svg')
 
-        .form_elements-item.form_elements-item_space-subscription.form-elements_container.container-space
-          .form_elements-head
-            h3.form_elements-title subscription text field    
-          .form_elements_input-wrapper
-            input.email_input.email_input-suscription(name='email', type='email', placeholder='Email')
-            button.email_input-btn_subscription(type='submit')
-              img(src='assets/img/svg/arrow_forward.svg')               
+      .form_elements-item.form_elements-item_space.form-elements_container
+        .form_elements-head
+          h3.form_elements-title Filter date dropdown
+        .form_elements_input-wrapper
+          input.email_input.email_input-filter(name='date', type='text', placeholder='19 авг - 23 авг')
+          button.email_input-btn_filter-date(type='submit')
+            img(src='assets/img/svg/expand_more.svg')
 
-        .form_elements-item.form_elements-item_space-dropdown.form-elements_container
-          .form_elements-head
-            h3.form_elements-title dropdown
-            p
-              span.form_elements-descr Default
-          .form_elements_input-wrapper
-            input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
-            button.email_input-btn_date-dropdown_group(type='submit')
-              img(src='assets/img/svg/expand_more.svg')
+      .form_elements-item.form_elements-item_space-subscription.form-elements_container.container-space
+        .form_elements-head
+          h3.form_elements-title subscription text field    
+        .form_elements_input-wrapper
+          input.email_input.email_input-suscription(name='email', type='email', placeholder='Email')
+          button.email_input-btn_subscription(type='submit')
+            img(src='assets/img/svg/arrow_forward.svg')               
+      
+      //-перенести в 4 колонку
+      .form_elements-item.form_elements-item_space-dropdown.form-elements_container
+        .form_elements-head
+          h3.form_elements-title dropdown
+          p
+            span.form_elements-descr Default
+        .form_elements_input-wrapper
+          input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
+          button.email_input-btn_date-dropdown_group(type='submit')
+            img(src='assets/img/svg/expand_more.svg')
 
-        //-написать на jquery dropdown
-        .form_elements-item.form_elements-item_space-dropdown.form-elements_container.form-elements_container-expanded
-          .form_elements-head
-            h3.form_elements-title dropdown
-            p
-              span.form_elements-descr Expanded
-          .form_elements_input-wrapper
-            input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
-            button.email_input-btn_date-dropdown_group(type='submit')
-              img(src='assets/img/svg/expand_more.svg')
-            .form_dropdown-menu
-              .form_dropdown-menu_wrapper
-                .form_dropdown-menu_item
-                  h3.form_elements-title.form_dropdown-title Спальни 
-                  .form_dropdown-configuration_controls
-                    button.configuration_controls.configuration_controls-button_left -
-                    .configuration_controls-button_count 2
-                    button.configuration_controls.configuration_controls-button_right + 
-                .form_dropdown-menu_item
-                  h3.form_elements-title.form_dropdown-title Кровати 
-                  .form_dropdown-configuration_controls
-                    button.configuration_controls.configuration_controls-button_left -
-                    .configuration_controls-button_count 2
-                    button.configuration_controls.configuration_controls-button_right + 
-                .form_dropdown-menu_item
-                  h3.form_elements-title.form_dropdown-title Ванные комнаты 
-                  .form_dropdown-configuration_controls
-                    button.configuration_controls.configuration_controls-button_left -
-                    .configuration_controls-button_count 0
-                    button.configuration_controls.configuration_controls-button_right + 
+      //-написать на jquery dropdown
+      .form_elements-item.form_elements-item_space-dropdown.form-elements_container.form-elements_container-expanded
+        .form_elements-head
+          h3.form_elements-title dropdown
+          p
+            span.form_elements-descr Expanded
+        .form_elements_input-wrapper
+          input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
+          button.email_input-btn_date-dropdown_group(type='submit')
+            img(src='assets/img/svg/expand_more.svg')
+          .form_dropdown-menu
+            .form_dropdown-menu_wrapper
+              .form_dropdown-menu_item
+                h3.form_elements-title.form_dropdown-title Спальни 
+                .form_dropdown-configuration_controls
+                  button.configuration_controls.configuration_controls-button_left -
+                  .configuration_controls-button_count 2
+                  button.configuration_controls.configuration_controls-button_right + 
+              .form_dropdown-menu_item
+                h3.form_elements-title.form_dropdown-title Кровати 
+                .form_dropdown-configuration_controls
+                  button.configuration_controls.configuration_controls-button_left -
+                  .configuration_controls-button_count 2
+                  button.configuration_controls.configuration_controls-button_right + 
+              .form_dropdown-menu_item
+                h3.form_elements-title.form_dropdown-title Ванные комнаты 
+                .form_dropdown-configuration_controls
+                  button.configuration_controls.configuration_controls-button_left -
+                  .configuration_controls-button_count 0
+                  button.configuration_controls.configuration_controls-button_right + 
 
-        .form_elements-item.form_elements-item_space-checkbox.form-elements_container-checkbox
-          .form_elements-head
-            h3.form_elements-title expandable checkbox list
-            button.email_input-btn_checkbox(type='submit')
-              img(src='assets/img/svg/expand_more.svg')
+      .form_elements-item.form_elements-item_space-checkbox.form-elements_container-checkbox
+        .form_elements-head
+          h3.form_elements-title expandable checkbox list
+          button.email_input-btn_checkbox(type='submit')
+            img(src='assets/img/svg/expand_more.svg')
 
-        .form_elements-item.form_elements-item_space-checkbox_expanded.form-elements_container-checkbox
-          .form_elements-head.head_checkbox-space
-            h3.form_elements-title expandable checkbox list
-            button.email_input-btn_checkbox(type='submit')
-              img(src='assets/img/svg/expand_more.svg')
-          .form_elements-checkbox_wrapper      
-            .form_elements-checkbox
-              label.checkbox_label(for='breakfast')
-                input.checkbox_input(name='option1', type='checkbox' id='breakfast')
-                span.checkbox_mark
-                span Завтрак
-            .form_elements-checkbox
-              label.checkbox_label(for='desk')
-                input.checkbox_input(name='option2', type='checkbox' id='desk')
-                span.checkbox_mark
-                span.checkbox_text Письменный стол   
-            .form_elements-checkbox
-              label.checkbox_label(for='feeding_chair')
-                input.checkbox_input(name='option3', type='checkbox' id='feeding_chair')
-                span.checkbox_mark
-                span.checkbox_text Стул для кормления
-            .form_elements-checkbox
-              label.checkbox_label(for='crib')
-                input.checkbox_input(name='option4', type='checkbox' id='crib')
-                span.checkbox_mark
-                span.checkbox_text Кроватка
-            .form_elements-checkbox
-              label.checkbox_label(for='tv')
-                input.checkbox_input(name='option5', type='checkbox' id='tv')
-                span.checkbox_mark
-                span.checkbox_text Телевизор
-            .form_elements-checkbox
-              label.checkbox_label(for='shampoo')
-                input.checkbox_input(name='option6', type='checkbox' id='shampoo')
-                span.checkbox_mark
-                span.checkbox_text Шампунь
-            .form_elements-checkbox
-              label.checkbox_label(for='tv2')
-                input.checkbox_input(name='option7', type='checkbox' id='tv2')
-                span.checkbox_mark
-                span.checkbox_text Телевизор
-            .form_elements-checkbox
-              label.checkbox_label(for='shampoo2')
-                input.checkbox_input(name='option8', type='checkbox' id='shampoo2')
-                span.checkbox_mark
-                span.checkbox_text Шампунь                           
+      .form_elements-item.form_elements-item_space-checkbox_expanded.form-elements_container-checkbox
+        .form_elements-head.head_checkbox-space
+          h3.form_elements-title expandable checkbox list
+          button.email_input-btn_checkbox(type='submit')
+            img(src='assets/img/svg/expand_more.svg')
+        .form_elements-checkbox_wrapper      
+          .form_elements-checkbox
+            label.checkbox_label(for='breakfast')
+              input.checkbox_input(name='option1', type='checkbox' id='breakfast')
+              span.checkbox_mark
+              span Завтрак
+          .form_elements-checkbox
+            label.checkbox_label(for='desk')
+              input.checkbox_input(name='option2', type='checkbox' id='desk')
+              span.checkbox_mark
+              span.checkbox_text Письменный стол   
+          .form_elements-checkbox
+            label.checkbox_label(for='feeding_chair')
+              input.checkbox_input(name='option3', type='checkbox' id='feeding_chair')
+              span.checkbox_mark
+              span.checkbox_text Стул для кормления
+          .form_elements-checkbox
+            label.checkbox_label(for='crib')
+              input.checkbox_input(name='option4', type='checkbox' id='crib')
+              span.checkbox_mark
+              span.checkbox_text Кроватка
+          .form_elements-checkbox
+            label.checkbox_label(for='tv')
+              input.checkbox_input(name='option5', type='checkbox' id='tv')
+              span.checkbox_mark
+              span.checkbox_text Телевизор
+          .form_elements-checkbox
+            label.checkbox_label(for='shampoo')
+              input.checkbox_input(name='option6', type='checkbox' id='shampoo')
+              span.checkbox_mark
+              span.checkbox_text Шампунь
+          .form_elements-checkbox
+            label.checkbox_label(for='tv2')
+              input.checkbox_input(name='option7', type='checkbox' id='tv2')
+              span.checkbox_mark
+              span.checkbox_text Телевизор
+          .form_elements-checkbox
+            label.checkbox_label(for='shampoo2')
+              input.checkbox_input(name='option8', type='checkbox' id='shampoo2')
+              span.checkbox_mark
+              span.checkbox_text Шампунь                           
 
-        .form_elements-item.form_elements-item_space-icon
-          .form_elements-item_icon
-            .form_elements-item_icon-block
-              .form_elements-item_picture
-                img(src='assets/img/svg/insert_emoticon.svg')
-              .form_elements-item_icon-title 
-                h3.item_icon-title Комфорт
-                p
-                  span.item_icon-text Шумопоглощающие стены
-              .form_elements-item_line
-                .item_line        
-            .form_elements-item_icon-block
-              .form_elements-item_picture.picture_space
-                img(src='assets/img/svg/location_city.svg')
-              .form_elements-item_icon-title.title-space
-                h3.item_icon-title Удобство           
-                p
-                  span.item_icon-text Окно в каждой из спален
-              .form_elements-item_line
-                 .item_line   
-      .form_elements-section-center
-
-      .form_elements-section-right
+      .form_elements-item.form_elements-item_space-icon
+        .form_elements-item_icon
+          .form_elements-item_icon-block
+            .form_elements-item_picture
+              img(src='assets/img/svg/insert_emoticon.svg')
+            .form_elements-item_icon-title 
+              h3.item_icon-title Комфорт
+              p
+                span.item_icon-text Шумопоглощающие стены
+            .form_elements-item_line
+              .item_line        
+          .form_elements-item_icon-block
+            .form_elements-item_picture.picture_space
+              img(src='assets/img/svg/location_city.svg')
+            .form_elements-item_icon-title.title-space
+              h3.item_icon-title Удобство           
+              p
+                span.item_icon-text Окно в каждой из спален
+            .form_elements-item_line
+              .item_line
+    //-Left section
+    .form_elements-section-center
+      .form_elements-item
+        .form_elements-head.head_checkbox-space
+          h3.form_elements-title checkbox buttons
+        .form_elements-checkbox_wrapper      
+          .form_elements-checkbox
+            label.checkbox_label(for='smoke')
+              input.checkbox_input(name='option1', type='checkbox' id='smoke')
+              span.checkbox_mark
+              span.checkbox_text Можно курить
+          .form_elements-checkbox
+            label.checkbox_label(for='pet')
+              input.checkbox_input(name='option1', type='checkbox' id='pet')
+              span.checkbox_mark
+              span.checkbox_text Можно с питомцами
+          .form_elements-checkbox
+            label.checkbox_label(for='guests')
+              input.checkbox_input(name='option1', type='checkbox' id='guests')
+              span.checkbox_mark
+              span.checkbox_text Можно пригласить гостей
+              span.checkbox_text-guests (до 10 человек)       
+    .form_elements-section-right
 
 
 
