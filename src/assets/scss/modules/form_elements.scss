@@ -3,7 +3,6 @@
   height: 100%;
   margin-top: 141px;
   margin-left: 213px;
-  //margin: 141px auto;
   display: grid;
   grid-template-columns: 320px 380px 320px;
   grid-column-gap: 69px;
@@ -11,7 +10,6 @@
 
 //Секции
 .form_elements-section_left {
-  //margin-left: 92px;
   width: 320px;
   height: 100%;  
 }
@@ -25,6 +23,19 @@
   width: 320px;
   height: 100%;
 }
+
+
+//Blocks
+
+.form_elements-item {
+  margin-bottom: 18px;
+}
+.form_elements-item_dropdown {
+  margin-bottom: 18px;
+}
+.container-space {
+  margin-bottom: 98px;
+}
 .form-elements_container {
   width: 266px;
   height: 66px;
@@ -37,17 +48,6 @@
 .form-elements_container-checkbox {
   width: 266px;
   height: 44px;
-}
-
-//Blocks
-.form_elements-item {
-  margin-bottom: 18px;
-}
-.form_elements-item_dropdown {
-  margin-bottom: 18px;
-}
-.container-space {
-  margin-bottom: 98px;
 }
 
 .form_elements-item_space {
@@ -67,7 +67,18 @@
 .form_elements-item_space-icon {
   margin-top: 252px;
 }
-
+.form_elements-radio_buttons-space{
+  margin-top: 38px;
+}
+.form_elements-toggle_buttons-space {
+  margin-top: 34px;
+}
+.form_elements-like_buttons-space {
+  margin-top: 42px;
+}
+.form_elements-rate_buttons-space {
+  margin-top: 38px;
+}
 
 .form_elements-date_dropdown-left {
   width: 47%;
@@ -90,6 +101,15 @@
 
 .head_checkbox-space {
   margin-bottom: 20px;
+}
+.head_radio-buttons_space {
+  margin-bottom: 18px;
+}
+.head_like-buttons_space {
+  margin-bottom: 18px;
+}
+.head_rate-buttons_space {
+  margin-bottom: 18px;
 }
 
 .form_elements-title{
@@ -157,12 +177,44 @@
   float: right;
 }
 
-.form_elements-checkbox_wrapper {
+.form_elements-checkbox_list {
   width: 222px;
   height: 230.56px;
 }
+.form_elements-checkbox_buttons {
+  width: 222px;
+  height: 97px;
+}
+.form_elements-radio_buttons {
+  width: 241px;
+  height: 24px;
+}
+.form_elements-toggle_buttons {
+  width: 260px;
+  height: 54px;
+  margin-top: 19px;
+}
+.form_elements-like_buttons {
+  width: 222px;
+  height: 20px;
+}
+
+
 .form_elements-checkbox {
   margin-bottom: 11px;
+}
+
+.form_elements-radio {
+  display: inline-block;
+  padding-right: 21px;
+}
+
+.form_elements-toggle {
+  margin-bottom: 15px;
+}
+.form_elements-like {
+  display: inline-block;
+  padding-right: 16px;
 }
 
 .form_elements-item_icon {
@@ -400,4 +452,144 @@
   float: right;
   position: relative;
   right: 84px;
+}
+
+//radio buttons
+.radio_label {
+  padding-left: 29px;
+  width: 100%;
+  height: 100%;
+  color: $dark-shade50;
+  text-align: center;
+}
+
+.radio_input {
+  position: absolute;
+  appearance: none;  
+}
+
+.radio_mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $dark-shade25;
+  border-radius: 10px;
+  margin-left: -30px;
+  transition: 0.2s;
+}
+
+.radio_input:checked + .radio_mark {
+  border: 1px solid #BC9CFF;
+  background-image: url('/assets/img/svg/linear_round.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: 0.2s;
+}
+
+//toggle buttons
+.toggle_label {
+  padding-left: 29px;
+  width: 100%;
+  height: 100%;
+  color: $dark-shade50;
+  text-align: center;
+}
+
+.toggle_input {
+  position: absolute;
+  appearance: none;  
+}
+
+.toggle_text {
+  margin-left: 20px;
+}
+
+.toggle_mark {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  border: 1px solid $dark-shade25;
+  border-radius: 10px;
+  margin-left: -30px;
+  transition: 0.2s;
+  background-image: url('/assets/img/svg/default_round.svg');
+  background-repeat: no-repeat;
+  background-position: 12% 50%;
+}
+
+.toggle_input:checked + .toggle_mark {
+  border: 1px solid #BC9CFF;
+  background-image: url('/assets/img/svg/linear_round.svg');
+  background-repeat: no-repeat;
+  background-position: 88% 50%;
+  transition: 0.2s;
+}
+
+//like buttons
+.like_label {
+  padding-left: 29px;
+  width: 100%;
+  height: 100%;
+  color: $dark-shade50;
+  text-align: center;
+}
+
+.like_input {
+  position: absolute;
+  appearance: none;  
+}
+
+.like_text {
+  position: relative;
+  right: 7px;
+  bottom: 1px;
+  font-size: 9px;
+  width: 2px;
+}
+
+.like_mark {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  border: 1px solid $dark-shade25;
+  border-radius: 10px;
+  margin-left: -30px;
+  background-image: url('/assets/img/svg/like_button_default.svg');
+  background-repeat: no-repeat;
+  background-position: 16% 50%;
+}
+
+.like_input:checked + .like_mark {
+  border: 1px solid #BC9CFF;
+  background-image: url('/assets/img/svg/like_button.svg');
+  background-repeat: no-repeat;
+  background-position: 16% 50%;
+}
+
+//rate buttons
+.rate_label {
+  padding-right: 24px;
+  width: 100%;
+  height: 100%;
+}
+
+.rate_input {
+  position: absolute;
+  appearance: none;  
+}
+
+.rate_mark {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: -1px;
+  background-image: url('/assets/img/svg/star_border.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.rate_input:checked + .rate_mark {
+  background-image: url('/assets/img/svg/star.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
