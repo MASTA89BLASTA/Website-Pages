@@ -5,7 +5,7 @@ block variables
 block form_elements
   include ../includes/modules/logo
   section.form_elements
-    .form_elements-section_left
+    .form_elements-section.form_elements-section_first
       .form_elements-item
         .form_elements-head
           h3.form_elements-title Text Field
@@ -72,9 +72,124 @@ block form_elements
           input.email_input.email_input-suscription(name='email', type='email', placeholder='Email')
           button.email_input-btn_subscription(type='submit')
             img(src='assets/img/svg/arrow_forward.svg')               
-      
+
       //-перенести в 4 колонку
-      .form_elements-item.form_elements-item_space-dropdown.form-elements_container
+
+    .form_elements-section.form_elements-section_second
+      .form_elements-item
+        .form_elements-head.head_checkbox-space
+          h3.form_elements-title checkbox buttons
+        .form_elements-checkbox_buttons      
+          .form_elements-checkbox
+            label.checkbox_label(for='smoke')
+              input.checkbox_input(name='smoke', type='checkbox' id='smoke')
+              span.checkbox_mark
+              span.checkbox_text Можно курить
+          .form_elements-checkbox
+            label.checkbox_label(for='pet')
+              input.checkbox_input(name='pet', type='checkbox' id='pet')
+              span.checkbox_mark
+              span.checkbox_text Можно с питомцами
+          .form_elements-checkbox
+            label.checkbox_label(for='guests')
+              input.checkbox_input(name='guests', type='checkbox' id='guests')
+              span.checkbox_mark
+              span.checkbox_text Можно пригласить гостей
+              span.checkbox_text-guests (до 10 человек)
+
+      .form_elements-item.form_elements-radio_buttons-space
+        .form_elements-head.head_radio-buttons_space
+          h3.form_elements-title radio buttons
+        .form_elements-radio_buttons      
+          .form_elements-radio
+            label.radio_label(for='male')
+              input.radio_input(name='gender', type='radio' id='male' value='male')
+              span.radio_mark
+              span.radio_text Мужчина
+          .form_elements-radio
+            label.radio_label(for='female')
+              input.radio_input(name='gender', type='radio' id='female' value='female')
+              span.radio_mark
+              span.radio_text Женщина
+
+      .form_elements-item.form_elements-toggle_buttons-space
+        .form_elements-head
+          h3.form_elements-title toggle
+        .form_elements-toggle_buttons      
+          .form_elements-toggle
+            label.toggle_label(for='special_offer')
+              input.toggle_input(name='special_offer', type='checkbox' id='special_offer')
+              span.toggle_mark
+              span.toggle_text Получать спецпредложения
+          .form_elements-toggle
+            label.toggle_label(for='special_offer_2')
+              input.toggle_input(name='special_offer_2', type='checkbox' id='special_offer_2')
+              span.toggle_mark
+              span.toggle_text Получать спецпредложения
+
+      .form_elements-item.form_elements-like_buttons-space
+        .form_elements-head.head_like-buttons_space
+          h3.form_elements-title like button
+        .form_elements-like_buttons      
+          .form_elements-like
+            label.like_label(for='social_like_default')
+              input.like_input(name='social_like_default', type='checkbox' id='social_like_default')
+              span.like_mark
+              span.like_text 2     
+          .form_elements-like
+            label.like_label(for='social_like')
+              input.like_input(name='social_like', type='checkbox' id='social_like')
+              span.like_mark
+              span.like_text 12
+
+      .form_elements-item.form_elements-rate_buttons-space
+        .form_elements-head.head_rate-buttons_space
+          h3.form_elements-title rate button
+        .form_elements-rate_buttons      
+          .form_elements-rate
+            label.rate_label(for='rate_1')
+              input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+              span.rate_mark
+            label.rate_label(for='rate_2')
+              input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+              span.rate_mark
+            label.rate_label(for='rate_3')
+              input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+              span.rate_mark
+            label.rate_label(for='rate_4')
+              input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+              span.rate_mark
+            label.rate_label(for='rate_5')
+              input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+              span.rate_mark
+
+    .form_elements-section.form_elements-section_third
+      .form_elements-item.form_elements-item_range-slider
+        .form_elements-head
+          h3.form_elements-title range slider
+          p
+            span.form_elements-descr.form_elements-descr_range-slider 5 000₽ - 10 000₽
+        .form_elements-range_slider
+          input.range-slider(type='range' min='5000' max='10000' id='myRange')
+
+      .form_elements-item
+        .form_elements-head.head-buttons_space
+          h3.form_elements-title buttons
+        .form_elements-buttons
+          .form_elements-buttons_gradient
+            button.buttons_gradient-default(type='submit')
+              span.buttons_gradient_text click me
+            button.buttons_gradient-hover(type='submit')
+              span.buttons_gradient_text click me
+          .form_elements-buttons_border-gradient
+            button.buttons_border-gradient_default(type='submit')
+              span.buttons_border-gradient_text click me
+            button.buttons_border-gradient_hover(type='submit')
+              span.buttons_border-gradient_text click me
+
+
+    .form_elements-section.form_elements-section_fourth  
+      .form_elements-item.form_elements-item_dropdown-space.form-elements_container
         .form_elements-head
           h3.form_elements-title dropdown
           p
@@ -85,7 +200,7 @@ block form_elements
             img(src='assets/img/svg/expand_more.svg')
 
       //-написать на jquery dropdown
-      .form_elements-item.form_elements-item_space-dropdown.form-elements_container.form-elements_container-expanded
+      .form_elements-item.form-elements_container.form-elements_container-expanded
         .form_elements-head
           h3.form_elements-title dropdown
           p
@@ -166,9 +281,9 @@ block form_elements
             label.checkbox_label(for='shampoo2')
               input.checkbox_input(name='shampoo2', type='checkbox' id='shampoo2')
               span.checkbox_mark
-              span.checkbox_text Шампунь                           
+              span.checkbox_text Шампунь
 
-      .form_elements-item.form_elements-item_space-icon
+      .form_elements-item.form_elements-item_icon-space
         .form_elements-item_icon
           .form_elements-item_icon-block
             .form_elements-item_picture
@@ -188,96 +303,15 @@ block form_elements
                 span.item_icon-text Окно в каждой из спален
             .form_elements-item_line
               .item_line
+
+    .form_elements-section.form_elements-section_fifth
+
+    .form_elements-section.form_elements-section_sixth
     //-middle section
-    .form_elements-section-center
-      .form_elements-item
-        .form_elements-head.head_checkbox-space
-          h3.form_elements-title checkbox buttons
-        .form_elements-checkbox_buttons      
-          .form_elements-checkbox
-            label.checkbox_label(for='smoke')
-              input.checkbox_input(name='smoke', type='checkbox' id='smoke')
-              span.checkbox_mark
-              span.checkbox_text Можно курить
-          .form_elements-checkbox
-            label.checkbox_label(for='pet')
-              input.checkbox_input(name='pet', type='checkbox' id='pet')
-              span.checkbox_mark
-              span.checkbox_text Можно с питомцами
-          .form_elements-checkbox
-            label.checkbox_label(for='guests')
-              input.checkbox_input(name='guests', type='checkbox' id='guests')
-              span.checkbox_mark
-              span.checkbox_text Можно пригласить гостей
-              span.checkbox_text-guests (до 10 человек)
 
-      .form_elements-item.form_elements-radio_buttons-space
-        .form_elements-head.head_radio-buttons_space
-          h3.form_elements-title radio buttons
-        .form_elements-radio_buttons      
-          .form_elements-radio
-            label.radio_label(for='male')
-              input.radio_input(name='gender', type='radio' id='male' value='male')
-              span.radio_mark
-              span.radio_text Мужчина
-          .form_elements-radio
-            label.radio_label(for='female')
-              input.radio_input(name='gender', type='radio' id='female' value='female')
-              span.radio_mark
-              span.radio_text Женщина
+    .form_elements-section.form_elements-section_seventh
 
-      .form_elements-item.form_elements-toggle_buttons-space
-        .form_elements-head
-          h3.form_elements-title toggle
-        .form_elements-toggle_buttons      
-          .form_elements-toggle
-            label.toggle_label(for='special_offer')
-              input.toggle_input(name='special_offer', type='checkbox' id='special_offer')
-              span.toggle_mark
-              span.toggle_text Получать спецпредложения
-          .form_elements-toggle
-            label.toggle_label(for='special_offer_2')
-              input.toggle_input(name='special_offer_2', type='checkbox' id='special_offer_2')
-              span.toggle_mark
-              span.toggle_text Получать спецпредложения
-              
-      .form_elements-item.form_elements-like_buttons-space
-        .form_elements-head.head_like-buttons_space
-          h3.form_elements-title like button
-        .form_elements-like_buttons      
-          .form_elements-like
-            label.like_label(for='social_like_default')
-              input.like_input(name='social_like_default', type='checkbox' id='social_like_default')
-              span.like_mark
-              span.like_text 2     
-          .form_elements-like
-            label.like_label(for='social_like')
-              input.like_input(name='social_like', type='checkbox' id='social_like')
-              span.like_mark
-              span.like_text 12
 
-      .form_elements-item.form_elements-rate_buttons-space
-        .form_elements-head.head_rate-buttons_space
-          h3.form_elements-title rate button
-        .form_elements-rate_buttons      
-          .form_elements-rate
-            label.rate_label(for='rate_1')
-              input.rate_input(name='rate_1', type='checkbox' id='rate_1')
-              span.rate_mark
-            label.rate_label(for='rate_2')
-              input.rate_input(name='rate_2', type='checkbox' id='rate_2')
-              span.rate_mark
-            label.rate_label(for='rate_3')
-              input.rate_input(name='rate_3', type='checkbox' id='rate_3')
-              span.rate_mark
-            label.rate_label(for='rate_4')
-              input.rate_input(name='rate_4', type='checkbox' id='rate_4')
-              span.rate_mark
-            label.rate_label(for='rate_5')
-              input.rate_input(name='rate_5', type='checkbox' id='rate_5')
-              span.rate_mark                                                             
-
-    .form_elements-section-right
 
 
 
