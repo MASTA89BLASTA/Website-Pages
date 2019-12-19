@@ -32,7 +32,7 @@ block form_elements
           button.email_input-btn(type='submit')
             img(src='assets/img/svg/expand_more.svg')
 
-      .form_elements-item         
+      .form_elements-item.form_elements-masked-field         
         .form_elements-head.form_elements-head_masked
           h3.form_elements-title.form_elements-title_masked Masked text field
           p
@@ -40,7 +40,7 @@ block form_elements
         .form_elements_input-wrapper
           input.email_input.email_input-date(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
 
-      .form_elements-item.form_elements-item_space
+      .form_elements-item.form_elements-date_dropdown
         .form_elements-date_dropdown-left
           .form_elements-head
             h3.form_elements-title Date dropdown
@@ -57,7 +57,7 @@ block form_elements
             button.email_input-btn_date-dropdown(type='submit')
               img(src='assets/img/svg/expand_more.svg')
 
-      .form_elements-item.form_elements-item_space.form-elements_container
+      .form_elements-item.form_elements-filter_date-dropdown.form-elements_container
         .form_elements-head
           h3.form_elements-title Filter date dropdown
         .form_elements_input-wrapper
@@ -65,7 +65,7 @@ block form_elements
           button.email_input-btn_filter-date(type='submit')
             img(src='assets/img/svg/expand_more.svg')
 
-      .form_elements-item.form_elements-item_space-subscription.form-elements_container.container-space
+      .form_elements-item.form-elements_container
         .form_elements-head
           h3.form_elements-title subscription text field    
         .form_elements_input-wrapper
@@ -172,7 +172,7 @@ block form_elements
         .form_elements-range_slider
           input.range-slider(type='range' min='5000' max='10000' id='myRange')
 
-      .form_elements-item
+      .form_elements-item.form_elements-item-buttons
         .form_elements-head.head-buttons_space
           h3.form_elements-title buttons
         .form_elements-buttons
@@ -186,6 +186,36 @@ block form_elements
               span.buttons_border-gradient_text click me
             button.buttons_border-gradient_hover(type='submit')
               span.buttons_border-gradient_text click me
+          .form_elements-buttons_text
+            p
+              span.buttons_text click me  
+              span.buttons_text_default click me
+          .form_elements-buttons_payment
+            .buttons_payment
+              span.buttons_payment-text перейти к оплате
+              button.buttons_payment-button(type='submit')
+                img(src='assets/img/svg/arrow_forward_white.svg')
+
+      .form_elements-item
+        .form_elements-head.head-pagination_space
+          h3.form_elements-title pagination
+        .form_elements-pagination
+          ul.pagination
+            li.active.pagination_item
+              a(href='#') 1
+            li.pagination_item
+              a(href='#') 2
+            li.pagination_item
+              a(href='#') 3
+            li.pagination_item
+              a(href='#') ...
+            li.pagination_item
+              a(href='#') 15
+
+
+
+
+
 
 
     .form_elements-section.form_elements-section_fourth  

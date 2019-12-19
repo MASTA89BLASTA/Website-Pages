@@ -98,13 +98,22 @@
 //Blocks
 
 .form_elements-item {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 .form_elements-item_dropdown {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
-.container-space {
-  margin-bottom: 98px;
+.form_elements-masked-field {
+  margin-bottom: 36px;
+}
+.form_elements-date_dropdown {
+  margin-bottom: 39px;
+}
+.form_elements-filter_date-dropdown {
+  margin-bottom: 39px;
+}
+.form_elements-item-buttons {
+  margin-bottom: 36px;
 }
 .form-elements_container {
   width: 266px;
@@ -119,10 +128,9 @@
   width: 266px;
   height: 44px;
 }
-.form_elements-item_space {
+.form_elements-date_dropdown {
   width: 100%;
   height: 66px;
-  margin-top: 38px;
 }
 .form_elements-item_range-slider {
   width: 266px;
@@ -131,11 +139,9 @@
 }
 
 
-.form_elements-item_space-subscription {
-  margin-top: 40px;
-}
 .form_elements-item_dropdown-space {
   margin-top: 20px;
+  margin-bottom: 18px;
 }
 .form_elements-item_space-checkbox {
   margin-top: 51px;
@@ -192,6 +198,9 @@
 }
 .head-buttons_space {
   margin-bottom: 18px;
+}
+.head-pagination_space {
+  margin-bottom: 20px;
 }
 
 .form_elements-title{
@@ -286,7 +295,7 @@
 
 .form_elements-buttons {
   width: 320px;
-  height: 250px;
+  height: 239px;
 }
 
 .form_elements-buttons_gradient, .form_elements-buttons_border-gradient {
@@ -296,6 +305,21 @@
 
 .form_elements-buttons_border-gradient {
   margin-top: 30px;
+}
+
+.form_elements-buttons_text {
+  margin-top: 29px;
+  margin-left: 1px;
+}
+.form_elements-buttons_payment {
+  width: 320px;
+  height: 44px;
+  margin-top: 28px;
+}
+
+.form_elements-pagination {
+  width: 241px;
+  height: 40px;
 }
 
 
@@ -308,6 +332,8 @@
   display: inline-block;
   padding-right: 21px;
 }
+
+
 
 .form_elements-toggle {
   margin-bottom: 15px;
@@ -375,6 +401,8 @@
 .form_elements-descr_range-slider {
   margin-right: 3px;
 }
+
+
 
 
 
@@ -457,10 +485,16 @@
   bottom: 31px;
 }
 
-.email_input-btn_filter-date, .email_input-btn_subscription {
+.email_input-btn_subscription {
   position: relative;
   top: 1px;
   right: 34px;
+  background-color: #fff;
+}
+.email_input-btn_filter-date {
+  position: relative;
+  left: 231px;
+  bottom: 30px;
   background-color: #fff;
 }
 
@@ -772,4 +806,57 @@
   border-radius: 22px;
   background-color: #FFFFFF;
   padding: 13px 19px;
+}
+
+.buttons_text, .buttons_text_default {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  font-weight: 700;
+}
+
+.buttons_text_default {
+  color: $dark-shade50;
+  margin-left: 17px;
+}
+
+.buttons_payment {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+}
+
+.buttons_payment-text {
+  position: relative;
+  top: 13px;
+  left: 94px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.buttons_payment-button {
+  position: relative;
+  top: 11px;
+  left: 151px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+//pagination
+
+.pagination_item {
+  display: inline-block;
+  color: $dark-shade50;
+}
+
+.active {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  color: #FFFFFF;
 }
