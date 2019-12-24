@@ -73,8 +73,6 @@ block form_elements
           button.email_input-btn_subscription(type='submit')
             img(src='assets/img/svg/arrow_forward.svg')               
 
-      //-перенести в 4 колонку
-
     .form_elements-section.form_elements-section_second
       .form_elements-item
         .form_elements-head.head_checkbox-space
@@ -196,26 +194,28 @@ block form_elements
               button.buttons_payment-button(type='submit')
                 img(src='assets/img/svg/arrow_forward_white.svg')
 
-      .form_elements-item
+      .form_elements-item.form_elements-item_pagination
         .form_elements-head.head-pagination_space
           h3.form_elements-title pagination
         .form_elements-pagination
-          ul.pagination
-            li.active.pagination_item
-              a(href='#') 1
-            li.pagination_item
-              a(href='#') 2
-            li.pagination_item
-              a(href='#') 3
-            li.pagination_item
-              a(href='#') ...
-            li.pagination_item
-              a(href='#') 15
-
-
-
-
-
+          .pagination_wrapper
+            ul.pagination
+              li.pagination_item.pagination_active 
+                a.pagination_link(href='#') 1
+              li.pagination_item  
+                a.pagination_link(href='#') 2
+              li.pagination_item  
+                a.pagination_link(href='#') 3
+              li.pagination_item  
+                a.pagination_link(href='#') ...
+              li.pagination_item  
+                a.pagination_link(href='#') 15
+              li.pagination_item.pagination_next  
+                a.pagination_link(href='#')
+                  img(src='assets/img/svg/arrow_forward_white.svg')
+          .pagination_wrapper-text
+            p
+              span.pagination_text  1 – 12 из 100+ вариантов аренды       
 
 
     .form_elements-section.form_elements-section_fourth  
@@ -335,9 +335,97 @@ block form_elements
               .item_line
 
     .form_elements-section.form_elements-section_fifth
+      .form_elements-item.form-elements_container-dropdown_expanded.form-elements_container-dropdown_expanded-space
+        .form_elements-head
+          h3.form_elements-title dropdown
+        .form_elements_input-wrapper
+          input.email_input.email_input-dropdown_guests-default(name='email', type='email', placeholder='Сколько гостей')
+          button.email_input-btn_date-dropdown_guests-default(type='submit')
+            img(src='assets/img/svg/expand_more.svg')
+        .form_dropdown-menu_guests-default
+          .form_dropdown-menu_wrapper_guests-default
+            .form_dropdown-menu_item_guests-default
+              h3.form_elements-title.form_dropdown-title Взрослые
+              .form_dropdown-menu_guests-configuration_controls
+                button.configuration_controls.configuration_controls-button_left -
+                .configuration_controls-button_count 0
+                button.configuration_controls.configuration_controls-button_right +
+            .form_dropdown-menu_item_guests-default
+              h3.form_elements-title.form_dropdown-title Дети
+              .form_dropdown-menu_guests-configuration_controls
+                button.configuration_controls.configuration_controls-button_left -
+                .configuration_controls-button_count 0
+                button.configuration_controls.configuration_controls-button_right +
+            .form_dropdown-menu_item_guests-default
+              h3.form_elements-title.form_dropdown-title Младенцы
+              .form_dropdown-menu_guests-configuration_controls
+                button.configuration_controls.configuration_controls-button_left -
+                .configuration_controls-button_count 0
+                button.configuration_controls.configuration_controls-button_right +
+            .form_dropdown-menu_item_guests-default
+              .form_dropdown-menu_guests-buttons_controls
+                //-button.configuration_controls-button_clear
+                button.configuration_controls-button_apply применить
+
+      .form_elements-item.form_elements-rich_checkbox-bullet_list-space
+        .form_elements-head.head-rich_checkbox-space
+          h3.form_elements-title rich checkbox buttons
+        .form_elements-rich_checkbox-buttons
+          .form_elements-rich_checkbox
+            label.checkbox_label(for='wide_corridor')
+              input.checkbox_input(name='wide_corridor', type='checkbox' id='wide_corridor')
+              span.checkbox_mark
+              span.rich-checkbox_text-title Широкий коридор
+              span.rich-checkbox_text Ширина коридоров в номере не менее 91 см.
+          .form_elements-rich_checkbox
+            label.checkbox_label(for='assistant_helper')
+              input.checkbox_input(name='assistant_helper', type='checkbox' id='assistant_helper')
+              span.checkbox_mark
+              span.rich-checkbox_text-title Помощник для инвалидов
+              span.rich-checkbox_text-2 На 1 этаже вас встретит специалист и проводит до номера                        
+
 
     .form_elements-section.form_elements-section_sixth
-    //-middle section
+      .form_elements-item.form-elements_container-dropdown_expanded.form-elements_container-dropdown_expanded-space
+        .form_elements-head
+          h3.form_elements-title dropdown
+        .form_elements_input-wrapper
+          input.email_input.email_input-dropdown_guests-default(name='email', type='email', placeholder='3 гостя')
+          button.email_input-btn_date-dropdown_guests-default(type='submit')
+            img(src='assets/img/svg/expand_more.svg')
+        .form_dropdown-menu_guests-default
+          .form_dropdown-menu_wrapper_guests-default
+            .form_dropdown-menu_item_guests-default
+              h3.form_elements-title.form_dropdown-title Взрослые
+              .form_dropdown-menu_guests-configuration_controls
+                button.configuration_controls.configuration_controls-button_left -
+                .configuration_controls-button_count 2
+                button.configuration_controls.configuration_controls-button_right +
+            .form_dropdown-menu_item_guests-default
+              h3.form_elements-title.form_dropdown-title Дети
+              .form_dropdown-menu_guests-configuration_controls
+                button.configuration_controls.configuration_controls-button_left -
+                .configuration_controls-button_count 0
+                button.configuration_controls.configuration_controls-button_right +
+            .form_dropdown-menu_item_guests-default
+              h3.form_elements-title.form_dropdown-title Младенцы
+              .form_dropdown-menu_guests-configuration_controls
+                button.configuration_controls.configuration_controls-button_left -
+                .configuration_controls-button_count 0
+                button.configuration_controls.configuration_controls-button_right +
+            .form_dropdown-menu_item_guests-default
+              .form_dropdown-menu_guests-buttons_controls
+                button.configuration_controls-button_clear очистить
+                button.configuration_controls-button_apply применить            
+
+      .form_elements-item.form_elements-rich_checkbox-bullet_list-space
+        .form_elements-head.head-rich_checkbox-space
+          h3.form_elements-title bullet list
+        .form_elements_bullet-list_wrapper
+          ul.bullet_list
+            li.bullet_list-item Нельзя с питомцами
+            li.bullet_list-item Без вечеринок и мероприятий 
+            li.bullet_list-item Время прибытия — после 13:00, а выезд до 12:00   
 
     .form_elements-section.form_elements-section_seventh
 

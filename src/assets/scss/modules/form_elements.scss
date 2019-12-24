@@ -68,6 +68,7 @@
   width: 320px;
   height: 100%;
   grid-area: third;
+  margin-left: 1px;
 }
 
 .form_elements-section_fourth {
@@ -77,7 +78,7 @@
 }
 
 .form_elements-section_fifth {
-  margin-left: 58px;
+  margin-left: 56px;
   width: 320px;
   height: 100%;
   grid-area: fifth;  
@@ -86,7 +87,8 @@
 .form_elements-section_sixth {
   width: 320px;
   height: 100%;
-  grid-area: sixth;  
+  grid-area: sixth;
+  margin-left: 1px;  
 }
 
 .form_elements-section_seventh {
@@ -137,6 +139,10 @@
   height: 47.44px;
   margin-bottom: 41px;
 }
+.form-elements_container-dropdown_expanded {
+  width: 320px;
+  height: 224px;
+}
 
 
 .form_elements-item_dropdown-space {
@@ -163,6 +169,9 @@
 }
 .form_elements-rate_buttons-space {
   margin-top: 38px;
+}
+.form-elements_container-dropdown_expanded-space {
+  margin-top: 20px;
 }
 
 .form_elements-date_dropdown-left {
@@ -200,7 +209,10 @@
   margin-bottom: 18px;
 }
 .head-pagination_space {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+}
+.head-rich_checkbox-space {
+  margin-bottom: 19px;
 }
 
 .form_elements-title{
@@ -227,6 +239,11 @@
   height: 46px;
 }
 
+.form_elements_bullet-list_wrapper {
+  width: 100%;
+  height: 110px;
+}
+
 .form_elements-title_masked {
   padding-top: 6px;
 }
@@ -235,14 +252,21 @@
   margin-bottom: 8px;
 }
 
-.form_dropdown-menu {
+.form_dropdown-menu, .form_dropdown-menu_guests-default {
   position: relative;
   bottom: 19px;
-  width: 266px;
+  width: 100%;
   height: 119px; 
 }
 
-.form_dropdown-menu_wrapper {
+.form_dropdown-menu_guests-default {
+  bottom: 2px;
+  height: 158px;
+}
+
+
+
+.form_dropdown-menu_wrapper, .form_dropdown-menu_wrapper_guests-default {
   border: 1px solid $dark-shade50;
   border-top: none;
   border-radius: 0px 0px 4px 4px;
@@ -250,17 +274,22 @@
   width: 100%;
 }
 
-.form_dropdown-menu_item {
+.form_dropdown-menu_item, .form_dropdown-menu_item_guests-default {
   width: 100%;
   height: 31%;
   padding-left: 13px;
 }
+.form_dropdown-menu_item_guests-default {
+  height: 24%;
+  padding-left: 14px;
+}
+
 .form_dropdown-title {
   padding-top: 12px;
   float: left;
 }
 
-.form_dropdown-configuration_controls {
+.form_dropdown-configuration_controls, .form_dropdown-menu_guests-configuration_controls {
   margin-top: 6px;
   margin-right: 7px;
   width: 92px;
@@ -268,10 +297,23 @@
   float: right;
 }
 
+.form_dropdown-menu_guests-configuration_controls {
+  margin-right: 6px;
+}
+.form_elements-rich_checkbox-bullet_list-space {
+  margin-top: 95px;
+}
+
 .form_elements-checkbox_list {
   width: 222px;
   height: 230.56px;
 }
+
+.form_elements-rich_checkbox-buttons {
+  width: 320px;
+  height: 145px;
+}
+
 .form_elements-checkbox_buttons {
   width: 222px;
   height: 97px;
@@ -324,7 +366,13 @@
 
 
 
-.form_elements-checkbox {
+.form_elements-checkbox{
+  margin-bottom: 11px;
+}
+
+.form_elements-rich_checkbox {
+  height: 35%;
+  width: 100%;
   margin-bottom: 11px;
 }
 
@@ -402,6 +450,11 @@
   margin-right: 3px;
 }
 
+.form_dropdown-menu_guests-buttons_controls {
+  width: 100%;
+  height: 100%;
+}
+
 
 
 
@@ -466,7 +519,7 @@
   }
 }
 
-.email_input-dropdown_group {
+.email_input-dropdown_group,  .email_input-dropdown_guests-default {
   width: 266px;
   border-radius: 4px 4px 0px 0px;
   border: 1px solid $dark-shade50;
@@ -475,6 +528,10 @@
     @include kerning(0.1);
     line-height: 24px;
   }
+}
+
+.email_input-dropdown_guests-default {
+  width: 320px;
 }
 
 //buttons
@@ -498,7 +555,7 @@
   background-color: #fff;
 }
 
-.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group{
+.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group, .email_input-btn_date-dropdown_guests-default{
   position: relative;
   bottom: 30px;
   left: 115px;
@@ -512,6 +569,11 @@
 
 .email_input-btn_date-dropdown_group {
   left: 230px;
+  bottom: 32px;
+}
+
+.email_input-btn_date-dropdown_guests-default {
+  left: 285px;
   bottom: 32px;
 }
 
@@ -549,6 +611,29 @@
 
 .configuration_controls-button_right {
   float: right;
+}
+
+.configuration_controls-button_apply, .configuration_controls-button_clear {
+  margin-top: 16px;
+  width: 30%;
+  height: 50%;
+  padding-left: 0;
+  padding-right: 2px;
+  float: right;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #BC9CFF;
+  background: none;
+  text-transform: uppercase;
+  @include kerning(1.1);
+}
+
+.configuration_controls-button_clear {
+  float: left;
+  color: $dark-shade50;
+  padding-left: 0px;
+  padding-right: 17px;
 }
 
 
@@ -592,6 +677,30 @@
   float: right;
   position: relative;
   right: 84px;
+}
+
+.rich-checkbox_text-title {
+  position: relative;
+  top: 1px;
+  left: 1px;
+  color: $dark-shade75;
+  font-weight: 700;
+  width: 144px;
+}
+
+.rich-checkbox_text, .rich-checkbox_text-2 {
+  float: left;
+  padding-top: 7px;
+  padding-left: 30px;
+  font-size: 12px;
+  width: 220px;
+  color: $dark-shade50;
+  font-weight: normal;
+  line-height: 14px;
+  text-align: left;
+}
+.rich-checkbox_text-2 {
+  width: 253px;
 }
 
 //radio buttons
@@ -848,7 +957,7 @@
 
 //pagination
 
-.pagination_item {
+/*.pagination_item {
   display: inline-block;
   color: $dark-shade50;
 }
@@ -859,4 +968,75 @@
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
   color: #FFFFFF;
+}*/
+.pagination_wrapper {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 12px;
+}
+.pagination_wrapper-text {
+  width: 100%;
+  height: 100%;
+}
+.pagination_item {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 11px 17px;
+}
+.pagination_link {
+  color: $dark-shade50; 
+}
+
+.pagination_next {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  box-sizing: border-box;
+  border-radius: 22px;
+  color: #FFFFFF;
+  padding: 12px 10px;
+  margin-left: 1px;
+  .pagination_link {
+    padding-left: 1px;
+  }
+}
+
+.pagination_active {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-sizing: border-box;
+  border-radius: 22px;
+  color: #FFFFFF;
+  padding: 12px 18px;
+  margin-left: 0;
+  .pagination_link {
+    color: #FFFFFF;
+  }
+}
+
+.pagination_text {
+  margin-left: 6px;
+  margin-top: 6px;
+  color: $dark-shade75;
+}
+
+//bullet list
+
+.bullet_list {
+  list-style-image: url('/assets/img/svg/Ellipse.svg');
+  margin-left: 18px;
+  margin-top: -2px;
+}
+
+.bullet_list-item {
+  width: 240px;
+  padding-left: 3px;
+  padding-top: 1px;
+  color: $dark-shade75;
+  margin-bottom: 13px;
+  line-height: 20px;
 }
