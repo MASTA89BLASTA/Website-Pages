@@ -1,0 +1,114 @@
+.form_elements-item.form_elements-item_dropdown-space.form-elements_container
+  .form_elements-head
+    h3.form_elements-title dropdown
+    p
+      span.form_elements-descr Default
+  .form_elements_input-wrapper
+    input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
+    button.email_input-btn_date-dropdown_group(type='submit')
+      img(src='assets/img/svg/expand_more.svg')
+
+//-написать на jquery dropdown
+.form_elements-item.form-elements_container.form-elements_container-expanded
+  .form_elements-head
+    h3.form_elements-title dropdown
+    p
+      span.form_elements-descr Expanded
+  .form_elements_input-wrapper
+    input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
+    button.email_input-btn_date-dropdown_group(type='submit')
+      img(src='assets/img/svg/expand_more.svg')
+    .form_dropdown-menu
+      .form_dropdown-menu_wrapper
+        .form_dropdown-menu_item
+          h3.form_elements-title.form_dropdown-title Спальни 
+          .form_dropdown-configuration_controls
+            button.configuration_controls.configuration_controls-button_left -
+            .configuration_controls-button_count 2
+            button.configuration_controls.configuration_controls-button_right + 
+        .form_dropdown-menu_item
+          h3.form_elements-title.form_dropdown-title Кровати 
+          .form_dropdown-configuration_controls
+            button.configuration_controls.configuration_controls-button_left -
+            .configuration_controls-button_count 2
+            button.configuration_controls.configuration_controls-button_right + 
+        .form_dropdown-menu_item
+          h3.form_elements-title.form_dropdown-title Ванные комнаты 
+          .form_dropdown-configuration_controls
+            button.configuration_controls.configuration_controls-button_left -
+            .configuration_controls-button_count 0
+            button.configuration_controls.configuration_controls-button_right + 
+
+.form_elements-item.form_elements-item_space-checkbox.form-elements_container-checkbox
+  .form_elements-head
+    h3.form_elements-title expandable checkbox list
+    button.email_input-btn_checkbox(type='submit')
+      img(src='assets/img/svg/expand_more.svg')
+
+.form_elements-item.form_elements-item_space-checkbox_expanded.form-elements_container-checkbox
+  .form_elements-head.head_checkbox-space
+    h3.form_elements-title expandable checkbox list
+    button.email_input-btn_checkbox(type='submit')
+      img(src='assets/img/svg/expand_more.svg')
+  .form_elements-checkbox_list      
+    .form_elements-checkbox
+      label.checkbox_label(for='breakfast')
+        input.checkbox_input(name='breakfast', type='checkbox' id='breakfast')
+        span.checkbox_mark
+        span Завтрак
+    .form_elements-checkbox
+      label.checkbox_label(for='desk')
+        input.checkbox_input(name='desk', type='checkbox' id='desk')
+        span.checkbox_mark
+        span.checkbox_text Письменный стол   
+    .form_elements-checkbox
+      label.checkbox_label(for='feeding_chair')
+        input.checkbox_input(name='feeding_chair', type='checkbox' id='feeding_chair')
+        span.checkbox_mark
+        span.checkbox_text Стул для кормления
+    .form_elements-checkbox
+      label.checkbox_label(for='crib')
+        input.checkbox_input(name='crib', type='checkbox' id='crib')
+        span.checkbox_mark
+        span.checkbox_text Кроватка
+    .form_elements-checkbox
+      label.checkbox_label(for='tv')
+        input.checkbox_input(name='tv', type='checkbox' id='tv')
+        span.checkbox_mark
+        span.checkbox_text Телевизор
+    .form_elements-checkbox
+      label.checkbox_label(for='shampoo')
+        input.checkbox_input(name='shampoo', type='checkbox' id='shampoo')
+        span.checkbox_mark
+        span.checkbox_text Шампунь
+    .form_elements-checkbox
+      label.checkbox_label(for='tv2')
+        input.checkbox_input(name='tv2', type='checkbox' id='tv2')
+        span.checkbox_mark
+        span.checkbox_text Телевизор
+    .form_elements-checkbox
+      label.checkbox_label(for='shampoo2')
+        input.checkbox_input(name='shampoo2', type='checkbox' id='shampoo2')
+        span.checkbox_mark
+        span.checkbox_text Шампунь
+
+.form_elements-item.form_elements-item_icon-space
+  .form_elements-item_icon
+    .form_elements-item_icon-block
+      .form_elements-item_picture
+        img(src='assets/img/svg/insert_emoticon.svg')
+      .form_elements-item_icon-title 
+        h3.item_icon-title Комфорт
+        p
+          span.item_icon-text Шумопоглощающие стены
+      .form_elements-item_line
+        .item_line        
+    .form_elements-item_icon-block
+      .form_elements-item_picture.picture_space
+        img(src='assets/img/svg/location_city.svg')
+      .form_elements-item_icon-title.title-space
+        h3.item_icon-title Удобство           
+        p
+          span.item_icon-text Окно в каждой из спален
+      .form_elements-item_line
+        .item_line
