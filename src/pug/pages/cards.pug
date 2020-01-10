@@ -6,13 +6,30 @@ block cards
   .wrapper
     include ../includes/modules/logo
     .cards_block
-      .cards_block-number_settings.bg-cards_settings
-        .cards_block-settings_text
-          h1.cards_block-setting-title_h1 Найдём номера под ваши пожелания
-        .cards_block-settings  
-          .cards_block-item_check-in Прибытие
-          .cards_block-item_check-out Выезд
-          
+      .cards_block_section_first
+        .cards_block-number_settings.bg-cards_settings
+          .cards_block-settings_text
+            h1.cards_block-setting-title_h1 Найдём номера под ваши пожелания
+          .cards_block-settings  
+            //-.cards_block-item_check-in Прибытие
+              .cards_block-item_check-out Выезд
+            .form_elements-item.form_elements-date_dropdown.form_elements-date_dropdown-space
+              .form_elements-date_dropdown-left
+                include ../includes/modules/mixin
+                +form_title("Прибытие")
+                +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
+                  "email_input-btn_date-dropdown","submit", "expand_more.svg")
+
+              .form_elements-date_dropdown-right
+                include ../includes/modules/mixin
+                +form_title("Выезд")
+                +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
+                  "email_input-btn_date-dropdown","submit", "expand_more.svg")
+
+      .cards_block_section_second
+      .cards_block_section_third
+
+
 
 
 

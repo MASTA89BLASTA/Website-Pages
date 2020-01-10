@@ -1,10 +1,18 @@
 .cards_block {
   position: absolute;
-  left: 172px;
+  left: 211px;
   top: 110px;
-  width: 1240px;
+  width: 80%;
   height: 1140px;
+  display: grid;
+  grid-template-columns: 380px 380px 380px;
+  
+  //grid-template-columns: repeat(auto-fill, 320px);
+  grid-template-rows: 1100px;
+  //grid-auto-flow: row;
+  grid-column-gap: 39px;
 }
+
 
 .bg-cards_settings {
   background: #FFFFFF;
@@ -14,19 +22,18 @@
   border-radius: 4px;
 }
 
-.cards_block-number_settings {
+.cards_block_section_first, .cards_block_section_second, .cards_block_section_third {
   position: relative;
   width: 380px;
   height: 374px;
   margin-top: 40px;
-  margin-left: 40px;
 }
 
 .cards_block-settings_text {
   width: 320px;
   height: 60px;
-  padding-top: 39px;
-  padding-left: 30px;  
+  margin-top: 39px;
+  margin-left: 31px;  
 }
 .cards_block-setting-title_h1{
   font-weight: 700;
@@ -37,7 +44,8 @@
 }
 
 .cards_block-settings {
-  display: flex;
-  justify-content: space-evenly;
+  width: 320px;
+  margin-left: 30px;
+  margin-top: 18px;
   
 }
