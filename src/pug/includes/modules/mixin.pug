@@ -1,0 +1,11 @@
+
+mixin form_title(classText)
+  .form_elements-head
+    h3(class ="form_elements-title")=classText
+
+mixin date_dropdown(className, inputClass, nameClass, typeName, plName, buttonClass, typeButton, srcPath)
+  div(class=""+className)
+    input(class=""+inputClass name=nameClass type=""+typeName placeholder=""+plName required="")
+    button(class=""+buttonClass type=""+typeButton)
+      img(src="assets/img/svg/"+srcPath)
+

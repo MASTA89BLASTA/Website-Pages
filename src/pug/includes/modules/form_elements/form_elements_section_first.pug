@@ -34,7 +34,17 @@
     input.email_input.email_input-date(name='date', type='text', placeholder='ДД.ММ.ГГГГ', required='')
 
 .form_elements-item.form_elements-date_dropdown.form_elements-date_dropdown-space
-  include ../form_elements/date_dropdown
+  .form_elements-date_dropdown-left
+    include ../mixin
+    +form_title("Date Dropdown")
+    +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
+                 "email_input-btn_date-dropdown","submit", "expand_more.svg") 
+  .form_elements-date_dropdown-right
+    include ../mixin
+    +form_title("Date Dropdown")
+    +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
+                 "email_input-btn_date-dropdown","submit", "expand_more.svg")  
+  
 
 .form_elements-item.form_elements-filter_date-dropdown.form-elements_container
   .form_elements-head
