@@ -9,3 +9,10 @@ mixin date_dropdown(className, inputClass, nameClass, typeName, plName, buttonCl
     button(class=""+buttonClass type=""+typeButton)
       img(src="assets/img/svg/"+srcPath)
 
+mixin form_button(className, classNameText, classText, buttonClass, typeButton, srcPath)
+  div(class=""+className)
+    div(class=""+classNameText)=classText
+      button(class=""+buttonClass type=""+typeButton)
+        img(src="assets/img/svg/"+srcPath) 
+
+
