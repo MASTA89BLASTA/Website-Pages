@@ -939,8 +939,12 @@
 
 .buttons_payment-text {
   position: relative;
-  top: 13px;
-  left: 94px;
+  top: 14px;
+  //left: 94px;
+  width: 230px;
+  height: 15px;
+  text-align: center;
+  margin-left: 59px;
   font-size: 12px;
   line-height: 15px;
   font-weight: 700;
@@ -950,8 +954,8 @@
 
 .buttons_payment-button {
   position: relative;
-  top: 11px;
-  left: 151px;
+  top: -2px;
+  left: 58px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
