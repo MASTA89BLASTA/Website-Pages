@@ -7,13 +7,11 @@ block cards
     include ../includes/modules/logo
     .cards_block
       .cards_block_section_first
-        .cards_block-number_settings.bg-cards_settings
+        .cards_block-number_one-settings.bg-cards_settings
           .cards_block-settings_text
             h1.cards_block-setting-title_h1 Найдём номера под ваши пожелания
           .cards_block-settings  
-            //-.cards_block-item_check-in Прибытие
-              .cards_block-item_check-out Выезд
-            .form_elements-item.form_elements-date_dropdown.form_elements-date_dropdown-space
+            .form_elements-item.form_elements-date_dropdown.cards_elements_space
               .form_elements-date_dropdown-left
                 include ../includes/modules/mixin
                 +form_title("Прибытие")
@@ -25,6 +23,21 @@ block cards
                 +form_title("Выезд")
                 +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
                   "email_input-btn_date-dropdown","submit", "expand_more.svg")
+
+            .form_elements-item.form_elements-item_dropdown.cards_elements_space
+              include ../includes/modules/mixin
+              +form_title("гости")
+              +date_dropdown("form_elements_input-wrapper", "email_input email_input-guests", "text", "text", "Сколько гостей",
+                  "email_input-btn","submit", "expand_more.svg")
+
+            .form_elements-buttons_payment.cards_elements_space-top
+              include ../includes/modules/mixin
+              +form_button("buttons_payment", "buttons_payment-text", "подобрать номер", "buttons_payment-button", "submit", "arrow_forward_white.svg")
+
+        .cards_block-number_two-settings.bg-cards_settings
+          .cards_block-settings_text
+            h1.cards_block-setting-title_h1 Регистрация аккаунта             
+ 
 
       .cards_block_section_second
       .cards_block_section_third
