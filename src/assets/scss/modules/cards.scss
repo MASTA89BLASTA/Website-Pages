@@ -22,16 +22,28 @@
   height: 1061px;
   margin-top: 40px;
 }
+.cards_block-elements_space {
+  margin-bottom: 40px;
+}
 
 .cards_block-number_one-settings {
   width: 100%;
   height: 374px;
-  margin-bottom: 40px;
 }
 
 .cards_block-number_two-settings {
   width: 100%;
   height: 646px;
+}
+
+.cards_block-number_three-settings {
+  width: 100%;
+  height: 511px;
+}
+
+.cards_block-number_four-settings {
+  width: 100%;
+  height: 358px;
 }
 
 .bg-cards_settings {
@@ -43,13 +55,17 @@
 }
 
 
-.cards_block-settings_text {
+.cards_block-settings_text, .cards_block-settings_text-register, .cards_block-settings_room{
   width: 320px;
   height: 60px;
   margin-top: 39px;
   margin-left: 31px;  
 }
-.cards_block-setting-title_h1{
+.cards_block-settings_text-register {
+  height: 50px;
+}
+
+.cards_block-setting-title_h1, .cards_block-settings_room-number_h1, .cards_block-settings_room-number, .cards_block-settings_total-h2{
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -57,14 +73,216 @@
   color: #1F2041;
 }
 
-.cards_block-settings {
+
+
+
+.cards_block-settings, .cards_block-settings_register, .cards_block-settings_payment, .cards_block-settings_buttons-reservation {
   width: 320px;
   margin-left: 30px;
   margin-top: 18px;
-  .cards_elements_space {
+  .cards_elements-space {
     margin-bottom: 18px;
   }
   .cards_elements_space-top {
     margin-top: 30px;
   }
+}
+
+.cards_block-settings_register {
+  margin-top: 0;
+}
+
+.cards_block-settings_payment {
+  margin-top: 19px;
+  height: 157px;
+  color: $dark-shade75;
+}
+
+.cards_block-settings_buttons-reservation {
+  margin-top: -4px;
+  margin-left: 32px;
+}
+
+.cards_block-settings_space {
+  margin-bottom: 15px;
+}
+.cards_block-settings_big-space {
+  margin-bottom: 28px;
+}
+
+.cards_block-settings-big-space_total {
+  margin-bottom: 47px;
+}
+
+.cards_block-settings_name {
+  margin-bottom: 8px;
+}
+
+.cards-block_settings_radio-buttons {
+  margin-bottom: 23px;
+}
+
+.cards_block-settings_input-date {
+  margin-bottom: 16px;
+}
+
+.cards_block-settings_buttons-entry {
+  width: 320px;
+  height: 44px;
+}
+
+.cards_block-settings_buttons-payment {
+  width: 320px;
+  height: 44px;
+  margin-bottom: 30px;
+}
+
+.cards_block_text {
+  float: left;
+  width: 60%;
+  line-height: 18px;
+  margin-top: 13px;
+}
+
+.cards_block_buttons {
+  float: right;
+  width: 31%;
+}
+
+.cards_block-buttons_payment {
+  width: 320px;
+  height: 44px;
+  margin-top: 18px;
+  margin-left: 2px;
+}
+
+
+.cards_block-settings_room {
+  height: 30px;
+}
+
+.cards_block-settings_room-left {
+  float: left;
+  width: 110px;
+  height: 30px;
+}
+
+.cards_block-settings_room-right {
+  float: right;
+  width: 110px;
+  height: 18px;
+  font-size: 14px;
+ 
+}
+
+.cards_block-settings_room-number_h1 {
+  font-family: 'Quicksand';
+  height: 100%;
+}
+
+.cards_block-settings_room-number {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.cards_block-settings_room-category {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: #BC9CFF;
+  margin-left: 6px;
+}
+
+.cards_block-settings_room-cost{
+  font-family: 'Montserrat';
+  height: 100%;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-left: 11px;
+  font-size: 14px;
+  font-weight: 700;
+  color: $dark-shade50;
+}
+
+.cards_block-settings_room-cost_text {
+  font-weight: normal;
+  font-size: 12px;
+  margin-left: 7px;
+}
+
+.cards_block-settings_payment-left {
+  float: left;
+  width: 252px;
+}
+.cards_block-settings_payment-right {
+  float: right;
+  width: 66px;
+  height: 19px;
+}
+
+.cards_block-settings_cost, .cards_block-settings_discount, .cards_block-settings_additional, .cards_block-settings_total{
+  width: 100%;
+  padding-left: 3px;
+  height: 20px;
+}
+.cards_block-settings_additional {
+  height: 36px;
+}
+
+.cards_block-settings_cost-total {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+}
+
+.cards_block-settings_cost-day, .cards_block-settings_multiplay {
+  padding-right: 5px;
+}
+
+.cards_block-settings_discount-servicecharge {
+  padding-right: 3px;
+}
+.cards_block-settings_discount-price {
+  padding-right: 8px;
+}
+
+.cards_block-settings_discount-prompt, .cards_block-settings_additional-prompt{
+  height: 20px;
+  width: 20px;
+  border: 1px solid $dark-shade25;
+  border-radius: 22px;
+  padding: 0px 7px;
+  font-weight: 700;
+  color: $dark-shade25;
+}
+.cards_block-settings_additional-prompt {
+  position: relative;
+  left: 170px;
+  bottom: 20px;
+}
+
+.cards_block-settings_cost-total_discount {
+  width: 100%;
+  height: 100%;
+}
+
+.cards_block-settings_total-border {
+  display: inline-block;
+  background: url('/assets/img/svg/dotted.svg');
+  height: 1px;
+  width: 182px;
+  margin-left: 3px;
+}
+
+.cards_block-settings_total-h2 {
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.cards_block-settings_cost-total_payment {
+  font-family: 'Quicksand';
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #1F2041;
 }

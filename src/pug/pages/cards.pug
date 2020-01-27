@@ -5,41 +5,150 @@ block variables
 block cards
   .wrapper
     include ../includes/modules/logo
+    include ../includes/modules/mixin
     .cards_block
       .cards_block_section_first
-        .cards_block-number_one-settings.bg-cards_settings
+        .cards_block-number_one-settings.bg-cards_settings.cards_block-elements_space
           .cards_block-settings_text
             h1.cards_block-setting-title_h1 Найдём номера под ваши пожелания
           .cards_block-settings  
-            .form_elements-item.form_elements-date_dropdown.cards_elements_space
+            .form_elements-item.form_elements-date_dropdown.cards_elements-space
               .form_elements-date_dropdown-left
-                include ../includes/modules/mixin
                 +form_title("Прибытие")
                 +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
                   "email_input-btn_date-dropdown","submit", "expand_more.svg")
 
               .form_elements-date_dropdown-right
-                include ../includes/modules/mixin
+                +form_title("Выезд")
+                +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
+                  "email_input-btn_date-dropdown","submit", "expand_more.svg")
+
+            .form_elements-item.form_elements-item_dropdown.cards_elements-space
+              +form_title("гости")
+              +date_dropdown("form_elements_input-wrapper", "email_input email_input-guests", "text", "text", "Сколько гостей",
+                "email_input-btn","submit", "expand_more.svg")
+
+            .form_elements-buttons_payment.cards_elements_space-top
+              +form_button("buttons_payment", "buttons_payment-text", "подобрать номер", "buttons_payment-button", "submit", "arrow_forward_white.svg")
+
+        .cards_block-number_two-settings.bg-cards_settings
+          .cards_block-settings_text-register
+            h1.cards_block-setting-title_h1 Регистрация аккаунта
+          .cards_block-settings_register
+            .cards_block-settings_name
+              +form_input("form_elements_input-wrapper", "email_input email_input-hover", "text", "text", "Имя")
+            .cards_block-settings_name  
+              +form_input("form_elements_input-wrapper", "email_input email_input-hover", "text", "text", "Фамилия")
+
+            .cards-block_settings_radio-buttons
+              +form_radio("form_elements-radio", "radio_label", "male", "radio_input", "gender", "radio", "male", "male", "radio_mark", "radio_text", "Мужчина")
+              +form_radio("form_elements-radio", "radio_label", "female", "radio_input", "gender", "radio", "female", "female", "radio_mark", "radio_text", "Женщина")
+
+            .cards_block-settings_input-date
+              +form_title("Дата Рождения")
+              +form_input("form_elements_input-wrapper", "email_input email_input-date", "date", "text", "ДД.ММ.ГГГГ")
+
+            .cards_block-settings_input-entry
+              +form_title("Данные для входа в сервис")
+              .cards_block-settings_name
+                +form_input("form_elements_input-wrapper", "email_input email_input-hover", "email", "email", "Email")
+              .cards_block-settings_name  
+                +form_input("form_elements_input-wrapper", "email_input email_input-hover", "email", "email", "Пароль")
+
+            .cards_block-settings_toggle-menu
+              +form_radio("form_elements-toggle", "toggle_label", "special_offer", "toggle_input", "special_offer", "checkbox", "special_offer", "special_offer", "toggle_mark", "toggle_text", "Получать спецпредложения")
+
+            .cards_block-settings_buttons-payment
+              .form_elements-buttons_payment
+                +form_button("buttons_payment", "buttons_payment-text", "Перейти к оплате", "buttons_payment-button", "submit", "arrow_forward_white.svg")
+            .cards_block-settings_buttons-entry
+              .cards_block_text
+                p Уже есть аккаунт на Toxin
+              .cards_block_buttons      
+                +form_gradient_button("buttons_border-gradient_default", "submit", "buttons_border-gradient_text-entry", " Войти")  
+
+
+      .cards_block_section_second
+        .cards_block-number_three-settings.bg-cards_settings.cards_block-elements_space
+          .cards_block-settings_room
+            .cards_block-settings_room-left
+              h1.cards_block-settings_room-number_h1
+                span.cards_block-settings_room-number №
+                | 888
+                span.cards_block-settings_room-category люкс
+            .cards_block-settings_room-right
+              h1.cards_block-settings_room-cost
+                | 9 990₽
+                span.cards_block-settings_room-cost_text в сутки
+
+          .cards_block-settings  
+            .form_elements-item.form_elements-date_dropdown.cards_elements-space
+              .form_elements-date_dropdown-left
+                +form_title("Прибытие")
+                +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
+                  "email_input-btn_date-dropdown","submit", "expand_more.svg")
+
+              .form_elements-date_dropdown-right
                 +form_title("Выезд")
                 +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
                   "email_input-btn_date-dropdown","submit", "expand_more.svg")
 
             .form_elements-item.form_elements-item_dropdown.cards_elements_space
-              include ../includes/modules/mixin
               +form_title("гости")
               +date_dropdown("form_elements_input-wrapper", "email_input email_input-guests", "text", "text", "Сколько гостей",
-                  "email_input-btn","submit", "expand_more.svg")
+                "email_input-btn","submit", "expand_more.svg") 
 
-            .form_elements-buttons_payment.cards_elements_space-top
-              include ../includes/modules/mixin
-              +form_button("buttons_payment", "buttons_payment-text", "подобрать номер", "buttons_payment-button", "submit", "arrow_forward_white.svg")
+          .cards_block-settings_payment
+            .cards_block-settings_payment-left
+              .cards_block-settings_cost.cards_block-settings_space
+                span.cards_block-settings_cost-day 9 990₽
+                span.cards_block-settings_multiplay x
+                span.cards_block-settings_day 4 суток
+              .cards_block-settings_discount.cards_block-settings_space
+                span.cards_block-settings_discount-servicecharge Сбор за услуги: скидка
+                span.cards_block-settings_discount-price 2 179₽
+                span.cards_block-settings_discount-prompt i
+              .cards_block-settings_additional.cards_block-settings_big-space
+                span.cards_block-settings_additional-service  Сбор за дополнительные услуги
+                span.cards_block-settings_additional-prompt i
+              .cards_block-settings_total
+                h2.cards_block-settings_total-h2 Итого
+                  .cards_block-settings_total-border
 
-        .cards_block-number_two-settings.bg-cards_settings
-          .cards_block-settings_text
-            h1.cards_block-setting-title_h1 Регистрация аккаунта             
- 
 
-      .cards_block_section_second
+            .cards_block-settings_payment-right
+              .cards_block-settings_cost-total.cards_block-settings_space
+                span.cards_block-settings_cost-total_day 39 960₽
+              .cards_block-settings_cost-total.cards_block-settings_space  
+                span.cards_block-settings_cost-total_discount 0₽
+              .cards_block-settings_cost-total.cards_block-settings-big-space_total
+                span.cards_block-settings_cost-total_additional 300₽
+              .cards_block-settings_cost-total 
+                span.cards_block-settings_cost-total_payment 38 081₽ 
+          .cards_block-settings_buttons-reservation
+            .form_elements-buttons_payment
+              +form_button("buttons_payment", "buttons_payment-text", "Забронировать", "buttons_payment-reservation_button", "submit", "arrow_forward_white.svg")     
+
+
+
+
+
+        .cards_block-number_four-settings.bg-cards_settings
+          .cards_block-settings_text-register
+            h1.cards_block-setting-title_h1 Войти
+          .cards_block-settings_register  
+            .cards_block-settings_name
+              +form_input("form_elements_input-wrapper", "email_input email_input-hover", "email", "email", "Email")
+            .cards_block-settings_name  
+              +form_input("form_elements_input-wrapper", "email_input email_input-hover", "email", "email", "Пароль")
+            .cards_block-settings_buttons-payment
+              .cards_block-buttons_payment
+                +form_button("buttons_payment", "buttons_payment-text", "Войти", "buttons_entry-button", "submit", "arrow_forward_white.svg")
+            .cards_block-settings_buttons-entry
+              .cards_block_text
+                p Нет аккаунта на Toxin?
+              .cards_block_buttons      
+                +form_gradient_button("buttons_border-gradient_default", "submit", "buttons_border-gradient_text-create", "Создать")        
       .cards_block_section_third
 
 

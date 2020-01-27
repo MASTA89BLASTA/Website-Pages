@@ -5,7 +5,7 @@ mixin form_title(classText)
 
 mixin date_dropdown(className, inputClass, nameClass, typeName, plName, buttonClass, typeButton, srcPath)
   div(class=""+className)
-    input(class=""+inputClass name=nameClass type=""+typeName placeholder=""+plName required="")
+    input(class=""+inputClass name=""+nameClass type=""+typeName placeholder=""+plName required="")
     button(class=""+buttonClass type=""+typeButton)
       img(src="assets/img/svg/"+srcPath)
 
@@ -14,5 +14,24 @@ mixin form_button(className, classNameText, classText, buttonClass, typeButton, 
     div(class=""+classNameText)=classText
       button(class=""+buttonClass type=""+typeButton)
         img(src="assets/img/svg/"+srcPath) 
+
+
+mixin form_input(className, inputClass, nameClass, typeName, plName)
+  div(class=""+className)
+    input(class=""+inputClass name=""+nameClass type=""+typeName placeholder=""+plName required="")
+
+mixin form_radio(className, labelClass, forName, inputClass, nameClass, typeName, nameId, nameValue, spanClassMark, spanClassText, radioTextName)
+  div(class=""+className)
+    label(class=""+labelClass for=""+forName)
+      input(class=""+inputClass name=""+nameClass type=""+typeName id=""+nameId value=""+nameValue)
+      span(class=""+spanClassMark)
+      span(class=""+spanClassText)=radioTextName
+
+mixin form_gradient_button(buttonClass, typeButton, spanClassText, radioTextName)
+  button(class=""+buttonClass type=""+typeButton)
+    span(class=""+spanClassText)=radioTextName
+
+
+
 
 
