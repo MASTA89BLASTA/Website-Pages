@@ -284,11 +284,12 @@
 .form_elements-buttons_text {
   margin-top: 29px;
   margin-left: 1px;
+  margin-bottom: 28px;
 }
 .form_elements-buttons_payment {
   width: 320px;
   height: 44px;
-  margin-top: 28px;
+  margin-top: 25px;
 }
 //pagination block
 .head-pagination_space {
@@ -891,6 +892,11 @@
   color: #FFFFFF;
 }
 
+.buttons_gradient-link {
+  width: 100px;
+  height: 15px;
+}
+
 .buttons_border-gradient_default, .buttons_border-gradient_hover {
   width: 99px;
   height: 44px;
@@ -905,16 +911,27 @@
   margin-left: 20px;
 }
 
-.buttons_border-gradient_text {
+.buttons_border-gradient_text, .buttons_border-gradient_text-entry, .buttons_border-gradient_text-create{
   position: relative;
   bottom: 1px;
   font-weight: 700;
   font-size: 12px;
+  color: #BC9CFF;
   line-height: 15px;
   text-transform: uppercase;
   border-radius: 22px;
   background-color: #FFFFFF;
   padding: 13px 19px;
+}
+
+.buttons_border-gradient_text-entry {
+  padding: 13px 23px 13px 25px;
+  @include kerning(1);
+}
+
+.buttons_border-gradient_text-create {
+  @include kerning(0.5);
+  padding: 13px 16px 13px 18px;
 }
 
 .buttons_text, .buttons_text_default {
@@ -944,7 +961,7 @@
   width: 230px;
   height: 15px;
   text-align: center;
-  margin-left: 59px;
+  margin-left: 58px;
   font-size: 12px;
   line-height: 15px;
   font-weight: 700;
@@ -952,11 +969,19 @@
   color: #FFFFFF;
 }
 
-.buttons_payment-button {
+.buttons_payment-button, .buttons_entry-button, .buttons_payment-reservation_button{
   position: relative;
   top: -2px;
   left: 58px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.buttons_entry-button {
+  left: 100px;
+}
+
+.buttons_payment-reservation_button {
+  left: 64px;
 }
 
 //pagination
