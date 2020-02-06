@@ -1,3 +1,4 @@
+//grid section
 .cards_block {
   position: absolute;
   left: 211px;
@@ -15,17 +16,19 @@
 
 
 
-
+//3 section
 .cards_block_section_first, .cards_block_section_second, .cards_block_section_third {
   position: relative;
   width: 380px;
   height: 1061px;
   margin-top: 40px;
 }
+//отступы между карточками
 .cards_block-elements_space {
   margin-bottom: 40px;
 }
 
+//размеры карточек
 .cards_block-number_one-settings {
   width: 100%;
   height: 374px;
@@ -46,7 +49,23 @@
   height: 358px;
 }
 
-.bg-cards_settings {
+.cards_block-number_five-settings {
+  width: 320px;
+  height: 369px;
+}
+
+.cards_block-number_six-settings, .cards_block-number_seven-settings {
+  width: 270px;
+  height: 257px;
+}
+
+//dasdas
+.cards_block-left-space {
+  margin-left: 3px;
+}
+
+//общий background, border и тд для карточек
+.bg-cards_settings, .bg-cards_settings-calendar {
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -54,7 +73,11 @@
   border-radius: 4px;
 }
 
+.bg-cards_settings-calendar {
+  border: 1px solid $dark-shade25;
+}
 
+//header карточек
 .cards_block-settings_text, .cards_block-settings_text-register, .cards_block-settings_room{
   width: 320px;
   height: 60px;
@@ -65,6 +88,7 @@
   height: 50px;
 }
 
+//заголовки карточек
 .cards_block-setting-title_h1, .cards_block-settings_room-number_h1, .cards_block-settings_room-number, .cards_block-settings_total-h2{
   font-weight: 700;
   font-size: 24px;
@@ -73,9 +97,7 @@
   color: #1F2041;
 }
 
-
-
-
+//настройки карточек
 .cards_block-settings, .cards_block-settings_register, .cards_block-settings_payment, .cards_block-settings_buttons-reservation {
   width: 320px;
   margin-left: 30px;
@@ -103,6 +125,7 @@
   margin-left: 32px;
 }
 
+//отступы и размеры элементов в настройках 1 секция
 .cards_block-settings_space {
   margin-bottom: 15px;
 }
@@ -156,7 +179,7 @@
   margin-left: 2px;
 }
 
-
+//отступы и размеры элементов в настройках 2 секции
 .cards_block-settings_room {
   height: 30px;
 }
@@ -172,7 +195,6 @@
   width: 110px;
   height: 18px;
   font-size: 14px;
- 
 }
 
 .cards_block-settings_room-number_h1 {
@@ -193,7 +215,7 @@
   margin-left: 6px;
 }
 
-.cards_block-settings_room-cost{
+.cards_block-settings_room-cost, .cards_block-settings_hotel-room_level-cost{
   font-family: 'Montserrat';
   height: 100%;
   line-height: 18px;
@@ -202,6 +224,10 @@
   font-size: 14px;
   font-weight: 700;
   color: $dark-shade50;
+}
+
+.cards_block-settings_hotel-room_level-cost{ 
+  margin-top: 0px;
 }
 
 .cards_block-settings_room-cost_text {
@@ -286,3 +312,165 @@
   font-weight: 700;
   color: #1F2041;
 }
+
+//section 3
+.cards_block-settings_hotel-room {
+  width: 100%;
+  height: 151px;
+}
+
+.cards_block-settings_hotel-room_picture, .cards_block-settings_hotel-room_list {
+  width: 100%;
+  height: 100%;
+}
+
+.cards_block-settings_hotel-room_arrows {
+  width: 100%;
+  height: 44px;
+  position: relative;
+  bottom: 97px;
+}
+
+.cards_block-settings_hotel-room_left-arrow {
+  //display: none;
+  float: left;
+}
+
+.cards_block-settings_hotel-room_right-arrow {
+  //display: none;
+  float: right;
+}
+
+.cards_block-settings_hotel-room_left-arrow , .cards_block-settings_hotel-room_right-arrow  {
+  width: 44px;
+  height: 44px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
+.cards_block-settings_hotel-room_right-arrow {
+  //display: none;
+  float: right;
+}
+
+.cards_block-settings_hotel-room_level {
+  position: relative;
+  bottom: 58px;
+  width: 100%;
+  height: 105px;
+  clear: both;
+}
+
+.cards_block-settings_hotel-room_level-title {
+  width: 100%;
+  height: 55px;
+}
+
+.cards_block-settings_hotel-room_level-left {
+  float: left;
+  width: 110px;
+  height: 24px;
+  margin-top: 19px;
+  margin-left: 19px;
+}
+
+.cards_block-settings_hotel-room_level-right {
+  float: right;
+  width: 110px;
+  height: 18px;
+  font-size: 14px;
+  margin-right: 16px;
+  margin-top: 24px;
+}
+
+.cards_block-settings_hotel-room_level-line  {
+  position: relative;
+  top: 54px;
+  left: 19px;
+  height: 1px;
+  width: 230px;
+  border-bottom: 1px solid $dark-shade10;
+}
+
+.cards_block-settings_hotel-room_level-number_h2 {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 17px;
+  font-family: 'Quicksand';
+  color: #1F2041;
+}
+
+.cards_block-settings_hotel-room_stars-reviews {
+  width: 100%;
+  height: 50px;
+}
+
+.cards_block-settings_hotel-room_stars-left {
+  width: 120px;
+  float: left;
+  margin-top: 7px;
+  margin-left: 20px;
+}
+.cards_block-settings_hotel-room_reviews-right {
+  width: 105px;
+  float: right;
+  margin-right: 19px;
+  margin-top: 2px;
+  text-align: right;
+}
+
+.cards_block-settings_hotel-room_reviews {
+  font-family: 'Montserrat';
+  height: 100%;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-left: 11px;
+  font-size: 14px;
+  font-weight: 700;
+  color: $dark-shade50;
+}
+
+.cards_block-settings_room-reviews_text {
+  font-weight: normal;
+  font-size: 14px;
+  margin-left: 4px;
+  margin-top: -1px;
+}
+
+.cards_block-settings_hotel-room_list {
+  position: relative;
+  bottom: 72px;
+  right: 4px;
+  width: 51px;
+  height: 15px;
+  float: right;
+}
+.hotel-room_picture {
+  display: block;
+}
+
+.hotel-room_list {
+  width: 44.25px;
+  height: 14.49px;
+}
+
+.hotel-room_list-item_active, .hotel-room_list-item {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #FFFFFF;
+  border-radius: 22px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+  margin-right: 3px;
+}
+
+.hotel-room_list-item_active {
+  background-color: #FFFFFF;
+}
+
+
