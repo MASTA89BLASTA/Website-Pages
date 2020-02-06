@@ -1,0 +1,59 @@
+.cards_block-number_three-settings.bg-cards_settings.cards_block-elements_space
+  .cards_block-settings_room
+    .cards_block-settings_room-left
+      h1.cards_block-settings_room-number_h1
+        span.cards_block-settings_room-number №
+        | 888
+        span.cards_block-settings_room-category люкс
+    .cards_block-settings_room-right
+      h1.cards_block-settings_room-cost
+        | 9 990₽
+        span.cards_block-settings_room-cost_text в сутки
+
+  .cards_block-settings  
+    .form_elements-item.form_elements-date_dropdown.cards_elements-space
+      .form_elements-date_dropdown-left
+        +form_title("Прибытие")
+        +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
+          "email_input-btn_date-dropdown","submit", "expand_more.svg")
+
+      .form_elements-date_dropdown-right
+        +form_title("Выезд")
+        +date_dropdown("form_elements_input-wrapper", "email_input email_input-dropdown", "date", "text", "ДД.ММ.ГГГГ",
+          "email_input-btn_date-dropdown","submit", "expand_more.svg")
+
+    .form_elements-item.form_elements-item_dropdown.cards_elements_space
+      +form_title("гости")
+      +date_dropdown("form_elements_input-wrapper", "email_input email_input-guests", "text", "text", "Сколько гостей",
+        "email_input-btn","submit", "expand_more.svg") 
+
+  .cards_block-settings_payment
+    .cards_block-settings_payment-left
+      .cards_block-settings_cost.cards_block-settings_space
+        span.cards_block-settings_cost-day 9 990₽
+        span.cards_block-settings_multiplay x
+        span.cards_block-settings_day 4 суток
+      .cards_block-settings_discount.cards_block-settings_space
+        span.cards_block-settings_discount-servicecharge Сбор за услуги: скидка
+        span.cards_block-settings_discount-price 2 179₽
+        span.cards_block-settings_discount-prompt i
+      .cards_block-settings_additional.cards_block-settings_big-space
+        span.cards_block-settings_additional-service  Сбор за дополнительные услуги
+        span.cards_block-settings_additional-prompt i
+      .cards_block-settings_total
+        h2.cards_block-settings_total-h2 Итого
+          .cards_block-settings_total-border
+
+
+    .cards_block-settings_payment-right
+      .cards_block-settings_cost-total.cards_block-settings_space
+        span.cards_block-settings_cost-total_day 39 960₽
+      .cards_block-settings_cost-total.cards_block-settings_space  
+        span.cards_block-settings_cost-total_discount 0₽
+      .cards_block-settings_cost-total.cards_block-settings-big-space_total
+        span.cards_block-settings_cost-total_additional 300₽
+      .cards_block-settings_cost-total 
+        span.cards_block-settings_cost-total_payment 38 081₽ 
+  .cards_block-settings_buttons-reservation
+    .form_elements-buttons_payment
+      +form_button("buttons_payment", "buttons_payment-text", "Забронировать", "buttons_payment-reservation_button", "submit", "arrow_forward_white.svg")

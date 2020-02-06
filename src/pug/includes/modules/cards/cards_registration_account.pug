@@ -1,0 +1,35 @@
+.cards_block-number_two-settings.bg-cards_settings
+  .cards_block-settings_text-register
+    h1.cards_block-setting-title_h1 Регистрация аккаунта
+  .cards_block-settings_register
+    .cards_block-settings_name
+      +form_input("form_elements_input-wrapper", "email_input email_input-hover", "text", "text", "Имя")
+    .cards_block-settings_name  
+      +form_input("form_elements_input-wrapper", "email_input email_input-hover", "text", "text", "Фамилия")
+
+    .cards-block_settings_radio-buttons
+      +form_radio("form_elements-radio", "radio_label", "male", "radio_input", "gender", "radio", "male", "male", "radio_mark", "radio_text", "Мужчина")
+      +form_radio("form_elements-radio", "radio_label", "female", "radio_input", "gender", "radio", "female", "female", "radio_mark", "radio_text", "Женщина")
+
+    .cards_block-settings_input-date
+      +form_title("Дата Рождения")
+      +form_input("form_elements_input-wrapper", "email_input email_input-date", "date", "text", "ДД.ММ.ГГГГ")
+
+    .cards_block-settings_input-entry
+      +form_title("Данные для входа в сервис")
+      .cards_block-settings_name
+        +form_input("form_elements_input-wrapper", "email_input email_input-hover", "email", "email", "Email")
+      .cards_block-settings_name  
+        +form_input("form_elements_input-wrapper", "email_input email_input-hover", "email", "email", "Пароль")
+
+    .cards_block-settings_toggle-menu
+      +form_radio("form_elements-toggle", "toggle_label", "special_offer", "toggle_input", "special_offer", "checkbox", "special_offer", "special_offer", "toggle_mark", "toggle_text", "Получать спецпредложения")
+
+    .cards_block-settings_buttons-payment
+      .form_elements-buttons_payment
+        +form_button("buttons_payment", "buttons_payment-text", "Перейти к оплате", "buttons_payment-button", "submit", "arrow_forward_white.svg")
+    .cards_block-settings_buttons-entry
+      .cards_block_text
+        p Уже есть аккаунт на Toxin
+      .cards_block_buttons      
+        +form_gradient_button("buttons_border-gradient_default", "submit", "buttons_border-gradient_text-entry", " Войти")  

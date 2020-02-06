@@ -1,0 +1,16 @@
+.cards_block-number_four-settings.bg-cards_settings
+  .cards_block-settings_text-register
+    h1.cards_block-setting-title_h1 Войти
+  .cards_block-settings_register  
+    .cards_block-settings_name
+      +form_input("form_elements_input-wrapper", "email_input email_input-hover", "email", "email", "Email")
+    .cards_block-settings_name  
+      +form_input("form_elements_input-wrapper", "email_input email_input-hover", "email", "email", "Пароль")
+    .cards_block-settings_buttons-payment
+      .cards_block-buttons_payment
+        +form_button("buttons_payment", "buttons_payment-text", "Войти", "buttons_entry-button", "submit", "arrow_forward_white.svg")
+    .cards_block-settings_buttons-entry
+      .cards_block_text
+        p Нет аккаунта на Toxin?
+      .cards_block_buttons      
+        +form_gradient_button("buttons_border-gradient_default", "submit", "buttons_border-gradient_text-create", "Создать")
