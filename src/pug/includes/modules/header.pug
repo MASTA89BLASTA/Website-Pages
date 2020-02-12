@@ -2,46 +2,47 @@
 //-header
 nav
   //-Menu Standard nav Bar
-  .menu_standard-navbar
+  .menu_standard-navbar.menu_navbar-space
     .menu_standard-navbar_section-left
       include logo_menu
-        .menu_standard-navbar_menu-list
-          ul 
-            li.menu_standard-navbar_item-elem1  Home
-            li  About Us
-            li.menu_standard-navbar_item-elem3
+        .menu_standard-navbar_menu
+          ul.menu_standard-navbar_menu-list 
+            li.menu_standard-navbar_item.standard-item_elem1  Home
+            li.menu_standard-navbar_item  About Us
+            li.menu_standard-navbar_item.standard-item_elem3
               | Services
               span.menu_standard-navbar_item-img
-                img(src='assets/img/expand_more.png')
-            li  Careers
-            li  News
-            li  Documentation
+                img(src='assets/img/svg/expand_more.svg')
+            li.menu_standard-navbar_item  Careers
+            li.menu_standard-navbar_item  News
+            li.menu_standard-navbar_item  Documentation
     .menu_standard-navbar_section-right
       .menu_standard-navbar_buttons
-        a#login.btn-login(href='#')
-          span.btn-login_text Login
-        a#register.btn-register(href='#') Register
+        .standard-navbar_buttons-wrapper
+          button#login.navbar_btn-login
+            a.navbar_btn-login_text(href='#') Login
+          button#register.navbar_btn-register
+            a.navbar_btn-register_text(href='#') Register
 
   //-Menu logged nav Bar
   .menu_logged-navbar
     .menu_logged-navbar_section-left
       include logo_menu
-        .menu_logged-navbar_menu-list
-          ul 
-            li.menu_logged-navbar_item-elem1  Home
-            li  About Us
-            li.menu_logged-navbar_item-elem3
+        .menu_logged-navbar_menu
+          ul.menu_logged-navbar_menu-list 
+            li.menu_logged-navbar_item.logged-item_elem1  Home
+            li.menu_logged-navbar_item  About Us
+            li.menu_logged-navbar_item.logged-item_elem3
               | Services
               span.menu_logged-navbar_item-img
-                img(src='assets/img/expand_more.png')
-            li  Careers
-            li  News
-            li  Documentation
+                img(src='assets/img/svg/expand_more.svg')
+            li.menu_logged-navbar_item  Careers
+            li.menu_logged-navbar_item  News
+            li.menu_logged-navbar_item  Documentation
 
     .menu_logged-navbar_section-right
       .menu_logged-navbar_user
-        p  
-          span.navbar_user-text  Cosmin Negoita  
+        span.navbar_user-text  Cosmin Negoita  
 
 
 
