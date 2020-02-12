@@ -545,8 +545,8 @@
 
 .email_input-btn_subscription {
   position: relative;
-  top: 1px;
-  right: 34px;
+  top: -32px;
+  left: 229px;
   background-color: #fff;
 }
 .email_input-btn_filter-date {
@@ -562,11 +562,6 @@
   left: 115px;
   display: block;
   background-color: #fff;
-}
-
-.email_input-btn_subscription {
-  top: -32px;
-  left: 229px;
 }
 
 .email_input-btn_date-dropdown_group {
