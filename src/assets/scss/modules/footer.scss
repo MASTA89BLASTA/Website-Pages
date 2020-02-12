@@ -1,9 +1,9 @@
 // footer style
 .footer-block {
-  position: absolute;
+
   width: 1600px;
   height: 443px;
-  margin-top: 364px;
+  margin-top: 40px;
 }
 .footer-block_box{
   box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
@@ -11,7 +11,7 @@
 }
 .footer-block_flex {
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   height: 100%;
 }
 
@@ -20,29 +20,38 @@
 }
 
 
+
 //Logo
-.footer-block_item {
-  position: relative;
+.footer-block_logo {
   width: 30%;
-  height: 100%;   
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-.footer_logo-gradient{
-  position: absolute;    
+
+.footer-block_container-logo {
+  width: 56%;
+  height: 46%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.footer_logo-gradient{ 
   width: 105.69px;
   height: 40px;
-  left: 212px;
-  float: left;
-  top: 100px;
+  margin-bottom: 18px;
+  margin-left: 1px;
 } 
 .footer-block_text {
-  position: relative;
-  top: 157px;
-  left: 211px; 
-  width: 260px;    
+  width: 260px;
+    
 }
 .block_text {
   line-height: 24px;
   font-size: 14px;
+  text-align: left;  
   color: rgba(31, 32, 65, 0.75);
 }
 
@@ -52,12 +61,22 @@
   display: flex;
   justify-content: flex-start;
   height: 100%;
-  width: 70%;  
+  width: 70%;
+  margin-left: 1px;  
+}
+.footer-block_menu-item, .footer-block_menu-item_email  {
+  width: 200px;
+  height: 100%;
+  display: flex;
+}
+.footer-block_menu-item_email {
+  width: 300px;
 }
 .footer-block_nav {
-  position: relative;
-  top: 102px;
-  left: 31px;      
+  width: 100%;
+  height: 45%; 
+  align-self: center;
+  margin-left: 31px;    
 }
 .footer-block_title {
   font-style: normal;
@@ -66,24 +85,24 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #1F2041;
-  padding-bottom: 17px;
+  margin-bottom: 17px;
 }
 .footer-block_navigation {
-  padding-right: 118px;
+  //margin-right: 118px;
+  
 }
 .footer-block_about {
-  padding-right: 117px;
 }
 .footer-block_support {
-  padding-right: 88px;
+  //padding-right: 88px;
 }
 
 .footer-block_content{
-  padding-bottom: 10px;
+  margin-bottom: 21px;
   .footer-menu {
     .footer-menu_item {
       line-height: 21px;
-      padding-bottom: 17px;
+      margin-bottom: 17px;
       color: rgba(31, 32, 65, 0.5);
     }
   }
@@ -93,7 +112,7 @@
 .footer-block-subscribe {
   width: 260px;
   .footer-block_title {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
   .footer-block_content {
     .footer-block_content-text {
@@ -104,13 +123,14 @@
 }
 
 .footer-block_form-email  {
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin-top: 11px;  
+  width: 266px;
+  height: 44px;
+ 
 }
 .footer_contact-email {
-  padding: 12px 0px 12px 14px;
+  //padding: 12px 0px 12px 14px;
+  width: 100%;
+  height: 100%;
   @include placeholder {
     color: rgba(31, 32, 65, 0.25);
     @include kerning(1);
@@ -126,12 +146,8 @@
 
 //social
 .footer-block_social {
-  position: absolute;
-  clear: both;
   width: 100%;
   height: 70px;
-  left: 0px;
-  top: 373px;
 }
 
 .footer-block_box-social {
@@ -142,23 +158,41 @@
 
 .footer-block_flex-wrapper {
   display: flex;
-  justify-content: space-between;
+  //flex-direction: row;
   height: 100%;
+  width: 100%;
 }
 
 .footer-block_copyright {
-  position: relative;
-  top: 28px;
-  left: 212px;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
   line-height: 17px;
   color: rgba(31, 32, 65, 0.75);
 }
 
+.footer_copyright {
+  width: 43%;
+  height: 23%;
+  align-self: center;
+  margin-top: 2px;
+  margin-right: 34px;
+}
+
 
 .footer-block_social-icons {
-  position: relative;
-  top: 21px;
-  right: 210px;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer_social-icons {
+  width: 20%;
+  height: 50%;
+  align-self: center;
+  margin-top: 9px;
+  margin-right: 181px;
 }
 
 .social-icons {
@@ -175,8 +209,7 @@
 //footer_creative
 
 .footer_creative {
-  position: absolute;
-  margin-top: 847px;
+  margin-top: 40px;
   width: 1600px;
   height: 367px;
 }
