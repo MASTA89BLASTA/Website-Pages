@@ -8,13 +8,14 @@
 @import "modules/colors_types.scss";
 @import "modules/cards.scss";
 @import "modules/form_elements/form_elements.scss";
+@import "modules/landing_page.scss";
 
 html {
   line-height: $mainLineHeight;
 	font-size: $mainFontSize;
 	color: $mainFontColor;
   height: 100vh;
-  overflow-x: hidden;
+  //overflow-x: hidden;
   margin: 0;
   @media screen and (max-width: $desktopWidth) {
 		font-size: 14px;
@@ -31,8 +32,8 @@ body {
   margin: 0;
   padding: 0;
   background-size: 100% auto;
-  max-width: 1600px;
-  min-height: 1853px;
+  max-width: 1584px;
+  min-height: 1880px;
   height: 100vh; 
   min-width: 320px;
   font-family: $mainFont;
@@ -101,6 +102,18 @@ section, .section {
     max-width: smPhoneWidth;
   }
 }
+
+.body_landing-page_sign-in {
+  min-height: 1198px;
+}
+.body_landing-page {
+  min-height: 1343px;
+}
+
+.body_landing-page_registration {
+  min-height: 1212px;
+}
+
 
 
 .icon__logo_container {

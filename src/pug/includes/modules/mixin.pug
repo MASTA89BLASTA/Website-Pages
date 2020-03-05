@@ -31,7 +31,30 @@ mixin form_gradient_button(buttonClass, typeButton, spanClassText, radioTextName
   button(class=""+buttonClass type=""+typeButton)
     span(class=""+spanClassText)=radioTextName
 
+mixin header_menu_navbar(className, ulClassName, liClass, spanClass, ...items)
+  div(class=""+className)
+    ul(class=""+ulClassName)
+      each item in items
+        if li == 1
+          li(class=""+ liClass)=item
+            span(class=""+spanClass)
+        else 
+          li(class=""+ liClass)=item
 
+
+mixin footer_block_list(className, h3Name, ...items)
+  div(class="footer-block_menu-item")
+    div(class="footer-block_nav")
+      div(class=""+className)
+        h3(class="footer-block_title")=h3Name
+        div(class="footer-block_content")
+          ul(class="footer-menu")
+            each item in items
+              li(class="footer-menu_item")=item
+
+mixin footer_block_text(textP)
+  div(class="footer-block_text")
+    span(class="block_text")=textP          
 
 
 
