@@ -1,11 +1,14 @@
-
+include mixin
 //-header
 nav
   //-Menu Standard nav Bar
   .menu_standard-navbar.menu_navbar-space
     .menu_standard-navbar_section-left
-      include logo_menu
+      
+        //-+header_menu_navbar("menu_standard-navbar_menu", "menu_standard-navbar_menu-list", "menu_standard-navbar_item",
+                            "menu_standard-navbar_item-img", "Home", "About Us", "Services", "Careers", "News", "Documentation" )
         .menu_standard-navbar_menu
+          include logo_menu
           ul.menu_standard-navbar_menu-list 
             li.menu_standard-navbar_item.standard-item_elem1  Home
             li.menu_standard-navbar_item  About Us

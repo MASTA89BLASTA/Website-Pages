@@ -1,6 +1,7 @@
 extends ../layout/main
+include ../includes/modules/mixin
 block variables
-    - var pageTitle = "UI Kit Headers and Footers"
+  - var pageTitle = "UI Kit Headers and Footers"
 
 block content
   .wrapper
@@ -8,9 +9,69 @@ block content
     .content_wrapper
       header
         include ../includes/modules/header
-      footer  
-        include ../includes/modules/footer
+      footer 
+        .footer-block.footer-block_space.footer-bg
+          .footer-block_box
+            .footer-block_flex
+              .footer-block_logo
+                .footer-block_container-logo
+                  include ../includes/modules/logo_menu
+                  +footer_block_text("Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.")
+              .footer-menu_block
+                +footer_block_list("footer-block_navigation","Navigation","About", "News", "Support", "Products")
+                +footer_block_list("footer-block_about","About Us","Who we are", "Our team", "Careers", "Investors")
+                +footer_block_list("footer-block_support","Support","Documentation", "Community", "Get in Touch")
+                .footer-block_menu-item_email        
+                  .footer-block_nav
+                    .footer-block-subscribe
+                      h3.footer-block_title Subscribe to our newsletter
+                      .footer-block_content
+                        p
+                          span.footer-block_content-text
+                            | Receive our latest news and promotions in your inbox!
+                      .footer-block_form-email 
+                        form.footer_contact-email(action='', method='POST')
+                          +date_dropdown("form_elements_input-wrapper", "email_input email_input-suscription", "email", "email", "Your email address",
+                            "email_input-btn_subscription","submit", "arrow_forward.svg") 
 
+              //-social
+            .footer-block_social
+              .footer-block_box-social
+                .footer-block_flex-wrapper
+                  .footer-block_copyright
+                    span.footer_copyright 
+                      | Copyright © 2018 Toxin UI Kit. All rights reserved.
+                  .footer-block_social-icons
+                    ul.footer_social-icons
+                      li.social-icons.social_tw
+                        a(href='#')
+                          img(src='assets/img/svg/twitter.svg')
+                      li.social-icons.social_fb
+                        a(href='#')
+                          img(src='assets/img/svg/facebook.svg')
+                      li.social-icons.social_inst
+                        a(href='#')
+                          img(src='assets/img/svg/instagram.svg')  
+
+        .footer_creative
+          .footer-creative_box
+            .footer-creative_grid-wrapper
+              .footer_creative_grid-box
+                .footer_creative_logo-gradient
+                  img(src='assets/img/svg/Logo_Toxin.svg')
+                .footer_creative_text
+                  p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                .footer_creative_social-icons
+                  ul
+                    li.social-icons.social_tw
+                      a(href='#')
+                        img(src='assets/img/svg/twitter.svg')
+                    li.social-icons.social_fb
+                      a(href='#')
+                        img(src='assets/img/svg/facebook.svg')
+                    li.social-icons.social_inst
+                      a(href='#')
+                        img(src='assets/img/svg/instagram.svg') 
 
 
 
