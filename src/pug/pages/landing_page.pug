@@ -34,10 +34,11 @@ block landing_page
                 a.navbar_btn-login_text(href='http://localhost:8081/sign_in.html') Войти
               button#register.navbar_btn-register
                 a.navbar_btn-register_text.navbar_landing-page_btn-register_text(href='http://localhost:8081/registration.html') Зарегистрироваться
-  .landing_bg
-    img.landing_img(src='assets/img/Landing_page_bg.png')
-    .landing_page-cards_find-number
-      include ../includes/modules/cards/cards_find_number
+  main
+    .landing_bg
+      img.landing_img(src='assets/img/Landing_page_bg.png')
+      .landing_page-cards_find-number
+        include ../includes/modules/cards/cards_find_number
 
   footer 
     .footer-block.footer-bg

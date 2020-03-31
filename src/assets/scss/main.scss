@@ -9,6 +9,8 @@
 @import "modules/cards.scss";
 @import "modules/form_elements/form_elements.scss";
 @import "modules/landing_page.scss";
+@import "modules/search_room.scss";
+@import "modules/room_details.scss";
 
 html {
   line-height: $mainLineHeight;
@@ -114,6 +116,9 @@ section, .section {
   min-height: 1212px;
 }
 
+.body_room-details {
+  min-height: 1937px;
+}
 
 
 .icon__logo_container {

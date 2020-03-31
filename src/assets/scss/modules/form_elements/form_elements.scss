@@ -106,6 +106,10 @@
   width: 266px;
   height: 66px;
 }
+//Относиться к search_room
+.form_elements-item_space {
+  margin-bottom: 18px;
+}
 
 //main
 .form_elements-head{
@@ -195,7 +199,22 @@
   margin-bottom: 39px;
 }
 
+.form_elements-filter_guests-dropdown {
+  margin-bottom: 28px;
+}
+
 //SECTION SECOND
+
+//checkbox buttons
+  //для search_room
+.form_elements-item_checkbox-buttons_space {
+  margin-bottom: 28px;
+}
+.form_elements-checkbox_buttons {
+  width: 222px;
+  height: 97px;
+}
+
 //buttons radio
 .form_elements-radio_buttons-space{
   margin-top: 38px;
@@ -241,26 +260,30 @@
 .head_rate-buttons_space {
   margin-bottom: 18px;
 }
-//checkbox buttons
-.form_elements-checkbox_buttons {
-  width: 222px;
-  height: 97px;
-}
 
 
 
 //SECTION THIRD
 //range slider block
-.form_elements-item_range-slider {
+.form_elements-item_range-slider.form_elements-item_range-slider_search-room {
   width: 266px;
   height: 47.44px;
   margin-bottom: 41px;
+}
+.form_elements-item_range-slider_search-room {
+  height: 74.44px;
+  margin-bottom: 27px;
 }
 .form_elements-range_slider {
   width: 100%;
 }
 .form_elements-descr_range-slider {
   margin-right: 3px;
+}
+.form_elements-range_slider-text  {
+  width: 100%;
+  font-size: 12px;
+  color: $dark-shade50;
 }
 
 //buttons block
@@ -304,6 +327,10 @@
 .form-elements_container-expanded {
   width: 266px;
   height: 185px;
+}
+//для search_room
+.form_elements-item_expandable-list_space {
+  margin-bottom: 27px;
 }
 //dropdown
 .form_elements-item_dropdown-space {
@@ -435,7 +462,7 @@
 //only section 5
 .form_elements-rich_checkbox-buttons {
   width: 320px;
-  height: 145px;
+  height: 136px;
 }
 //only section 6
 .form_elements_bullet-list_wrapper {
@@ -448,10 +475,14 @@
 .form_elements-rich_checkbox-bullet_list-space {
   margin-top: 95px;
 }
+//для search_room
+.form_elements-item_checkbox-space {
+  margin-bottom: 6px;
+}
 .form_elements-rich_checkbox {
-  height: 35%;
+  height: 39%;
   width: 100%;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 .form_dropdown-menu_guests-buttons_controls {
   width: 100%;
@@ -845,6 +876,7 @@
   appearance: none;
   width: 100%;
   margin-top: 19px;
+  margin-bottom: 11px;
   height: 6px;
   background: #FFFFFF;
   border: 1px solid $dark-shade25;

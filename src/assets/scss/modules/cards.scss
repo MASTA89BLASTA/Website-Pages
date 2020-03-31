@@ -54,7 +54,7 @@
   height: 369px;
 }
 
-.cards_block-number_six-settings, .cards_block-number_seven-settings {
+.cards_block-number_six-settings, .cards_block-number_seven-settings, .cards_block-room_number-settings {
   width: 270px;
   height: 257px;
 }
@@ -70,7 +70,8 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .bg-cards_settings-calendar {
@@ -220,7 +221,7 @@
   height: 100%;
   line-height: 18px;
   margin-top: 10px;
-  margin-left: 11px;
+  margin-left: 10px;
   font-size: 14px;
   font-weight: 700;
   color: $dark-shade50;
@@ -380,10 +381,10 @@
 
 .cards_block-settings_hotel-room_level-right {
   float: right;
-  width: 110px;
+  width: 111px;
   height: 18px;
   font-size: 14px;
-  margin-right: 16px;
+  margin-right: 14px;
   margin-top: 24px;
 }
 
@@ -451,6 +452,8 @@
 }
 .hotel-room_picture {
   display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .hotel-room_list {
