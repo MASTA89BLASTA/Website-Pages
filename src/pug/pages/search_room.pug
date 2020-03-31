@@ -1,0 +1,880 @@
+extends ../layout/main
+include ../includes/modules/mixin
+block variables
+  - var pageTitle = "Search Room"
+
+block search_room
+  header
+    nav
+      //-Menu Standard nav Bar
+      .menu_standard-navbar
+        .menu_standard-navbar_section-left.menu_standard-landing_page-navbar_section-left
+
+          //-+header_menu_navbar("menu_standard-navbar_menu", "menu_standard-navbar_menu-list", "menu_standard-navbar_item",
+            "menu_standard-navbar_item-img", "Home", "About Us", "Services", "Careers", "News", "Documentation" )
+          .menu_standard-navbar_menu
+            include ../includes/modules/logo_menu
+            ul.menu_standard-navbar_menu-list.menu_standard-landing_page-navbar_menu-list 
+              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item.standard-item_elem1.landing_page-standard-item_elem1 О нас
+              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item.landing_page-standard-item_elem2
+                | Услуги
+                span.menu_standard-navbar_item-img.menu_standard-landing_page-navbar_item-img
+                  img(src='assets/img/svg/expand_more.svg')
+              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item.standard-item_elem3 Вакансии
+              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item Новости
+              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item
+                | Соглашения
+                span.menu_standard-navbar_item-img.menu_standard-landing_page-navbar_item-img
+                  img(src='assets/img/svg/expand_more.svg')
+
+        .menu_standard-navbar_section-right.menu_standard-landing_page-navbar_section-right
+          .menu_standard-navbar_buttons.menu_standard-landing_page-navbar_buttons
+            .standard-navbar_buttons-wrapper.standard-landing_page-navbar_buttons-wrapper
+              button#login.navbar_btn-login.navbar_landing-page_btn-login
+                a.navbar_btn-login_text(href='http://localhost:8081/sign_in.html') Войти
+              button#register.navbar_btn-register
+                a.navbar_btn-register_text.navbar_landing-page_btn-register_text(href='http://localhost:8081/registration.html') Зарегистрироваться
+
+  main.search_room.search_room-border
+    section.search_room-left
+      .search_room-form_elements-section_left
+        .search_room-form_elements
+          .form_elements-item.form_elements-item_space.form-elements_container
+            .form_elements-head
+              h3.form_elements-title Даты пребывания в отеле
+            .form_elements_input-wrapper
+              input.email_input.email_input-filter(name='date', type='text', placeholder='19 авг - 23 авг')
+              button.email_input-btn_filter-date(type='submit')
+                img(src='assets/img/svg/expand_more.svg')
+
+          .form_elements-item.form_elements-filter_guests-dropdown.form-elements_container
+            .form_elements-head
+              h3.form_elements-title Гости
+            .form_elements_input-wrapper
+              input.email_input.email_input-filter(name='date', type='text', placeholder='3 гостя, 1 младенец')
+              button.email_input-btn_filter-date(type='submit')
+                img(src='assets/img/svg/expand_more.svg')
+
+          .form_elements-item.form_elements-item_range-slider_search-room
+            .form_elements-head
+              h3.form_elements-title Диапазон цены
+              p
+                span.form_elements-descr.form_elements-descr_range-slider 5 000₽ - 10 000₽
+            .form_elements-range_slider
+              input.range-slider(type='range' min='5000' max='10000' id='myRange')
+              p
+                span.form_elements-range_slider-text Стоимость за сутки пребывания в номере 
+
+          .form_elements-item.form_elements-item_checkbox-buttons_space
+            .form_elements-head.head_checkbox-space
+              h3.form_elements-title checkbox buttons
+            .form_elements-checkbox_buttons      
+              .form_elements-checkbox
+                label.checkbox_label(for='smoke')
+                  input.checkbox_input(name='smoke', type='checkbox' id='smoke')
+                  span.checkbox_mark
+                  span.checkbox_text Можно курить
+              .form_elements-checkbox
+                label.checkbox_label(for='pet')
+                  input.checkbox_input(name='pet', type='checkbox' id='pet')
+                  span.checkbox_mark
+                  span.checkbox_text Можно с питомцами
+              .form_elements-checkbox
+                label.checkbox_label(for='guests')
+                  input.checkbox_input(name='guests', type='checkbox' id='guests')
+                  span.checkbox_mark
+                  span.checkbox_text Можно пригласить гостей
+                  span.checkbox_text-guests (до 10 человек)
+
+
+          .form_elements-item.form_elements-item_checkbox-space
+            .form_elements-head.head-rich_checkbox-space
+              h3.form_elements-title Доступность
+            .form_elements-rich_checkbox-buttons
+              .form_elements-rich_checkbox
+                label.checkbox_label(for='wide_corridor')
+                  input.checkbox_input(name='wide_corridor', type='checkbox' id='wide_corridor')
+                  span.checkbox_mark
+                  span.rich-checkbox_text-title Широкий коридор
+                  span.rich-checkbox_text Ширина коридоров в номере не менее 91 см.
+              .form_elements-rich_checkbox
+                label.checkbox_label(for='assistant_helper')
+                  input.checkbox_input(name='assistant_helper', type='checkbox' id='assistant_helper')
+                  span.checkbox_mark
+                  span.rich-checkbox_text-title Помощник для инвалидов
+                  span.rich-checkbox_text-2 На 1 этаже вас встретит специалист и проводит до номера
+
+          
+          .form_elements-item.form_elements-item_expandable-list_space.form-elements_container
+            .form_elements-head
+              h3.form_elements-title Удобства номера
+            .form_elements_input-wrapper
+              input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
+              button.email_input-btn_date-dropdown_group(type='submit')
+                img(src='assets/img/svg/expand_more.svg')
+              .form_dropdown-menu(hidden='hidden')
+                .form_dropdown-menu_wrapper
+                  .form_dropdown-menu_item
+                    h3.form_elements-title.form_dropdown-title Спальни 
+                    .form_dropdown-configuration_controls
+                      button.configuration_controls.configuration_controls-button_left -
+                      .configuration_controls-button_count 2
+                      button.configuration_controls.configuration_controls-button_right + 
+                  .form_dropdown-menu_item
+                    h3.form_elements-title.form_dropdown-title Кровати 
+                    .form_dropdown-configuration_controls
+                      button.configuration_controls.configuration_controls-button_left -
+                      .configuration_controls-button_count 2
+                      button.configuration_controls.configuration_controls-button_right + 
+                  .form_dropdown-menu_item
+                    h3.form_elements-title.form_dropdown-title Ванные комнаты 
+                    .form_dropdown-configuration_controls
+                      button.configuration_controls.configuration_controls-button_left -
+                      .configuration_controls-button_count 0
+                      button.configuration_controls.configuration_controls-button_right + 
+
+          .form_elements-item.form_elements-item_space-checkbox_expanded.form-elements_container-checkbox
+            .form_elements-head.head_checkbox-space
+              h3.form_elements-title Дополнительные удобства
+              button.email_input-btn_checkbox(type='submit')
+                img(src='assets/img/svg/expand_more.svg')
+            .form_elements-checkbox_list(hidden='hidden')      
+              .form_elements-checkbox
+                label.checkbox_label(for='breakfast')
+                  input.checkbox_input(name='breakfast', type='checkbox' id='breakfast')
+                  span.checkbox_mark
+                  span Завтрак
+              .form_elements-checkbox
+                label.checkbox_label(for='desk')
+                  input.checkbox_input(name='desk', type='checkbox' id='desk')
+                  span.checkbox_mark
+                  span.checkbox_text Письменный стол   
+              .form_elements-checkbox
+                label.checkbox_label(for='feeding_chair')
+                  input.checkbox_input(name='feeding_chair', type='checkbox' id='feeding_chair')
+                  span.checkbox_mark
+                  span.checkbox_text Стул для кормления
+              .form_elements-checkbox
+                label.checkbox_label(for='crib')
+                  input.checkbox_input(name='crib', type='checkbox' id='crib')
+                  span.checkbox_mark
+                  span.checkbox_text Кроватка
+              .form_elements-checkbox
+                label.checkbox_label(for='tv')
+                  input.checkbox_input(name='tv', type='checkbox' id='tv')
+                  span.checkbox_mark
+                  span.checkbox_text Телевизор
+              .form_elements-checkbox
+                label.checkbox_label(for='shampoo')
+                  input.checkbox_input(name='shampoo', type='checkbox' id='shampoo')
+                  span.checkbox_mark
+                  span.checkbox_text Шампунь
+              .form_elements-checkbox
+                label.checkbox_label(for='tv2')
+                  input.checkbox_input(name='tv2', type='checkbox' id='tv2')
+                  span.checkbox_mark
+                  span.checkbox_text Телевизор
+              .form_elements-checkbox
+                label.checkbox_label(for='shampoo2')
+                  input.checkbox_input(name='shampoo2', type='checkbox' id='shampoo2')
+                  span.checkbox_mark
+                  span.checkbox_text Шампунь                                       
+
+    section.search_room-right
+      .search_room-cards_elements-section_right
+        .search_room-cards_elements
+          h1.search_room-h1_title Номера, которые мы для вас подобрали
+          .search_room-cards_rooms
+            .cards_rooms-sections.cards_rooms-sections_flex
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room1.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow &lsaquo;
+                      span.cards_block-settings_hotel-room_right-arrow &rsaquo;
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 888
+                        span.cards_block-settings_room-category люкс
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 9 990₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 145
+                        span.cards_block-settings_room-reviews_text Отзывов
+
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room2.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 840
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 9 990₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 65
+                        span.cards_block-settings_room-reviews_text Отзывов
+
+
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room3.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 980
+                        span.cards_block-settings_room-category люкс
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 8 500₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 35
+                        span.cards_block-settings_room-reviews_text Отзывов 
+
+            //-section 2
+            .cards_rooms-sections.cards_rooms-sections_flex
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room4.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 856
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 7 300₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 19
+                        span.cards_block-settings_room-reviews_text Отзывов                         
+
+
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room5.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 740
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 6 000₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 44
+                        span.cards_block-settings_room-reviews_text Отзывов
+
+
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room6.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                  .cards_block-settings_hotel-room_level
+                    .cards_block-settings_hotel-room_level-title
+                      .cards_block-settings_hotel-room_level-left
+                        h2.cards_block-settings_hotel-room_level-number_h2
+                          span.cards_block-settings_room-number №
+                          | 982
+                      .cards_block-settings_hotel-room_level-right
+                        h2.cards_block-settings_hotel-room_level-cost
+                          | 5 800₽
+                          span.cards_block-settings_room-cost_text в сутки
+                      .cards_block-settings_hotel-room_level-line 
+
+                    .cards_block-settings_hotel-room_stars-reviews
+                      .cards_block-settings_hotel-room_stars-left
+                        .form_elements-rate_buttons      
+                          .form_elements-rate
+                            label.rate_label(for='rate_1')
+                              input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                              span.rate_mark
+                            label.rate_label(for='rate_2')
+                              input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                              span.rate_mark
+                            label.rate_label(for='rate_3')
+                              input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                              span.rate_mark
+                            label.rate_label(for='rate_4')
+                              input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                              span.rate_mark
+                            label.rate_label(for='rate_5')
+                              input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                              span.rate_mark
+
+                      .cards_block-settings_hotel-room_reviews-right
+                        h2.cards_block-settings_hotel-room_reviews
+                          | 56
+                          span.cards_block-settings_room-reviews_text Отзывов
+
+            //-section 3
+            .cards_rooms-sections.cards_rooms-sections_flex
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room7.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 678
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 5 500₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 45
+                        span.cards_block-settings_room-reviews_text Отзывов 
+
+
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room8.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 450
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 5 300₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 39
+                        span.cards_block-settings_room-reviews_text Отзывов            
+
+
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room9.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 350
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 5 000₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 77
+                        span.cards_block-settings_room-reviews_text Отзывов  
+
+            //-section 4
+            .cards_rooms-sections.cards_rooms-sections_flex
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room10.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 666
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 5 000₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 25
+                        span.cards_block-settings_room-reviews_text Отзывов            
+              
+
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room11.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 444
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 5 000₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 15
+                        span.cards_block-settings_room-reviews_text Отзывов 
+              
+
+              .cards_block-room_number-settings.bg-cards_settings
+                .cards_block-settings_hotel-room
+                  .cards_block-settings_hotel-room_picture
+                    img.hotel-room_picture(src='assets/img/hotel_room12.jpg')
+                    .cards_block-settings_hotel-room_arrows  
+                      span.cards_block-settings_hotel-room_left-arrow 
+                      span.cards_block-settings_hotel-room_right-arrow 
+                    .cards_block-settings_hotel-room_list
+                      ul.hotel-room_list
+                        li.hotel-room_list-item_active
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+                        li.hotel-room_list-item
+
+                .cards_block-settings_hotel-room_level
+                  .cards_block-settings_hotel-room_level-title
+                    .cards_block-settings_hotel-room_level-left
+                      h2.cards_block-settings_hotel-room_level-number_h2
+                        span.cards_block-settings_room-number №
+                        | 352
+                    .cards_block-settings_hotel-room_level-right
+                      h2.cards_block-settings_hotel-room_level-cost
+                        | 5 000₽
+                        span.cards_block-settings_room-cost_text в сутки
+                    .cards_block-settings_hotel-room_level-line 
+
+                  .cards_block-settings_hotel-room_stars-reviews
+                    .cards_block-settings_hotel-room_stars-left
+                      .form_elements-rate_buttons      
+                        .form_elements-rate
+                          label.rate_label(for='rate_1')
+                            input.rate_input(name='rate_1', type='checkbox' id='rate_1')
+                            span.rate_mark
+                          label.rate_label(for='rate_2')
+                            input.rate_input(name='rate_2', type='checkbox' id='rate_2')
+                            span.rate_mark
+                          label.rate_label(for='rate_3')
+                            input.rate_input(name='rate_3', type='checkbox' id='rate_3')
+                            span.rate_mark
+                          label.rate_label(for='rate_4')
+                            input.rate_input(name='rate_4', type='checkbox' id='rate_4')
+                            span.rate_mark
+                          label.rate_label(for='rate_5')
+                            input.rate_input(name='rate_5', type='checkbox' id='rate_5')
+                            span.rate_mark
+
+                    .cards_block-settings_hotel-room_reviews-right
+                      h2.cards_block-settings_hotel-room_reviews
+                        | 55
+                        span.cards_block-settings_room-reviews_text Отзывов 
+
+          .search_room-pagination
+            .search_room-pagination_flex
+              .search_room-pagination_container
+                .form_elements-pagination
+                  .pagination_wrapper
+                    ul.pagination
+                      li.pagination_item.pagination_active 
+                        a.pagination_link(href='#') 1
+                      li.pagination_item  
+                        a.pagination_link(href='#') 2
+                      li.pagination_item  
+                        a.pagination_link(href='#') 3
+                      li.pagination_item  
+                        a.pagination_link(href='#') ...
+                      li.pagination_item  
+                        a.pagination_link(href='#') 15
+                      li.pagination_item.pagination_next  
+                        a.pagination_link(href='#')
+                          img(src='assets/img/svg/arrow_forward_white.svg')
+                  .pagination_wrapper-text
+                    p
+                      span.pagination_text  1 – 12 из 100+ вариантов аренды
+
+  footer 
+    .footer-block.footer-bg
+      .footer-block_box
+        .footer-block_flex
+          .footer-block_logo
+            .footer-block_container-logo
+              include ../includes/modules/logo_menu
+              +footer_block_text("Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
+          .footer-menu_block
+            +footer_block_list("footer-block_navigation","Навигация","О нас", "Новости", "Служба поддержки", "Услуги")
+            +footer_block_list("footer-block_about","О нас","О сервисе", "Наша команда", "Вакансии", "Инвесторы")
+            +footer_block_list("footer-block_support","Служба поддержки","Соглашения", "Сообщества", "Связь с нами")
+            .footer-block_menu-item_email        
+              .footer-block_nav
+                .footer-block-subscribe
+                  h3.footer-block_title Подписка
+                  .footer-block_content
+                    p
+                      span.footer-block_content-text
+                        | Получайте специальные предложения и новости сервиса
+                  .footer-block_form-email 
+                    form.footer_contact-email(action='', method='POST')
+                      +date_dropdown("form_elements_input-wrapper", "email_input email_input-suscription", "email", "email", "Your email address",
+                        "email_input-btn_subscription","submit", "arrow_forward.svg") 
+
+          //-social
+        .footer-block_social
+          .footer-block_box-social
+            .footer-block_flex-wrapper
+              .footer-block_copyright
+                span.footer_copyright 
+                  | Copyright © 2018 Toxin отель. Все права защищены.
+              .footer-block_social-icons
+                ul.footer_social-icons
+                  li.social-icons.social_tw
+                    a(href='#')
+                      img(src='assets/img/svg/twitter.svg')
+                  li.social-icons.social_fb
+                    a(href='#')
+                      img(src='assets/img/svg/facebook.svg')
+                  li.social-icons.social_inst
+                    a(href='#')
+                      img(src='assets/img/svg/instagram.svg')   

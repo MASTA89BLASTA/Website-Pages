@@ -1,0 +1,67 @@
+.room_details {
+  width: 100%;
+  height: 73.5%;
+}
+
+.room_details-border {
+  border-bottom: 1px solid $dark-shade25;
+}
+
+// section pictures
+.room_details-pictures.room_details-pictures_flex{
+  width: 100%;
+  height: 34.1%;
+}
+.room_details-pictures_flex {
+  display: flex;
+}
+
+.room_details-pictures_left {
+  width: 66.5%;
+  height: 100%;
+}
+
+.room_details-picture_lg {
+  width: 100%;
+  height: 100%;
+}
+
+.room_details-pictures_right {
+  width: 33.5%;
+  height: 100%;
+}
+
+.room_details-picture_sm {
+  width: 100%;
+  height: 50%;
+}
+
+//section general_info
+.room_details-general_info {
+  display: flex;
+  width: 100%;
+  height: 65.9%;
+}
+//left info section
+.room_details-general_info-left {
+  width: 60%;
+  height: 100%;
+}
+
+//right info section
+.room_details-general_info-right {
+  width: 40%;
+  height: 100%;
+}
+.room_details-general_info-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 73.5%;
+  height: 69%; 
+}
+
+.room_details-general_info-card_wrapper {
+  width: 380px;
+  height: 511px;
+}
