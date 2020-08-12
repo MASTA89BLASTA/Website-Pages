@@ -5,30 +5,30 @@
     input.email_input.email_input-dropdown_guests-default(name='email', type='email', placeholder='3 гостя')
     button.email_input-btn_date-dropdown_guests-default(type='submit')
       img(src='assets/img/svg/expand_more.svg')
-  .form_dropdown-menu_guests-default
-    .form_dropdown-menu_wrapper_guests-default
-      .form_dropdown-menu_item_guests-default
-        h3.form_elements-title.form_dropdown-title Взрослые
-        .form_dropdown-menu_guests-configuration_controls
-          button.configuration_controls.configuration_controls-button_left -
-          .configuration_controls-button_count 2
-          button.configuration_controls.configuration_controls-button_right +
-      .form_dropdown-menu_item_guests-default
-        h3.form_elements-title.form_dropdown-title Дети
-        .form_dropdown-menu_guests-configuration_controls
-          button.configuration_controls.configuration_controls-button_left -
-          .configuration_controls-button_count 0
-          button.configuration_controls.configuration_controls-button_right +
-      .form_dropdown-menu_item_guests-default
-        h3.form_elements-title.form_dropdown-title Младенцы
-        .form_dropdown-menu_guests-configuration_controls
-          button.configuration_controls.configuration_controls-button_left -
-          .configuration_controls-button_count 0
-          button.configuration_controls.configuration_controls-button_right +
-      .form_dropdown-menu_item_guests-default
-        .form_dropdown-menu_guests-buttons_controls
-          button.configuration_controls-button_clear очистить
-          button.configuration_controls-button_apply применить            
+    .form_dropdown-menu_guests-default
+      .form_dropdown-menu_wrapper_guests-default
+        .form_dropdown-menu_item_guests-default
+          h3.form_elements-title.form_dropdown-title Взрослые
+          .form_dropdown-menu_guests-configuration_controls
+            button#buttonAdultsMinus.configuration_controls.configuration_controls-button_left -
+            #buttonAdults.configuration_controls-button_count 0
+            button#buttonAdultsPlus.configuration_controls.configuration_controls-button_right +
+        .form_dropdown-menu_item_guests-default
+          h3.form_elements-title.form_dropdown-title Дети
+          .form_dropdown-menu_guests-configuration_controls
+            button#buttonChildrenMinus.configuration_controls.configuration_controls-button_left -
+            #buttonChildren.configuration_controls-button_count 0
+            button#buttonChildrenPlus.configuration_controls.configuration_controls-button_right +
+        .form_dropdown-menu_item_guests-default
+          h3.form_elements-title.form_dropdown-title Младенцы
+          .form_dropdown-menu_guests-configuration_controls
+            button#buttonBabiesMinus.configuration_controls.configuration_controls-button_left -
+            #buttonBabies.configuration_controls-button_count 0
+            button#buttonBabiesPlus.configuration_controls.configuration_controls-button_right +
+        .form_dropdown-menu_item_guests-default
+          .form_dropdown-menu_guests-buttons_controls
+            button.configuration_controls-button_clear очистить
+            button.configuration_controls-button_apply применить            
 
 .form_elements-item.form_elements-rich_checkbox-bullet_list-space
   .form_elements-head.head-rich_checkbox-space

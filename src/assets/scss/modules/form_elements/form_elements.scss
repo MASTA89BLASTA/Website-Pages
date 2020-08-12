@@ -112,14 +112,17 @@
 }
 
 //main
-.form_elements-head{
+.form_elements-head, .form_elements-head_bullet-list{
   display: flex;
   justify-content: space-between;
-  text-transform: uppercase;
   margin-bottom: 7px;
   height: 15px;
   width: 100%;
 }
+.form_elements-head_bullet-list {
+  height: 24px;
+}
+
 //main
 .form_elements-title{
   font-weight: 700;
@@ -361,12 +364,16 @@
 }
 .form_elements-item_icon {
   width: 291px;
-  height: 175px;
+  height: 256px;
 }
 .form_elements-item_icon-block {
   width: 100%;
-  height: 45%;
+  height: 31%;
   margin-top: 10px;
+}
+//для room_details
+.form_elements-item_icon-block_space {
+  margin-top: 5px;
 }
 .form_elements-item_picture {
   position: relative;
@@ -415,7 +422,9 @@
   bottom: 19px;
   width: 100%;
   height: 119px; 
+  display: none;
 }
+
 .form_dropdown-menu_wrapper, .form_dropdown-menu_wrapper_guests-default {
   border: 1px solid $dark-shade50;
   border-top: none;
@@ -451,8 +460,11 @@
 .head-rich_checkbox-space {
   margin-bottom: 19px;
 }
+.head-bullet_list-space {
+  margin-bottom: 23px;
+}
 .form_dropdown-menu_guests-default {
-  bottom: 2px;
+  bottom: 18px;
   height: 158px;
 }
 .form_dropdown-menu_item_guests-default {
@@ -492,7 +504,7 @@
 
 
 //инпуты
-.email_input {
+.email_input, .email_text-area {
   padding: 13px 15px;
   border: 1px solid $dark-shade25;
   width: 100%;
@@ -500,8 +512,12 @@
   @include placeholder {
     color: $dark-shade25;
     font-family: $mainFont;
+    width: 200px;
   }  
 }
+.email_text-area {
+  padding: 8px 12px 0px 12px;
+}  
 
 .email_input-hover:hover {
   border: 1px solid $dark-shade50;
@@ -551,7 +567,7 @@
   }
 }
 
-.email_input-dropdown_group,  .email_input-dropdown_guests-default {
+.email_input-dropdown_group,  .email_input-dropdown_guests-default, .email_text-area_dropdown-group {
   width: 266px;
   border-radius: 4px 4px 0px 0px;
   border: 1px solid $dark-shade50;
@@ -587,7 +603,11 @@
   background-color: #fff;
 }
 
-.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group, .email_input-btn_date-dropdown_guests-default{
+.active_button_class {
+  transform: rotate(180deg);
+} 
+
+.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group, .email_input-btn_date-dropdown_guests-default, .email_text-area_btn-date_dropdown-group{
   position: relative;
   bottom: 30px;
   left: 115px;
@@ -595,7 +615,7 @@
   background-color: #fff;
 }
 
-.email_input-btn_date-dropdown_group {
+.email_input-btn_date-dropdown_group, .email_text-area_btn-date_dropdown-group {
   left: 230px;
   bottom: 32px;
 }
@@ -662,6 +682,7 @@
   color: $dark-shade50;
   padding-left: 0px;
   padding-right: 17px;
+  display: none;
 }
 
 
@@ -984,7 +1005,6 @@
 .buttons_payment-text {
   position: relative;
   top: 14px;
-  //left: 94px;
   width: 230px;
   height: 15px;
   text-align: center;
@@ -1081,6 +1101,14 @@
 }
 
 //bullet list
+  //для room_details
+.form_elements-bullet_list-title {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 19px;
+  margin-top: 2px;
+  margin-left: 21px;
+}
 
 .bullet_list {
   list-style-image: url('/assets/img/svg/Ellipse.svg');
@@ -1099,16 +1127,21 @@
 
 //comment
 .form_elements-item_comment {
-  height: 25%;
+  margin-top: 23px;
+  height: 48%;
   width: 100%;
 }
 
 .form_elements-comment {
+  display: flex;
+  flex-wrap: wrap;
   height: 100%;
-  margin-left: 56px;
-  margin-top: 6px;
 }
 
+.form_elements-comment_author-wrapper {
+  width: 100%;
+  height: 100%
+}
 .form_elements-comment_author-like {
   width: 53.72px;
   height: 20px;
@@ -1121,17 +1154,19 @@
   width: 47.67px;
   height: 48px;
   position: absolute;
+  background-size: contain;
+  margin-top: -3px;
+}
+.form_elements-comment_avatar-picture {
+  width: 100%;
+  height: 100%;
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
   box-shadow: 0px 11px 5px rgba(31, 32, 65, 0.1);
   border-radius: 32px;
-  background: url('/assets/img/avatar.jpg') no-repeat 50% 50%;
-  background-size: contain;
-  margin-top: -3px;
 }
 
 .form_elements-comment_author {
-  margin-top: 9px;
   margin-left: 58px;
   width: 220.45px;
   height: 48px;

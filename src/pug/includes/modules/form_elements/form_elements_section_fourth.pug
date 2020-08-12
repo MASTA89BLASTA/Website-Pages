@@ -15,29 +15,29 @@
     p
       span.form_elements-descr Expanded
   .form_elements_input-wrapper
-    input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
-    button.email_input-btn_date-dropdown_group(type='submit')
+    textarea.email_text-area.email_text-area_dropdown-group(name='text', type='text', placeholder="0 спальни, 0 кровати..")
+    button.email_text-area_btn-date_dropdown-group(type='submit')
       img(src='assets/img/svg/expand_more.svg')
     .form_dropdown-menu
       .form_dropdown-menu_wrapper
         .form_dropdown-menu_item
           h3.form_elements-title.form_dropdown-title Спальни 
           .form_dropdown-configuration_controls
-            button.configuration_controls.configuration_controls-button_left -
-            .configuration_controls-button_count 2
-            button.configuration_controls.configuration_controls-button_right + 
+            button#buttonBedroomsMinus.configuration_controls.configuration_controls-button_left  -
+            #buttonBedrooms.configuration_controls-button_count.buttonBedroomsClass 0
+            button#buttonBedroomsPlus.configuration_controls.configuration_controls-button_right + 
         .form_dropdown-menu_item
           h3.form_elements-title.form_dropdown-title Кровати 
           .form_dropdown-configuration_controls
-            button.configuration_controls.configuration_controls-button_left -
-            .configuration_controls-button_count 2
-            button.configuration_controls.configuration_controls-button_right + 
+            button#buttonBedMinus.configuration_controls.configuration_controls-button_left -
+            #buttonBeds.configuration_controls-button_count 0
+            button#buttonBedPlus.configuration_controls.configuration_controls-button_right + 
         .form_dropdown-menu_item
           h3.form_elements-title.form_dropdown-title Ванные комнаты 
           .form_dropdown-configuration_controls
-            button.configuration_controls.configuration_controls-button_left -
-            .configuration_controls-button_count 0
-            button.configuration_controls.configuration_controls-button_right + 
+            button#buttonBathroomsMinus.configuration_controls.configuration_controls-button_left -
+            #buttonBathrooms.configuration_controls-button_count 0
+            button#buttonBathroomsPlus.configuration_controls.configuration_controls-button_right + 
 
 .form_elements-item.form_elements-item_space-checkbox.form-elements_container-checkbox
   .form_elements-head
