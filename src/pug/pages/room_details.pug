@@ -35,7 +35,7 @@ block room_details
               button#register.navbar_btn-register
                 a.navbar_btn-register_text.navbar_landing-page_btn-register_text(href='http://localhost:8081/registration.html') Зарегистрироваться
 
-  main.room_details
+  main.room_details.room_details-border 
     section.room_details-pictures.room_details-pictures_flex
       .room_details-pictures_left
         img.room_details-picture_lg(src='assets/img/room_details_lg.png')
@@ -45,7 +45,136 @@ block room_details
 
     section.room_details-general_info
       .room_details-general_info-left
-        
+        .room_details-general_info-wrapper
+          .room_details-general_info-data
+            .room_details-general_room-info
+              .room_details-general_room-info-wrapper
+                .room_details-general_room-info-section
+                  .room_details-general_room-info_title
+                    h2.general_room-info_title Сведения о номере
+                  .form_elements-item
+                    .form_elements-item_icon
+                      .form_elements-item_icon-block
+                        .form_elements-item_picture
+                          img(src='assets/img/svg/insert_emoticon.svg')
+                        .form_elements-item_icon-title 
+                          h3.item_icon-title Комфорт
+                          p
+                            span.item_icon-text Шумопоглощающие стены
+                        .form_elements-item_line
+                          .item_line        
+                      .form_elements-item_icon-block
+                        .form_elements-item_picture.picture_space
+                          img(src='assets/img/svg/location_city.svg')
+                        .form_elements-item_icon-title.title-space
+                          h3.item_icon-title Удобство           
+                          p
+                            span.item_icon-text Окно в каждой из спален
+                        .form_elements-item_line
+                          .item_line
+                      .form_elements-item_icon-block.form_elements-item_icon-block_space
+                        .form_elements-item_picture.picture_space
+                          img(src='assets/img/svg/whatshot.svg')
+                        .form_elements-item_icon-title.title-space
+                          h3.item_icon-title Уют          
+                          p
+                            span.item_icon-text Номер оснащен камином
+
+            .room_details-general_room-impression
+              .room_details-general_room-impression_wrapper
+                .room_details-general_room-impression_section
+                  .room_details-general_room-impression_title
+                    h2.general_room-impression_title Впечатления от номера
+                  .room_details-general_room-impression_rate
+                    .room_details-general_room-impression_voting
+                    .room_details-general_room-impression_assessment  
+
+          .room_details-general_info-visitor_reviews
+            .room_details-general_info-visitor_reviews-wrapper
+              .room_details-general_info-visitor_reviews-title
+                h2.general_info-visitor_reviews-title Отзывы посетителей номера
+                .general_info-visitor_reviews-sum 2 отзыва
+              .room_details-general_info-visitor_reviews-comment  
+                .form_elements-item_comment
+                  .form_elements-comment
+                    .form_elements-comment_avatar
+                      img.form_elements-comment_avatar-picture(src='assets/img/avatar.jpg')              
+                    .form_elements-comment_author Мурад Сарафанов
+                      .form_elements-comment_author-day  5 дней назад
+                    .form_elements-comment_author-wrapper  
+                      .form_elements-comment_author-like
+                        .form_elements-like
+                          label.like_label(for='social_like_2')
+                            input.like_input(name='social_like_2', type='checkbox' id='social_like_2')
+                            span.like_mark
+                            span.like_text 12
+                      .form_elements-comment_text
+                        | Великолепный матрас на кровати в основной спальне!
+                        | А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
+                        | Выкрикивал комплименты повару — никто не жаловался из соседей.
+                
+                .form_elements-item_comment
+                  .form_elements-comment
+                    .form_elements-comment_avatar
+                      img.form_elements-comment_avatar-picture(src='assets/img/avatar.jpg')              
+                    .form_elements-comment_author Патрисия Стёклышкова
+                      .form_elements-comment_author-day  Неделю назад
+                    .form_elements-comment_author-wrapper  
+                      .form_elements-comment_author-like
+                        .form_elements-like
+                          label.like_label(for='social_like_2')
+                            input.like_input(name='social_like_2', type='checkbox' id='social_like_2')
+                            span.like_mark
+                            span.like_text 12
+                      .form_elements-comment_text
+                        | Обслуживание на высоте! Всё аккуратно, чисто.
+                        | Завтраки в номер советую заказать,
+                        | каждый день новое блюдо и десерт как комплимент.
+
+                  //-.form_elements-item.form_elements-item_comment
+                    .form_elements-comment
+                      .form_elements-comment_avatar
+                        img.form_elements-comment_avatar-picture(src='assets/img/avatar.jpg')              
+                      .form_elements-comment_author Патрисия Стёклышкова
+                        .form_elements-comment_author-day  Неделю назад
+                      .form_elements-comment_author-wrapper  
+                        .form_elements-comment_author-like
+                          .form_elements-like
+                            label.like_label(for='social_like_2')
+                              input.like_input(name='social_like_2', type='checkbox' id='social_like_2')
+                              span.like_mark
+                              span.like_text 12
+                        .form_elements-comment_text
+                          | Обслуживание на высоте! Всё аккуратно, чисто.
+                          | Завтраки в номер советую заказать,
+                          | каждый день новое блюдо и десерт как комплимент.      
+                  
+                        
+
+          .room_details-general_info-use_terms
+            .room_details-general_info-use_terms-wrapper
+              .room_details-general_info-use_terms_rules
+                .form_elements-item
+                  .form_elements-head.form_elements-head_bullet-list.head-bullet_list-space
+                    h2.form_elements-bullet_list-title Правила
+                  .form_elements_bullet-list_wrapper
+                    ul.bullet_list
+                      li.bullet_list-item Нельзя с питомцами
+                      li.bullet_list-item Без вечеринок и мероприятий 
+                      li.bullet_list-item Время прибытия — после 13:00, а выезд до 12:00
+
+              .room_details-general_info-use_terms_cancellation
+                .room_details-general_info-use_terms_cancellation-wrapper
+                  .room_details-general_info-use_terms_cancellation-title
+                    h2.general_info-use_terms_cancellation-title Отмена
+                  .room_details-general_info-use_terms_cancellation-text  
+                    p
+                      span.general_info-use_terms_cancellation-text
+                        |Бесплатная отмена в течение 48 ч.
+                        |После этого при отмене не позднее чем за 5 дн.
+                        |до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+
       .room_details-general_info-right
         .room_details-general_info-card
           .room_details-general_info-card_wrapper
@@ -109,3 +238,47 @@ block room_details
                 .form_elements-buttons_payment
                   +form_button("buttons_payment", "buttons_payment-text", "Забронировать", "buttons_payment-reservation_button", "submit", "arrow_forward_white.svg") 
 
+
+  footer 
+    .footer-block.footer-bg
+      .footer-block_box
+        .footer-block_flex
+          .footer-block_logo
+            .footer-block_container-logo
+              include ../includes/modules/logo_menu
+              +footer_block_text("Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
+          .footer-menu_block
+            +footer_block_list("footer-block_navigation","Навигация","О нас", "Новости", "Служба поддержки", "Услуги")
+            +footer_block_list("footer-block_about","О нас","О сервисе", "Наша команда", "Вакансии", "Инвесторы")
+            +footer_block_list("footer-block_support","Служба поддержки","Соглашения", "Сообщества", "Связь с нами")
+            .footer-block_menu-item_email        
+              .footer-block_nav
+                .footer-block-subscribe
+                  h3.footer-block_title Подписка
+                  .footer-block_content
+                    p
+                      span.footer-block_content-text
+                        | Получайте специальные предложения и новости сервиса
+                  .footer-block_form-email 
+                    form.footer_contact-email(action='', method='POST')
+                      +date_dropdown("form_elements_input-wrapper", "email_input email_input-suscription", "email", "email", "Your email address",
+                        "email_input-btn_subscription","submit", "arrow_forward.svg") 
+
+          //-social
+        .footer-block_social
+          .footer-block_box-social
+            .footer-block_flex-wrapper
+              .footer-block_copyright
+                span.footer_copyright 
+                  | Copyright © 2018 Toxin отель. Все права защищены.
+              .footer-block_social-icons
+                ul.footer_social-icons
+                  li.social-icons.social_tw
+                    a(href='#')
+                      img(src='assets/img/svg/twitter.svg')
+                  li.social-icons.social_fb
+                    a(href='#')
+                      img(src='assets/img/svg/facebook.svg')
+                  li.social-icons.social_inst
+                    a(href='#')
+                      img(src='assets/img/svg/instagram.svg')   
