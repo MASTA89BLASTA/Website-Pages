@@ -5,35 +5,7 @@ block variables
 
 block search_room
   header
-    nav
-      //-Menu Standard nav Bar
-      .menu_standard-navbar
-        .menu_standard-navbar_section-left.menu_standard-landing_page-navbar_section-left
-
-          //-+header_menu_navbar("menu_standard-navbar_menu", "menu_standard-navbar_menu-list", "menu_standard-navbar_item",
-            "menu_standard-navbar_item-img", "Home", "About Us", "Services", "Careers", "News", "Documentation" )
-          .menu_standard-navbar_menu
-            include ../includes/modules/logo_menu
-            ul.menu_standard-navbar_menu-list.menu_standard-landing_page-navbar_menu-list 
-              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item.standard-item_elem1.landing_page-standard-item_elem1 О нас
-              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item.landing_page-standard-item_elem2
-                | Услуги
-                span.menu_standard-navbar_item-img.menu_standard-landing_page-navbar_item-img
-                  img(src='assets/img/svg/expand_more.svg')
-              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item.standard-item_elem3 Вакансии
-              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item Новости
-              li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item
-                | Соглашения
-                span.menu_standard-navbar_item-img.menu_standard-landing_page-navbar_item-img
-                  img(src='assets/img/svg/expand_more.svg')
-
-        .menu_standard-navbar_section-right.menu_standard-landing_page-navbar_section-right
-          .menu_standard-navbar_buttons.menu_standard-landing_page-navbar_buttons
-            .standard-navbar_buttons-wrapper.standard-landing_page-navbar_buttons-wrapper
-              button#login.navbar_btn-login.navbar_landing-page_btn-login
-                a.navbar_btn-login_text(href='http://localhost:8081/sign_in.html') Войти
-              button#register.navbar_btn-register
-                a.navbar_btn-register_text.navbar_landing-page_btn-register_text(href='http://localhost:8081/registration.html') Зарегистрироваться
+    include ../includes/modules/header
 
   main.search_room.search_room-border
     section.search_room-left
@@ -933,45 +905,4 @@ block search_room
                       span.pagination_text  1 – 12 из 100+ вариантов аренды
 
   footer 
-    .footer-block.footer-bg
-      .footer-block_box
-        .footer-block_flex
-          .footer-block_logo
-            .footer-block_container-logo
-              include ../includes/modules/logo_menu
-              +footer_block_text("Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
-          .footer-menu_block
-            +footer_block_list("footer-block_navigation","Навигация","О нас", "Новости", "Служба поддержки", "Услуги")
-            +footer_block_list("footer-block_about","О нас","О сервисе", "Наша команда", "Вакансии", "Инвесторы")
-            +footer_block_list("footer-block_support","Служба поддержки","Соглашения", "Сообщества", "Связь с нами")
-            .footer-block_menu-item_email        
-              .footer-block_nav
-                .footer-block-subscribe
-                  h3.footer-block_title Подписка
-                  .footer-block_content
-                    p
-                      span.footer-block_content-text
-                        | Получайте специальные предложения и новости сервиса
-                  .footer-block_form-email 
-                    form.footer_contact-email(action='', method='POST')
-                      +date_dropdown("form_elements_input-wrapper", "email_input email_input-suscription", "email", "email", "Your email address",
-                        "email_input-btn_subscription","submit", "arrow_forward.svg") 
-
-          //-social
-        .footer-block_social
-          .footer-block_box-social
-            .footer-block_flex-wrapper
-              .footer-block_copyright
-                span.footer_copyright 
-                  | Copyright © 2018 Toxin отель. Все права защищены.
-              .footer-block_social-icons
-                ul.footer_social-icons
-                  li.social-icons.social_tw
-                    a(href='#')
-                      img(src='assets/img/svg/twitter.svg')
-                  li.social-icons.social_fb
-                    a(href='#')
-                      img(src='assets/img/svg/facebook.svg')
-                  li.social-icons.social_inst
-                    a(href='#')
-                      img(src='assets/img/svg/instagram.svg')   
+    include ../includes/modules/footer

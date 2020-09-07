@@ -595,6 +595,9 @@
   top: -32px;
   left: 229px;
   background-color: #fff;
+  @media screen and (max-width: $phoneWidth) {
+    left: 111px;
+  } 
 }
 .email_input-btn_filter-date {
   position: relative;

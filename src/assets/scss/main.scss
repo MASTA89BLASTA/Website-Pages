@@ -110,6 +110,9 @@ section, .section {
 }
 .body_landing-page {
   min-height: 1343px;
+  @media screen and (max-width: $phoneWidth) {
+    width: 480px;
+  }
 }
 
 .body_landing-page_registration {
