@@ -2,6 +2,11 @@
   display: flex;
   width: 100%;
   height: 72.2%;
+  @media screen and (max-width: $phoneWidth) {
+    flex-direction: column;
+    height: auto;
+   }
+  
 }
 
 .search_room-border {
@@ -14,6 +19,9 @@
   display: flex;
   justify-content: flex-end;
   height: 100%;
+  @media screen and (max-width: $phoneWidth) {
+    justify-content: center;
+  }
 }
 
 .search_room-form_elements-section_left {
@@ -21,6 +29,9 @@
   width: 64.61%;
   height: 100%;
   justify-content: center;
+  @media screen and (max-width: $phoneWidth) {
+    margin-left: 16px;
+  }
 }
 
 .search_room-form_elements {
@@ -40,6 +51,9 @@
   justify-content: center;
   width: 82.9%;
   height: 100%;
+  @media screen and (max-width: $phoneWidth) {
+    width: 100%;
+  }
 }
 
 .search_room-cards_elements {
@@ -47,6 +61,12 @@
   width: 93.8%;
   height: 100%;
   //margin-left: 27px;
+  @media screen and (max-width: $phoneWidth) {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 16px;
+  }
+  
 }
 
 .search_room-h1_title {
@@ -58,6 +78,11 @@
   margin-top: 28px;
   margin-left: 1px;
   margin-bottom: 9px;
+  @media screen and (max-width: $phoneWidth) {
+    width: 93%;
+    font-size: 17px;
+    margin-left: 31px;
+  }
 }
 
 .search_room-cards_rooms {
@@ -66,7 +91,12 @@
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
-  
+  @media screen and (max-width: $phoneWidth) {
+    width: 100%;
+    //margin-top: 40px;
+    //margin-left: 86px;
+    justify-content: center;
+  }
 }
 
 .cards_rooms-sections {
@@ -81,6 +111,10 @@
   align-items: space-around;
   width: 100%;
   height: 22.8%;
+  @media screen and (max-width: $phoneWidth) {
+    flex-direction: column;
+    width: 60%;
+  }
 }
 
 //pagination
@@ -89,6 +123,9 @@
   height: 13%;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: $phoneWidth) {
+    height: 100px;
+  }
 }
 
 .search_room-pagination_flex {
@@ -97,8 +134,15 @@
   align-items: center;
   height: 59.2%;
   width: 50%;
+  @media screen and (max-width: $phoneWidth) {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .search_room-pagination_container {
   margin-right: 14px;
+  @media screen and (max-width: $phoneWidth) {
+    margin-right: 0;
+  }
 }

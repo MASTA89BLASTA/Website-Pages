@@ -62,7 +62,11 @@
   width: 270px;
   height: 257px;
 }
-
+.cards_block-room_number-settings {
+  @media screen and (max-width: $phoneWidth) {
+    margin-bottom: 40px;
+  }
+}
 
 //dasdas
 .cards_block-left-space {
@@ -534,6 +538,225 @@
   margin-top: -1px;
 }
 
+.email_input-dropdown_datepiker {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-dropdown_datepiker-right {
+  position: relative;
+  bottom: 41px;
+  left: 111px;
+  display: block;
+  background-color: #fff;
+  width: 10%;
+}
+input, .email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-dropdown_datepiker-right{
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  font-family: Montserrat;
+}
+.email_input-btn_date-dropdown_datepiker-right {
+  bottom: 59px;
+  left: 281px;
+}
+.form_elements-datepiker-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.form_elements-title_datepiker-left, .form_elements-title_datepiker-right {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $h-color;
+  float: left;
+  padding-top: 3px;
+}
+.form_elements-title_datepiker-right {
+  padding-left: 10px;
+}
+
+
+.datepicker {
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+.datepicker_active {
+  display: block;
+}
+.ui-datepicker,
+.ui-datepicker table,
+.ui-datepicker tr,
+.ui-datepicker td,
+.ui-datepicker th {
+ margin: 0;
+ padding: 0;
+ border: none;
+ border-spacing: 0;
+ color: rgba(31, 32, 65, 0.5); 
+}
+
+
+.ui-datepicker {
+ display: none;
+ width: 320px;
+ height: 369px;
+ padding: 12px;
+ cursor: default;
+
+ font-family: Montserrat;
+ font-size: 11px;
+ background: #FFFFFF;
+ border: 1px solid rgba(0, 0, 0, 0.12);
+ box-sizing: border-box;
+ box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+ border-top-left-radius: 4px;
+ border-top-right-radius: 4px;
+} 
+
+.ui-datepicker-header {
+ position: relative;
+ top: 7px;
+ padding-bottom: 50px;
+
+}
+.ui-datepicker .ui-datepicker-title { 
+	text-align: center;
+	font-weight: bold;
+	color: #1F2041; 
+	font-size: 18px;
+	font-family: 'Open Sans';
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+ position: absolute;
+ top: 3px;
+ padding: 5px;
+ cursor: pointer;
+ /*display: block;*/
+ width: 18px;
+ height: 24px;
+ background-repeat: no-repeat;
+}
+
+.ui-datepicker-prev{
+ left: 12px;
+ padding-left: 0;
+ background-image:  url('/assets/img/svg/arrow_back.svg') !important;
+  background-position: 0px 0px !important;
+}
+
+.ui-datepicker-next{
+ right: 9px;
+ padding-right: 0;
+ background-image: url('/assets/img/svg/arrow_forward.svg') !important;
+ background-position: 0px 0px !important;
+}
+
+.ui-icon{
+	display: none;
+}
+
+.ui-datepicker-calendar  {
+ text-align: center;
+ font-weight: normal;
+ 
+}
+
+.ui-datepicker-calendar .ui-state-default {
+ display: block;
+ width: 41px;
+ height: 40px;
+ outline: none !important;
+
+ text-decoration: none;
+ color: rgba(31, 32, 65, 0.5);
+
+ //border: 1px solid transparent;
+}
+
+.ui-datepicker table {
+	padding-left: 9px;
+  width: 284px;
+  margin-left: 10px;
+}
+
+.ui-datepicker-calendar th{
+	color: #BC9CFF;
+	text-decoration: none;
+	padding-bottom: 12px;
+	padding-right: 2px;
+}
+
+.ui-datepicker-other-month .ui-state-default { 
+	color: rgba(31, 32, 65, 0.25); 
+}
+
+.ui-datepicker-calendar td {
+	 padding: 0px 0px 0px 0px;
+	 width: 39.88px;
+	 height: 42px;
+	 text-align: center;
+	 line-height: 40px;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+	position: relative;
+	width: 39.88px;
+	height: 42px;
+	bottom: 1px;
+	
+  
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight::before {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background-position: center;
+	border-radius: 22px;
+	color: #fff;
+  text-align: center;
+  z-index: 5;	
+}
+
+
+
+.ui-datepicker-calendar .ui-state-active {
+	color: #fff;
+}
+
+
+
+
+.date-range-selected > .ui-state-default {
+   
+
+}
+
+.dp-highlight .ui-state-default {
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); 
+   color: #FFF;
+   
+}
+
+
+.ui-state-default {
+  width: 35px;
+  z-index: 1;
+}
+/*.ui-state-active {
+  border-radius: 0px 22px 22px 0px;
+}*/
+.dp-highlight:nth-child(1n) {
+  border-radius: 22px;
+}
+.date-range-selected > .ui-state-active {
+  border-radius: 22px;
+}
+.dp-highlight_from {
+  border-radius: 22px;
+}
 /*
 .cards_block-settings_hotel-room_list, .cards_block-settings_hotel-room_list-dots {
   position: relative;

@@ -118,6 +118,7 @@
   margin-bottom: 7px;
   height: 15px;
   width: 100%;
+  
 }
 .form_elements-head_bullet-list {
   height: 24px;
@@ -618,6 +619,7 @@
   background-color: #fff;
 }
 
+
 .email_input-btn_date-dropdown_group, .email_text-area_btn-date_dropdown-group {
   left: 230px;
   bottom: 32px;
@@ -1111,6 +1113,9 @@
   font-size: 19px;
   margin-top: 2px;
   margin-left: 21px;
+  @media screen and (max-width: $phoneWidth) {
+    margin-left: 39px;
+  }
 }
 
 .bullet_list {
@@ -1184,6 +1189,10 @@
   color: $dark-shade75;
   float: left;
   margin-top: 8px;
+  @media screen and (max-width: $phoneWidth) {
+    width: 90%;
+    height: auto;
+  }
 }
 
 .form_elements-comment_author-day  {
