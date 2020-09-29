@@ -124,7 +124,7 @@ $(document).ready(function($) {
   arrows("#room_picture12");
   
 
-
+ 
 
   function showHiddenMenu(obj_1, obj_2) {
     //внутри нашего пункта меню находим "выпадашку"
@@ -237,4 +237,49 @@ $(document).ready(function($) {
   slider("#room_slider10");
   slider("#room_slider11");
   slider("#room_slider12");
+
+
+  $(".email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-dropdown_datepiker-right ").on("click", function() {
+    $(this).toggleClass("active_button_class");
+    showHiddenMenu(".email_input-btn_date-dropdown_datepiker-left", ".datepicker");
+  });
+
+  
+
+  //datepiker
+  $.datepicker.regional['ru'] = {
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		dateFormat: 'dd.mm.yy',
+		firstDay: 1,
+		isRTL: false,
+		showMonthAfterYear: false,
+		showOtherMonths: true,
+		yearSuffix: ''
+	};
+  $.datepicker.setDefaults($.datepicker.regional['ru']);
+  
+
+	$(function() {
+		let parseDate = (name) => $.datepicker.parseDate($.datepicker._defaults.dateFormat, $(name).val());
+		$(".datepicker").datepicker({
+				beforeShowDay: function(date) {
+          const date1 = parseDate("#from");
+					const date2 = parseDate("#to");
+					return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];
+				},
+				onSelect: function(dateText, inst) {
+					const date1 = parseDate("#from");
+					const date2 = parseDate("#to");
+					if (!date1 || date2) {
+						$("#from").val(dateText);
+						$("#to").val("");
+	                    $(this).datepicker();
+					} else {
+						$("#to").val(dateText);
+	                    $(this).datepicker();
+					}
+				}
+		});
+  });
 }); 

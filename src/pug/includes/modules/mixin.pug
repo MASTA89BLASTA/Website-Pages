@@ -1,7 +1,7 @@
 
-mixin form_title(classText)
+mixin form_title(className,classText)
   .form_elements-head
-    h3(class ="form_elements-title")=classText
+    h3(class =""+className)=classText
 
 mixin date_dropdown(className, inputClass, nameClass, typeName, plName, buttonClass, typeButton, srcPath)
   div(class=""+className)
@@ -54,7 +54,16 @@ mixin footer_block_list(className, h3Name, ...items)
 
 mixin footer_block_text(textP)
   div(class="footer-block_text")
-    span(class="block_text")=textP          
+    span(class="block_text")=textP     
 
+
+mixin datepicker(forName, inputClass, nameClass, typeName, nameId, plName, buttonClass, typeButton, srcPath)
+  label(for=""+forName)
+  input(class=""+inputClass name=""+nameClass type=""+typeName id=""+nameId placeholder=""+plName required="")
+  
+
+mixin button_datepicker(buttonClass, typeButton, srcPath)  
+  button(class=""+buttonClass type=""+typeButton)
+    img(src="assets/img/svg/"+srcPath)
 
 
