@@ -7,16 +7,30 @@ $(document).ready(function ($) {
 
 
   //выпадающее меню
-  $(".email_text-area_btn-date_dropdown-group").on("click", function () {
-    $(this).toggleClass("active_button_class");
-    showHiddenMenu(".email_text-area_btn-date_dropdown-group", ".form_dropdown-menu");
-  });
-
+  //dropdown
+  function dropDownMenu(elem_1, elem_2, elem_3) {
+    $(elem_1).on("click", function () {
+      $(this).toggleClass("active_button_class");
+      $(elem_3).toggleClass("active_class-border");
+      showHiddenMenu(elem_1, elem_2, elem_3);
+    });
+  }
+  dropDownMenu(".email_text-area_btn-date_dropdown-group", ".form_dropdown-menu", ".email_text-area_dropdown-group");
+  dropDownMenu(".search_room-email_text-area_btn-date_dropdown-group", ".search_room-form_dropdown-menu_guests-default", ".search_room-email_input-dropdown_guests-default");
+  //  
   $(".email_input-btn_date-dropdown_guests-default").on("click", function () {
     $(this).toggleClass("active_button_class");
     $(".email_input-dropdown_guests-default").toggleClass("active_class-border");
     showHiddenMenu(".email_input-btn_date-dropdown_guests-default", ".form_dropdown-menu_guests-default");
   });
+
+  //checkbox-list
+  $(".email_input-btn_checkbox").on("click", function () {
+    $(this).toggleClass("active_button_class");
+    showHiddenMenu(".email_input-btn_checkbox", ".form_elements-checkbox_list  ");
+  });
+
+
 
 
   function myPlaceholderChecker() {
@@ -77,16 +91,16 @@ $(document).ready(function ($) {
     getButtonNumberPlus(5, "#buttonBabies", buttonGetNumber);
   });
   //кнопка применить
-  $(".configuration_controls-button_apply").click(function () {
+  $(".configuration_controls-button_apply, .search_room-configuration_controls-button_apply").click(function () {
     if (buttonGetNumber[5] > 0) {
       let $sum1 = buttonGetNumber[3] + buttonGetNumber[4] + " гостя, " + buttonGetNumber[5] + " младенец";
-      $(".email_input-dropdown_guests-default").attr("placeholder", $sum1);
+      $(".email_input-dropdown_guests-default, .search_room-email_input-dropdown_guests-default").attr("placeholder", $sum1);
       $(".form_dropdown-menu_guests-buttons_controls").parent().find(".configuration_controls-button_clear");
       $(".configuration_controls-button_clear").is(":visible");
       $(".configuration_controls-button_clear").fadeIn();
     } else {
       let $sum2 = buttonGetNumber[3] + buttonGetNumber[4] + " гостя";
-      $(".email_input-dropdown_guests-default").attr("placeholder", $sum2);
+      $(".email_input-dropdown_guests-default, .search_room-email_input-dropdown_guests-default").attr("placeholder", $sum2);
       $(".form_dropdown-menu_guests-buttons_controls").parent().find(".configuration_controls-button_clear");
       $(".configuration_controls-button_clear").is(":visible");
       $(".configuration_controls-button_clear").fadeIn();
@@ -95,7 +109,7 @@ $(document).ready(function ($) {
 
   //кнопка очистить
   $(".configuration_controls-button_clear").click(function () {
-    $(".email_input-dropdown_guests-default").attr("placeholder", "Сколько гостей");
+    $(".email_input-dropdown_guests-default, .search_room-email_input-dropdown_guests-default").attr("placeholder", "Сколько гостей");
     $(this).hide(":visible");
     $(this).fadeOut();
     getButtonNumberReset(3, "#buttonAdults", buttonGetNumber);

@@ -21,26 +21,45 @@ block search_room
 
           .form_elements-item.form_elements-filter_guests-dropdown.form-elements_container
             .form_elements-head
-              h3.form_elements-title Гости
+              h3.form_elements-title гости
             .form_elements_input-wrapper
-              input.email_input.email_input-filter(name='date', type='text', placeholder='3 гостя, 1 младенец')
-              button.email_input-btn_filter-date(type='submit')
+              input.email_input.search_room-email_input-dropdown_guests-default(name='text', type='text', placeholder='Сколько гостей')
+              button.search_room-email_text-area_btn-date_dropdown-group(type='submit')
                 img(src='assets/img/svg/expand_more.svg')
+              .form_dropdown-menu_guests-default.search_room-form_dropdown-menu_guests-default
+                .form_dropdown-menu_wrapper_guests-default
+                  .form_dropdown-menu_item_guests-default
+                    h3.form_elements-title.form_dropdown-title Взрослые
+                    .form_dropdown-menu_guests-configuration_controls
+                      button#buttonAdultsMinus.configuration_controls.configuration_controls-button_left -
+                      #buttonAdults.configuration_controls-button_count 0
+                      button#buttonAdultsPlus.configuration_controls.configuration_controls-button_right +
+                  .form_dropdown-menu_item_guests-default
+                    h3.form_elements-title.form_dropdown-title Дети
+                    .form_dropdown-menu_guests-configuration_controls
+                      button#buttonChildrenMinus.configuration_controls.configuration_controls-button_left -
+                      #buttonChildren.configuration_controls-button_count 0
+                      button#buttonChildrenPlus.configuration_controls.configuration_controls-button_right +
+                  .form_dropdown-menu_item_guests-default
+                    h3.form_elements-title.form_dropdown-title Младенцы
+                    .form_dropdown-menu_guests-configuration_controls
+                      button#buttonBabiesMinus.configuration_controls.configuration_controls-button_left -
+                      #buttonBabies.configuration_controls-button_count 0
+                      button#buttonBabiesPlus.configuration_controls.configuration_controls-button_right +
+                  .form_dropdown-menu_item_guests-default
+                    .form_dropdown-menu_guests-buttons_controls
+                      button.configuration_controls-button_clear очистить
+                      button.configuration_controls-button_apply.search_room-configuration_controls-button_apply применить
+
 
           .form_elements-item.form_elements-item_range-slider_search-room
-
-              //-h3.form_elements-title Диапазон цены
-              //-   p
-                    span.form_elements-descr.form_elements-descr_range-slider 5 000₽ - 10 000₽
-                .form_elements-range_slider
-                  input.range-slider(type='range' min='5000' max='10000' id='myRange')
-              p
-                span.search_room-range_slider
-                  label.amount_label(for='amount') Диапазон цены
-                  input#amount.input_amount-text(type='text' readonly='' style='border:none; color:rgba(31, 32, 65, 0.5); font-weight:bold; outline:none;')
-              #slider-range  
-              p
-                span.form_elements-range_slider-text Стоимость за сутки пребывания в номере 
+            p
+              span.search_room-range_slider
+                label.amount_label(for='amount') Диапазон цены
+                input#amount.input_amount-text(type='text' readonly='' style='border:none; color:rgba(31, 32, 65, 0.5); font-weight:bold; outline:none;')
+            #slider-range  
+            p
+              span.form_elements-range_slider-text Стоимость за сутки пребывания в номере 
 
           .form_elements-item.form_elements-item_checkbox-buttons_space
             .form_elements-head.head_checkbox-space
@@ -86,10 +105,30 @@ block search_room
             .form_elements-head
               h3.form_elements-title Удобства номера
             .form_elements_input-wrapper
-              input.email_input.email_input-dropdown_group(name='email', type='email', placeholder='2 спальни, 2 кровати..')
-              button.email_input-btn_date-dropdown_group(type='submit')
+              textarea.email_text-area.email_text-area_dropdown-group(name='text', type='text', placeholder="0 спальни, 0 кровати..")
+              button.email_text-area_btn-date_dropdown-group(type='submit')
                 img(src='assets/img/svg/expand_more.svg')
-              .form_dropdown-menu(hidden='hidden')
+              .form_dropdown-menu
+                .form_dropdown-menu_wrapper
+                  .form_dropdown-menu_item
+                    h3.form_elements-title.form_dropdown-title Спальни 
+                    .form_dropdown-configuration_controls
+                      button#buttonBedroomsMinus.configuration_controls.configuration_controls-button_left  -
+                      #buttonBedrooms.configuration_controls-button_count.buttonBedroomsClass 0
+                      button#buttonBedroomsPlus.configuration_controls.configuration_controls-button_right + 
+                  .form_dropdown-menu_item
+                    h3.form_elements-title.form_dropdown-title Кровати 
+                    .form_dropdown-configuration_controls
+                      button#buttonBedMinus.configuration_controls.configuration_controls-button_left -
+                      #buttonBeds.configuration_controls-button_count 0
+                      button#buttonBedPlus.configuration_controls.configuration_controls-button_right + 
+                  .form_dropdown-menu_item
+                    h3.form_elements-title.form_dropdown-title Ванные комнаты 
+                    .form_dropdown-configuration_controls
+                      button#buttonBathroomsMinus.configuration_controls.configuration_controls-button_left -
+                      #buttonBathrooms.configuration_controls-button_count 0
+                      button#buttonBathroomsPlus.configuration_controls.configuration_controls-button_right +   
+              //-.form_dropdown-menu(hidden='hidden')
                 .form_dropdown-menu_wrapper
                   .form_dropdown-menu_item
                     h3.form_elements-title.form_dropdown-title Спальни 
@@ -115,47 +154,47 @@ block search_room
               h3.form_elements-title Дополнительные удобства
               button.email_input-btn_checkbox(type='submit')
                 img(src='assets/img/svg/expand_more.svg')
-            .form_elements-checkbox_list(hidden='hidden')      
-              .form_elements-checkbox
-                label.checkbox_label(for='breakfast')
-                  input.checkbox_input(name='breakfast', type='checkbox' id='breakfast')
-                  span.checkbox_mark
-                  span Завтрак
-              .form_elements-checkbox
-                label.checkbox_label(for='desk')
-                  input.checkbox_input(name='desk', type='checkbox' id='desk')
-                  span.checkbox_mark
-                  span.checkbox_text Письменный стол   
-              .form_elements-checkbox
-                label.checkbox_label(for='feeding_chair')
-                  input.checkbox_input(name='feeding_chair', type='checkbox' id='feeding_chair')
-                  span.checkbox_mark
-                  span.checkbox_text Стул для кормления
-              .form_elements-checkbox
-                label.checkbox_label(for='crib')
-                  input.checkbox_input(name='crib', type='checkbox' id='crib')
-                  span.checkbox_mark
-                  span.checkbox_text Кроватка
-              .form_elements-checkbox
-                label.checkbox_label(for='tv')
-                  input.checkbox_input(name='tv', type='checkbox' id='tv')
-                  span.checkbox_mark
-                  span.checkbox_text Телевизор
-              .form_elements-checkbox
-                label.checkbox_label(for='shampoo')
-                  input.checkbox_input(name='shampoo', type='checkbox' id='shampoo')
-                  span.checkbox_mark
-                  span.checkbox_text Шампунь
-              .form_elements-checkbox
-                label.checkbox_label(for='tv2')
-                  input.checkbox_input(name='tv2', type='checkbox' id='tv2')
-                  span.checkbox_mark
-                  span.checkbox_text Телевизор
-              .form_elements-checkbox
-                label.checkbox_label(for='shampoo2')
-                  input.checkbox_input(name='shampoo2', type='checkbox' id='shampoo2')
-                  span.checkbox_mark
-                  span.checkbox_text Шампунь                                       
+              .form_elements-checkbox_list   
+                .form_elements-checkbox
+                  label.checkbox_label(for='breakfast')
+                    input.checkbox_input(name='breakfast', type='checkbox' id='breakfast')
+                    span.checkbox_mark
+                    span Завтрак
+                .form_elements-checkbox
+                  label.checkbox_label(for='desk')
+                    input.checkbox_input(name='desk', type='checkbox' id='desk')
+                    span.checkbox_mark
+                    span.checkbox_text Письменный стол   
+                .form_elements-checkbox
+                  label.checkbox_label(for='feeding_chair')
+                    input.checkbox_input(name='feeding_chair', type='checkbox' id='feeding_chair')
+                    span.checkbox_mark
+                    span.checkbox_text Стул для кормления
+                .form_elements-checkbox
+                  label.checkbox_label(for='crib')
+                    input.checkbox_input(name='crib', type='checkbox' id='crib')
+                    span.checkbox_mark
+                    span.checkbox_text Кроватка
+                .form_elements-checkbox
+                  label.checkbox_label(for='tv')
+                    input.checkbox_input(name='tv', type='checkbox' id='tv')
+                    span.checkbox_mark
+                    span.checkbox_text Телевизор
+                .form_elements-checkbox
+                  label.checkbox_label(for='shampoo')
+                    input.checkbox_input(name='shampoo', type='checkbox' id='shampoo')
+                    span.checkbox_mark
+                    span.checkbox_text Шампунь
+                .form_elements-checkbox
+                  label.checkbox_label(for='tv2')
+                    input.checkbox_input(name='tv2', type='checkbox' id='tv2')
+                    span.checkbox_mark
+                    span.checkbox_text Телевизор
+                .form_elements-checkbox
+                  label.checkbox_label(for='shampoo2')
+                    input.checkbox_input(name='shampoo2', type='checkbox' id='shampoo2')
+                    span.checkbox_mark
+                    span.checkbox_text Шампунь                                       
 
     section.search_room-right
       .search_room-cards_elements-section_right

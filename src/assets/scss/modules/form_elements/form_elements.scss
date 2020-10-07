@@ -356,6 +356,9 @@
 .form_elements-checkbox_list {
   width: 222px;
   height: 230.56px;
+  display: none;
+  position: absolute;
+  margin-top: 35px;
 }
 
 
@@ -439,6 +442,13 @@
   top: 72.3%;
   background-color: #fff;
   z-index: 1;
+}
+.search_room-form_dropdown-menu_guests-default {
+  position: absolute;
+  width: 52.3%;
+  top: 13.3%;
+  background-color: #fff;
+  z-index: 3;
 }
 
 .form_dropdown-menu_wrapper, .form_dropdown-menu_wrapper_guests-default {
@@ -584,7 +594,7 @@
   }
 }
 
-.email_input-dropdown_group,  .email_input-dropdown_guests-default, .email_text-area_dropdown-group {
+.email_input-dropdown_group,  .email_input-dropdown_guests-default, .email_text-area_dropdown-group, .search_room-email_input-dropdown_guests-default {
   width: 266px;
   border-radius: 4px 4px 0px 0px;
   border: 1px solid $dark-shade50;
@@ -596,8 +606,17 @@
 }
 
 .email_input-dropdown_guests-default {
-  width: 320px;
+  width: 100%;
   border: 1px solid $dark-shade25;
+}
+.search_room-email_input-dropdown_guests-default, .email_text-area_dropdown-group {
+  border: 1px solid $dark-shade25;
+}
+.search_room-email_input-dropdown_guests-default:hover {
+  border: 1px solid $dark-shade50;
+}
+.email_text-area_dropdown-group:hover {
+  border: 1px solid $dark-shade50;
 }
 
 //buttons
@@ -631,7 +650,7 @@
   border: 1px solid rgba(31,32,65,.5);
 }
 
-.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group, .email_input-btn_date-dropdown_guests-default, .email_text-area_btn-date_dropdown-group{
+.email_input-btn_date-dropdown, .email_input-btn_date-dropdown_group, .email_input-btn_date-dropdown_guests-default, .email_text-area_btn-date_dropdown-group, .search_room-email_text-area_btn-date_dropdown-group{
   position: relative;
   bottom: 30px;
   left: 115px;
@@ -640,7 +659,7 @@
 }
 
 
-.email_input-btn_date-dropdown_group, .email_text-area_btn-date_dropdown-group {
+.email_input-btn_date-dropdown_group, .email_text-area_btn-date_dropdown-group, .search_room-email_text-area_btn-date_dropdown-group {
   left: 230px;
   bottom: 32px;
 }
@@ -686,7 +705,7 @@
   float: right;
 }
 
-.configuration_controls-button_apply, .configuration_controls-button_clear {
+.configuration_controls-button_apply,.search_room-configuration_controls-button_apply, .configuration_controls-button_clear {
   margin-top: 16px;
   width: 30%;
   height: 50%;
@@ -700,6 +719,9 @@
   background: none;
   text-transform: uppercase;
   @include kerning(1.1);
+}
+.search_room-configuration_controls-button_apply {
+  width: 37%;
 }
 
 .configuration_controls-button_clear {
