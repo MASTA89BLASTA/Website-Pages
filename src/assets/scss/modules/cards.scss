@@ -239,12 +239,17 @@
 .cards_block-settings_hotel-room_level-cost{ 
   margin-top: 0px;
 }
-
+.cards_block-settings_hotel-room_level-currency {
+  color: $dark-shade50;
+}
 .cards_block-settings_room-cost_text {
   font-weight: normal;
   font-size: 12px;
   margin-left: 7px;
+  color: $dark-shade50;
+  line-height: 19px;
 }
+
 
 .cards_block-settings_payment-left {
   float: left;
@@ -482,6 +487,8 @@
   font-size: 14px;
   margin-right: 14px;
   margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cards_block-settings_hotel-room_level-line  {
@@ -580,7 +587,7 @@ input, .email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-drop
 
 .datepicker {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 .datepicker_active {
@@ -727,12 +734,6 @@ input, .email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-drop
 }
 
 
-
-
-.date-range-selected > .ui-state-default {
-   
-
-}
 
 .dp-highlight .ui-state-default {
    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); 
