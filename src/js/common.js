@@ -256,13 +256,71 @@ $(document).ready(function ($) {
 
   $(".email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-dropdown_datepiker-right ").on("click", function () {
     $(this).toggleClass("active_button_class");
-    showHiddenMenu(".email_input-btn_date-dropdown_datepiker-left", ".datepicker");
+    showHiddenMenu(".email_input-btn_date-dropdown_datepiker-left", ".datepicker-inline");
   });
 
+ 
 
 
   //datepiker
-  $.datepicker.regional['ru'] = {
+ $('.myDatepicker').datepicker({
+    //selectOtherMonths: false,
+    moveToOtherMonthsOnSelect: true,
+		todayButton: new Date(),
+    clearButton: new Date(),
+    prevHtml: '<svg><path d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z"></path></svg>',
+    nextHtml: '<svg><path d="M8 1l8 8-8 8-1-1 6-6H0V8h13L7 2l1-1z"></path></svg>',
+    navTitles: {
+      days: 'MM <i>yyyy</i>',
+    },
+    
+    onSelect: function (fd, d, picker) { 
+	    $("#from").val(fd.split("-")[0]);
+	    $("#to").val(fd.split("-")[1]);
+
+    },  
+	});
+  /*
+  $('#from').datepicker({ 
+		todayButton: new Date(),
+    clearButton: new Date(),
+    prevHtml: '<svg><path d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z"></path></svg>',
+    nextHtml: '<svg><path d="M8 1l8 8-8 8-1-1 6-6H0V8h13L7 2l1-1z"></path></svg>',
+    navTitles: {
+      days: 'MM <i>yyyy</i>',
+
+    },
+	  onSelect: function (fd, d, picker) { 
+	    $("#from").val(fd.split("-")[0]);
+	    $("#to").val(fd.split("-")[1]);
+
+    },
+    onShow: function(dp, animationCompleted){
+      if (!animationCompleted) {
+        $(".email_input-btn_date-dropdown_datepiker-left").toggleClass("active_button_class");
+      } else {
+
+      }
+    },
+    onHide: function(dp, animationCompleted){
+        if (!animationCompleted) {
+          $(".email_input-btn_date-dropdown_datepiker-left").removeClass("active_button_class");
+        } else {
+          
+        }
+    }
+	});
+	$('#to').datepicker({ 
+    todayButton: new Date(),
+    clearButton: new Date(),
+    prevHtml: '<svg><path d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z"/></svg>',
+    nextHtml: '<svg><path d="M8 1l8 8-8 8-1-1 6-6H0V8h13L7 2l1-1z"></path></svg>',
+	  onSelect: function (fd, d, picker) { 
+	    $("#from").val(fd.split("-")[0]);
+	    $("#to").val(fd.split("-")[1]);
+	  }
+	});
+  /*$.datepicker.regional['ru'] = {
     monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
     dateFormat: 'dd.mm.yy',
@@ -293,10 +351,26 @@ $(document).ready(function ($) {
         } else {
           $("#to").val(dateText);
           $(this).datepicker();
-        }
+        }  
+        let my_Arr1 = [];
+        $(".dp-highlight").each(function() {
+          let getFirstDay = parseDate("#from");
+          let getLastDay = parseDate("#to");
+          my_Arr1.push(getFirstDay);
+          my_Arr1.push(getLastDay);
+          $.each(my_Arr1, function (index, value) {
+            if(index[0]) {
+              $(".dp-highlight").css("background","black");
+            }
+          });
+
+        
+        });
+      console.log(my_Arr1);
       }
     });
   });
+  */
 
   //range-slider
   $("#slider-range").slider({
@@ -335,16 +409,15 @@ $(document).ready(function ($) {
   }
 
 
-  /*
-   $(function() {
+  
+   /*$(function() {
      var myArr = [];
-     $(".cards_block-settings_hotel-room_level-cost").each(function() {
+     $(".dp-highlight").each(function() {
        let priceContent = $(this).html().replace(/\s/g, '');
        let strNumber = Number(priceContent);
        myArr.push(strNumber);
      });
      
      console.log(myArr);
-   });
-  */
+   });*/
 }); 

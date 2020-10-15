@@ -17,7 +17,7 @@
         +form_title("form_elements-title form_elements-title_datepiker-right", "Выезд")
       +datepicker("from", "email_input email_input-dropdown email_input-dropdown_datepiker",  "from", "text", "from", "ДД.ММ.ГГГГ")
       +datepicker( "to", "email_input email_input-dropdown",  "to", "text", "to", "ДД.ММ.ГГГГ") 
-      .datepicker
+      .myDatepicker.datepicker-here(data-range="true" data-multiple-dates-separator=" - " inline: true )
       +button_datepicker("email_input-btn_date-dropdown_datepiker-left", "submit", "expand_more.svg") 
       +button_datepicker("email_input-btn_date-dropdown_datepiker-right", "submit", "expand_more.svg") 
     //-  .form_elements-date_dropdown-left

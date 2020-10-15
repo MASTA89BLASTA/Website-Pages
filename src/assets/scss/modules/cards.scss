@@ -584,7 +584,12 @@ input, .email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-drop
   padding-left: 10px;
 }
 
-
+.myDatepicker {
+  position: absolute;
+  z-index: 1;
+  margin-top: -3px;
+}
+/*
 .datepicker {
   position: absolute;
   z-index: 2;
@@ -643,7 +648,7 @@ input, .email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-drop
  top: 3px;
  padding: 5px;
  cursor: pointer;
- /*display: block;*/
+ display: block;
  width: 18px;
  height: 24px;
  background-repeat: no-repeat;
@@ -748,7 +753,7 @@ input, .email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-drop
 }
 /*.ui-state-active {
   border-radius: 0px 22px 22px 0px;
-}*/
+}
 .dp-highlight:nth-child(1n) {
   border-radius: 22px;
 }
@@ -758,7 +763,7 @@ input, .email_input-btn_date-dropdown_datepiker-left, .email_input-btn_date-drop
 .dp-highlight_from {
   border-radius: 22px;
 }
-/*
+
 .cards_block-settings_hotel-room_list, .cards_block-settings_hotel-room_list-dots {
   position: relative;
   bottom: 29px;

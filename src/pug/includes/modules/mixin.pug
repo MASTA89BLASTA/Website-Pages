@@ -57,9 +57,9 @@ mixin footer_block_text(textP)
     span(class="block_text")=textP     
 
 
-mixin datepicker(forName, inputClass, nameClass, typeName, nameId, plName, buttonClass, typeButton, srcPath)
+mixin datepicker(forName, inputClass, nameClass, typeName, nameId, plName)
   label(for=""+forName)
-  input(class=""+inputClass name=""+nameClass type=""+typeName id=""+nameId placeholder=""+plName required="")
+  input(class=""+inputClass name=""+nameClass type=""+typeName id=""+nameId,  placeholder=""+plName)
   
 
 mixin button_datepicker(buttonClass, typeButton, srcPath)  
