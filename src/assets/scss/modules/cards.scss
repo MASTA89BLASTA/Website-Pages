@@ -275,9 +275,16 @@
   height: 100%;
   text-align: right;
 }
+.cards_block-settings_cost-total_payment-wrapper {
+  width: 81px;
+  text-align: left;
+}
 
-.cards_block-settings_cost-day, .cards_block-settings_multiplay {
+.cards_block-settings_cost-day-text, .cards_block-settings_multiplay {
   padding-right: 5px;
+}
+.cards_block-settings_cost-day-text-total{
+  color: #1f2041;
 }
 
 .cards_block-settings_discount-servicecharge {

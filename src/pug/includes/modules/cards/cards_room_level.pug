@@ -68,12 +68,15 @@
   .cards_block-settings_payment
     .cards_block-settings_payment-left
       .cards_block-settings_cost.cards_block-settings_space
-        span.cards_block-settings_cost-day 9 990₽
+        span#costdays.cards_block-settings_cost-day 9 990
+        span.cards_block-settings_cost-day-text ₽
         span.cards_block-settings_multiplay x
-        span.cards_block-settings_day 4 суток
+        span#numberdays.cards_block-settings_day 0 
+          span суток
       .cards_block-settings_discount.cards_block-settings_space
         span.cards_block-settings_discount-servicecharge Сбор за услуги: скидка
-        span.cards_block-settings_discount-price 2 179₽
+        span.cards_block-settings_discount-price 2 179
+          span ₽
         span.cards_block-settings_discount-prompt i
       .cards_block-settings_additional.cards_block-settings_big-space
         span.cards_block-settings_additional-service  Сбор за дополнительные услуги
@@ -85,13 +88,17 @@
 
     .cards_block-settings_payment-right
       .cards_block-settings_cost-total.cards_block-settings_space
-        span.cards_block-settings_cost-total_day 39 960₽
+        span.cards_block-settings_cost-total_day#sumCostDays 0
+        span.cards_block-settings_cost-day-text ₽
       .cards_block-settings_cost-total.cards_block-settings_space  
-        span.cards_block-settings_cost-total_discount 0₽
+        span.cards_block-settings_cost-total_discount#totalDiscount 0
+        span.cards_block-settings_cost-day-text ₽
       .cards_block-settings_cost-total.cards_block-settings-big-space_total
-        span.cards_block-settings_cost-total_additional 300₽
-      .cards_block-settings_cost-total 
-        span.cards_block-settings_cost-total_payment 38 081₽ 
+        span.cards_block-settings_cost-total_additional#totalAdditional 300
+        span.cards_block-settings_cost-day-text ₽
+      .cards_block-settings_cost-total.cards_block-settings_cost-total_payment-wrapper
+        span.cards_block-settings_cost-total_payment#totalPayment 0
+        span.cards_block-settings_cost-day-text-total ₽ 
   .cards_block-settings_buttons-reservation
     .form_elements-buttons_payment
       +form_button("buttons_payment", "buttons_payment-text", "Забронировать", "buttons_payment-reservation_button", "submit", "arrow_forward_white.svg")

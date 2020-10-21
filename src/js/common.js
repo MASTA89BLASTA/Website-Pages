@@ -261,116 +261,72 @@ $(document).ready(function ($) {
 
  
 
-
+  
   //datepiker
  $('.myDatepicker').datepicker({
     //selectOtherMonths: false,
     moveToOtherMonthsOnSelect: true,
 		todayButton: new Date(),
     clearButton: new Date(),
+    minDate: new Date(),
     prevHtml: '<svg><path d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z"></path></svg>',
     nextHtml: '<svg><path d="M8 1l8 8-8 8-1-1 6-6H0V8h13L7 2l1-1z"></path></svg>',
     navTitles: {
       days: 'MM <i>yyyy</i>',
     },
     
-    onSelect: function (fd, d, picker) { 
-	    $("#from").val(fd.split("-")[0]);
-	    $("#to").val(fd.split("-")[1]);
-
-    },  
-	});
-  /*
-  $('#from').datepicker({ 
-		todayButton: new Date(),
-    clearButton: new Date(),
-    prevHtml: '<svg><path d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z"></path></svg>',
-    nextHtml: '<svg><path d="M8 1l8 8-8 8-1-1 6-6H0V8h13L7 2l1-1z"></path></svg>',
-    navTitles: {
-      days: 'MM <i>yyyy</i>',
-
-    },
-	  onSelect: function (fd, d, picker) { 
-	    $("#from").val(fd.split("-")[0]);
-	    $("#to").val(fd.split("-")[1]);
-
-    },
-    onShow: function(dp, animationCompleted){
-      if (!animationCompleted) {
-        $(".email_input-btn_date-dropdown_datepiker-left").toggleClass("active_button_class");
-      } else {
-
+    onSelect: function onSelect(selectedDates) {
+      console.log(selectedDates);
+      if(selectedDates !== undefined && selectedDates != '' && selectedDates.indexOf('-') > -1){
+        var mdy = selectedDates.split('-');
+         $("#from").val(mdy[0]);
+         $("#to").val(mdy[1]);
+         $("#numberdays").html(stringDate(datediff(parseDate(mdy[0]), parseDate(mdy[1]))));
+         $("#numberdays").val(getMySum(datediff(parseDate(mdy[0]), parseDate(mdy[1]))));
       }
     },
-    onHide: function(dp, animationCompleted){
-        if (!animationCompleted) {
-          $(".email_input-btn_date-dropdown_datepiker-left").removeClass("active_button_class");
-        } else {
-          
-        }
-    }
-	});
-	$('#to').datepicker({ 
-    todayButton: new Date(),
-    clearButton: new Date(),
-    prevHtml: '<svg><path d="M16.1755 8.01562V9.98438H3.98801L9.56613 15.6094L8.15988 17.0156L0.144258 9L8.15988 0.984375L9.56613 2.39062L3.98801 8.01562H16.1755Z"/></svg>',
-    nextHtml: '<svg><path d="M8 1l8 8-8 8-1-1 6-6H0V8h13L7 2l1-1z"></path></svg>',
-	  onSelect: function (fd, d, picker) { 
-	    $("#from").val(fd.split("-")[0]);
-	    $("#to").val(fd.split("-")[1]);
-	  }
-	});
-  /*$.datepicker.regional['ru'] = {
-    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    dateFormat: 'dd.mm.yy',
-    firstDay: 1,
-    isRTL: false,
-    showMonthAfterYear: false,
-    showOtherMonths: true,
-    yearSuffix: ''
-  };
-  $.datepicker.setDefaults($.datepicker.regional['ru']);
 
-
-  $(function () {
-    let parseDate = (name) => $.datepicker.parseDate($.datepicker._defaults.dateFormat, $(name).val());
-    $(".datepicker").datepicker({
-      beforeShowDay: function (date) {
-        const date1 = parseDate("#from");
-        const date2 = parseDate("#to");
-        return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];
-      },
-      onSelect: function (dateText, inst) {
-        const date1 = parseDate("#from");
-        const date2 = parseDate("#to");
-        if (!date1 || date2) {
-          $("#from").val(dateText);
-          $("#to").val("");
-          $(this).datepicker();
-        } else {
-          $("#to").val(dateText);
-          $(this).datepicker();
-        }  
-        let my_Arr1 = [];
-        $(".dp-highlight").each(function() {
-          let getFirstDay = parseDate("#from");
-          let getLastDay = parseDate("#to");
-          my_Arr1.push(getFirstDay);
-          my_Arr1.push(getLastDay);
-          $.each(my_Arr1, function (index, value) {
-            if(index[0]) {
-              $(".dp-highlight").css("background","black");
-            }
-          });
-
-        
-        });
-      console.log(my_Arr1);
-      }
-    });
   });
-  */
+  function parseDate(str) {
+    var mdy = str.split('.');
+    return new Date( mdy[2], mdy[1], mdy[0]);
+  }
+
+  function datediff(first, second) {
+    return Math.round(Math.abs((second-first)/(1000*60*60*24)));
+  }
+
+  function stringDate(str) {
+    let myStr = str;
+    let stringOne = " сутки";
+    let stringMany = " суток"
+    if(myStr > 1) {
+      return myStr + stringMany;
+    }else{
+     return  myStr + stringOne;
+    }
+  }
+
+  function getMySum(num) {
+    let costOfNumber = num;
+    let priceContent = $("#costdays").html().replace(/\s/g, '');
+    let numberDays = Number(priceContent);
+    return sumCostDay = function(){
+      $("#sumCostDays").html(numberWithSpace(numberDays*costOfNumber));
+      getTotalSum($("#sumCostDays").val(numberDays*costOfNumber));
+      
+    }
+    
+  }
+  function getTotalSum(total) {
+    let totalPayment = total.val();
+    let totalNumberPayment = Number(totalPayment);
+    let totalDiscount = Number($("#totalDiscount").html().replace(/\s/g, ''));
+    let totalAdditional = Number($("#totalAdditional").html().replace(/\s/g, ''));
+    $("#totalPayment").html(numberWithSpace(totalNumberPayment-totalDiscount+totalAdditional)); 
+  }
+
+
 
   //range-slider
   $("#slider-range").slider({
