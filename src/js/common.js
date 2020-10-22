@@ -1,4 +1,7 @@
+import ApexCharts from 'apexcharts';
+
 $(document).ready(function ($) {
+
   //просто тест
   $(".email_input-btn_filter-date").click(function () {
     $(this).toggleClass("active_button_class");
@@ -311,13 +314,10 @@ $(document).ready(function ($) {
     let costOfNumber = num;
     let priceContent = $("#costdays").html().replace(/\s/g, '');
     let numberDays = Number(priceContent);
-    return sumCostDay = function(){
-      $("#sumCostDays").html(numberWithSpace(numberDays*costOfNumber));
-      getTotalSum($("#sumCostDays").val(numberDays*costOfNumber));
-      
-    }
-    
+    $("#sumCostDays").html(numberWithSpace(numberDays*costOfNumber));
+    getTotalSum($("#sumCostDays").val(numberDays*costOfNumber));  
   }
+
   function getTotalSum(total) {
     let totalPayment = total.val();
     let totalNumberPayment = Number(totalPayment);
@@ -364,7 +364,55 @@ $(document).ready(function ($) {
     return items.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 
+  //apexcharts
+  const options = {
+      colors:["rgba(144, 144, 144, 1) rgba(61, 73, 117, 1)", "rgba(188, 156, 255, 1) rgba(139, 164, 249, 1)","rgba(111, 207, 151, 1) rgba(102, 210, 234, 1)","rgba(255, 227, 156, 1) rgba(255, 186, 156, 1)"],
+      series: [0, 50, 50, 100 ],
+      labels: ['Разочарован', 'Удовл-но', "Хорошо", "Великолепно"],
+      chart: {
+        type: 'donut',
+        sparkline: {
+          enabled: true,
+        },
+        foreColor: '#BC9CFF'
+      },
 
+      plotOptions: {
+        pie: {
+          donut: {
+            size: '90%',
+            labels: {
+              show: true,
+              name: {
+                  show: true,
+                  fontSize: "12px",
+                  fontFamily: "Montserrat",
+                  fontWeight: 800,
+                  offsetY: 17,
+                },
+                value: {
+                  show: true,
+                  fontSize: "24px",
+                  fontFamily: "Quicksand",
+                  fontWeight: 800,
+                  offsetY: -17,
+                },
+              total: {
+                showAlways: false,
+                show: true,
+                label: 'голосов',
+                fontFamily: 'Sans-serif',
+                fontWeight: "bold",
+                offsetY: 0,
+                position: 'bottom',
+              }
+            }
+          }
+        }
+      },
+    };
+    const chart = new ApexCharts($("#chart")[0], options);
+    chart.render();
   
    /*$(function() {
      var myArr = [];

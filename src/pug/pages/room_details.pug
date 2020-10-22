@@ -58,8 +58,19 @@ block room_details
                   .room_details-general_room-impression_title
                     h2.general_room-impression_title Впечатления от номера
                   .room_details-general_room-impression_rate
-                    .room_details-general_room-impression_voting
-                    .room_details-general_room-impression_assessment  
+                    .room_details-general_room-impression_voting(style='width: 171px; height: 160px; padding-top: 25px;')
+                      #chart
+                    .room_details-general_room-impression_assessment 
+                      ul.room-impression_assessment-wrapper
+                        li.room-impression_assessment Великолепно 
+                          span.room-impression_assessment-round.room-impression_assessment-round_orange  
+                        li.room-impression_assessment Хорошо 
+                          span.room-impression_assessment-round.room-impression_assessment-round_green
+                        li.room-impression_assessment Удовлетворительно 
+                          span.room-impression_assessment-round.room-impression_assessment-round_violet
+                        li.room-impression_assessment Разочарован 
+                          span.room-impression_assessment-round.room-impression_assessment-round_black
+
 
           .room_details-general_info-visitor_reviews
             .room_details-general_info-visitor_reviews-wrapper

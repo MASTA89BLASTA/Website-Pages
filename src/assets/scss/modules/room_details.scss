@@ -165,18 +165,55 @@
   align-items: flex-end;
   width: 100%;
   height: 50%;
+  justify-content: space-between;
 }
 
 .room_details-general_room-impression_voting {
   width: 44%;
   height: 90%;
+  position: relative;
+  right: 18px;
+  top: 8px;
 }
 
 .room_details-general_room-impression_assessment {
   width: 56%;
   height: 90%;
 }
+.room-impression_assessment-wrapper {
+  margin-top: 39px;
+}
 
+.room-impression_assessment {
+  padding-top: 0px;
+  padding-left: 10px;
+  line-height: 14px;
+  font-size: 14px;
+  color: $dark-shade75; 
+}
+.room-impression_assessment-round {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 22px;
+  position: relative;
+  right: 15px;
+  bottom: 13px;
+}
+
+.room-impression_assessment-round_orange  {
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+
+}  
+.room-impression_assessment-round_green {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.room-impression_assessment-round_violet {
+  background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.room-impression_assessment-round_black {
+  background:linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
 //visitor reviews
 .room_details-general_info-visitor_reviews {
   display: flex;
