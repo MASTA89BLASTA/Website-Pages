@@ -12,6 +12,7 @@
 @import "modules/search_room.scss";
 @import "modules/room_details.scss";
 @import "modules/datepicker.scss";
+@import "modules/media.scss";
 
 html {
   line-height: $mainLineHeight;
@@ -20,13 +21,13 @@ html {
   height: 100vh;
   //overflow-x: hidden;
   margin: 0;
-  @media screen and (max-width: $desktopWidth) {
+  @media screen and (max-width: 1440px) {
 		font-size: 14px;
   }
-  @media screen and (max-width: $tableWidth) {
+  @media screen and (max-width: 768px) {
 		font-size: 15px;
   }
-  @media screen and (max-width: $phoneWidth) {
+  @media screen and (max-width: 480px) {
 		font-size: 14px;
   }
 }
@@ -44,6 +45,18 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*@media screen and (max-width: $desktopWidth) {
+    min-width: $lgDesktopWidth;
+  }
+  @media screen and (max-width: $lgDesktopWidth) {
+    min-width: $mdDesktopWidth;
+  }
+  @media screen and (max-width: $mdDesktopWidth) {
+    min-width: $smDesktopWidth;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    min-width: $phoneWidth;
+  }*/
 }
 
 *, *:before, *:after { box-sizing: border-box; }
@@ -63,15 +76,6 @@ section, .section {
   //padding: 40px 0;
   width: 100%;
   height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
 }
 
 .wrapper {
@@ -94,16 +98,14 @@ section, .section {
   flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
+  max-width: 1440px;
+  @media screen and (max-width: 768px) {
     max-width: phoneWidth;
   }
-  @media screen and (max-width: $phoneWidth) {
+  @media screen and (max-width: 480px) {
     max-width: smPhoneWidth;
   }
+  
 }
 
 .body_landing-page_sign-in {
@@ -111,9 +113,22 @@ section, .section {
 }
 .body_landing-page {
   min-height: 1343px;
+  /*@media screen and (max-width: $desktopWidth) {
+    width: 1440px;
+  }
+  @media screen and (max-width: $lgDesktopWidth) {
+    width: 1366px;
+  }
+  @media screen and (max-width: $mdDesktopWidth) {
+    width: 1280px;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    width: 1024px;
+  }
   @media screen and (max-width: $phoneWidth) {
     width: 480px;
-  }
+  }*/
+
 }
 
 .body_landing-page_registration {

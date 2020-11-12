@@ -298,7 +298,7 @@ $(document).ready(function ($) {
   function datediff(first, second) {
     return Math.round(Math.abs((second-first)/(1000*60*60*24)));
   }
-
+  
   function stringDate(str) {
     let myStr = str;
     let stringOne = " сутки";
@@ -309,7 +309,7 @@ $(document).ready(function ($) {
      return  myStr + stringOne;
     }
   }
-
+  
   function getMySum(num) {
     let costOfNumber = num;
     let priceContent = $("#costdays").html().replace(/\s/g, '');
@@ -318,6 +318,7 @@ $(document).ready(function ($) {
     getTotalSum($("#sumCostDays").val(numberDays*costOfNumber));  
   }
 
+  
   function getTotalSum(total) {
     let totalPayment = total.val();
     let totalNumberPayment = Number(totalPayment);
@@ -341,7 +342,7 @@ $(document).ready(function ($) {
 
       $(".cards_block-room_number-settings").each(function () {
         let $this = $(this);
-        price = $this.data('price');
+        let price = $this.data('price');
         //console.log(price);
         let val1 = ui.values[0];
         let val2 = ui.values[1]; 
@@ -369,6 +370,18 @@ $(document).ready(function ($) {
       colors:["rgba(144, 144, 144, 1) rgba(61, 73, 117, 1)", "rgba(188, 156, 255, 1) rgba(139, 164, 249, 1)","rgba(111, 207, 151, 1) rgba(102, 210, 234, 1)","rgba(255, 227, 156, 1) rgba(255, 186, 156, 1)"],
       series: [0, 50, 50, 100 ],
       labels: ['Разочарован', 'Удовл-но', "Хорошо", "Великолепно"],
+      noData: {
+        text: undefined,
+        align: 'center',
+        verticalAlign: 'middle',
+        offsetX: 0,
+        offsetY: 0,
+        style: {
+          color: undefined,
+          fontSize: '14px',
+          fontFamily: undefined
+        }
+      },  
       chart: {
         type: 'donut',
         sparkline: {
@@ -413,6 +426,7 @@ $(document).ready(function ($) {
     };
     const chart = new ApexCharts($("#chart")[0], options);
     chart.render();
+    
   
    /*$(function() {
      var myArr = [];

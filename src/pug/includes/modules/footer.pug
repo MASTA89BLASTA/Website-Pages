@@ -8,21 +8,22 @@ include mixin
               include logo_menu
               +footer_block_text("Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
           .footer-menu_block
-            +footer_block_list("footer-block_navigation","Навигация","О нас", "Новости", "Служба поддержки", "Услуги")
-            +footer_block_list("footer-block_about","О нас","О сервисе", "Наша команда", "Вакансии", "Инвесторы")
-            +footer_block_list("footer-block_support","Служба поддержки","Соглашения", "Сообщества", "Связь с нами")
-            .footer-block_menu-item_email        
-              .footer-block_nav
-                .footer-block-subscribe
-                  h3.footer-block_title Подписка
-                  .footer-block_content
-                    p
-                      span.footer-block_content-text
-                        | Получайте специальные предложения и новости сервиса
-                  .footer-block_form-email 
-                    form.footer_contact-email(action='', method='POST')
-                      +date_dropdown("form_elements_input-wrapper", "email_input email_input-suscription", "email", "email", "Your email address",
-                        "email_input-btn_subscription","submit", "arrow_forward.svg") 
+            .footer-menu_block-wrapper
+              +footer_block_list("footer-block_navigation","Навигация","О нас", "Новости", "Служба поддержки", "Услуги")
+              +footer_block_list("footer-block_about","О нас","О сервисе", "Наша команда", "Вакансии", "Инвесторы")
+              +footer_block_list("footer-block_support","Служба поддержки","Соглашения", "Сообщества", "Связь с нами")
+              .footer-block_menu-item_email        
+                .footer-block_nav
+                  .footer-block-subscribe
+                    h3.footer-block_title Подписка
+                    .footer-block_content
+                      p
+                        span.footer-block_content-text
+                          | Получайте специальные предложения и новости сервиса
+                    .footer-block_form-email 
+                      form.footer_contact-email(action='', method='POST')
+                        +date_dropdown("form_elements_input-wrapper", "email_input email_input-suscription", "email", "email", "Your email address",
+                          "email_input-btn_subscription","submit", "arrow_forward.svg") 
 
           //-social
         .footer-block_social

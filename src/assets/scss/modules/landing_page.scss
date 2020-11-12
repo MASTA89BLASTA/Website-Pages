@@ -3,15 +3,10 @@
 .menu_standard-landing_page-navbar_section-left {
   //float: left;
   width: 1069px;
-  @media screen and (max-width: $phoneWidth) {
-   height: 72%;
-   width: 100%;
-  }
 }
 
 .menu_standard-landing_page-navbar_menu-list {
   margin-right: 21px;
-  
 }
 .menu_standard-landing_page-navbar_item {
   padding-top: 0;
@@ -20,9 +15,6 @@
 }
 .landing_page-standard-item_elem1 {
   margin-left: 37px;
-  @media screen and (max-width: $phoneWidth) {
-    margin-left: 0;
-  }
 }
 
 .menu_standard-landing_page-navbar_item-img {
@@ -39,17 +31,9 @@
 .menu_standard-landing_page-navbar_buttons {
   width: 71%;
   height: 50%;
-  @media screen and (max-width: $phoneWidth) {
-    width: 42%;
-  }
 }
 .standard-landing_page-navbar_buttons-wrapper {
   width: 83%;
-  @media screen and (max-width: $phoneWidth) {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
 }
 .navbar_landing-page_btn-login {
   margin-left: 1px;
@@ -77,10 +61,6 @@
   left: 211px;
   width: 380px;
   height: 374px;
-  @media screen and (max-width: $phoneWidth) {
-    top: 530px;
-    left: 50px;
-  }
 }
 
 //entry
@@ -93,12 +73,9 @@
   top: 233px;
   left: 602px;
   width: 380px;
-  height: 358px;
-  @media screen and (max-width: $phoneWidth) {
-    top: 650px;
-    left: 50px;
-  }
+  height: 358px; 
 }
+
 //registration
 .landing_bg-registration {
   width: 100%;
@@ -107,9 +84,6 @@
 .landing_page-cards_registration {
   top: 100px;
   height: 646px;
-  @media screen and (max-width: $phoneWidth) {
-    top: 510px;
-  }
 }
 
 
