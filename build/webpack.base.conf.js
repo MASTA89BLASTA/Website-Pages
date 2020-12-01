@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 
+
 // Main const
 
 const PATHS = {
@@ -25,17 +26,17 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    app: PATHS.src,
     //headers_footers: PATHS.src + '/headers_footers.js',
     //colors_types: PATHS.src + '/colors_types.js'
-    // module: `${PATHS.src}/your-module.js`,
+    //module: `${PATHS.src}/your-module.js`,
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[hash].js`,
+    filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
-    publicPath: '/'
+    //publicPath: '/'
   },
-  optimization: {
+  optimization: { 
     splitChunks: {
       cacheGroups: {
         vendor: {
@@ -55,34 +56,38 @@ module.exports = {
     }, {
       test: /\.pug$/,
       loader: 'pug-loader'
-    }, 
-   {
+    },{
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file-loader',
+      loader: 'url-loader',
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
       }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]'
+      use: [
+      {  
+        loader: 'url-loader',
+        options: '[name].[ext]'
       }
-    }, {
+    ],
+    },{
       test: /\.scss$/,
       use: [
         'style-loader',
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: {url: false, sourceMap: true }
         }, {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
         }, {
           loader: 'sass-loader',
           options: { sourceMap: true }
-        }
+        }, {
+          loader: 'resolve-url-loader',
+          options: { sourceMap: true }
+      },
       ]
     }, {
       test: /\.css$/,
@@ -99,9 +104,15 @@ module.exports = {
       ]
     }]
   },
+  resolve: {
+    alias: {
+      '~': PATHS.src, // Example: import Dog from "~/assets/img/dog.jpg"
+      '@': `${PATHS.src}/js`, // Example: import Sort from "@/utils/sort.js"
+    }
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: `${PATHS.assets}css/[name].[chunkhash].css`,
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -130,7 +141,7 @@ module.exports = {
       filename: './colors_types.html',
       chunks: ['colors_types'],
       inject: true
-    })*/    
-    
+    })*/
+        
   ], 
 }
