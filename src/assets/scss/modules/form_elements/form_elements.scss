@@ -756,7 +756,7 @@
 
 .checkbox_input:checked + .checkbox_mark {
   border: 1px solid #BC9CFF;
-  background-image: url('/assets/img/svg/mark_check.svg');
+  background-image: url('../img/svg/mark_check.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transition: 0.2s;
@@ -823,7 +823,7 @@
 
 .radio_input:checked + .radio_mark {
   border: 1px solid #BC9CFF;
-  background-image: url('/assets/img/svg/linear_round.svg');
+  background-image: url('../img/svg/linear_round.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transition: 0.2s;
@@ -855,14 +855,14 @@
   border-radius: 10px;
   margin-left: -30px;
   transition: 0.2s;
-  background-image: url('/assets/img/svg/default_round.svg');
+  background-image: url('../img/svg/default_round.svg');
   background-repeat: no-repeat;
   background-position: 12% 50%;
 }
 
 .toggle_input:checked + .toggle_mark {
   border: 1px solid #BC9CFF;
-  background-image: url('/assets/img/svg/linear_round.svg');
+  background-image: url('../img/svg/linear_round.svg');
   background-repeat: no-repeat;
   background-position: 88% 50%;
   transition: 0.2s;
@@ -897,14 +897,14 @@
   border: 1px solid $dark-shade25;
   border-radius: 10px;
   margin-left: -30px;
-  background-image: url('/assets/img/svg/like_button_default.svg');
+  background-image: url('../img/svg/like_button_default.svg');
   background-repeat: no-repeat;
   background-position: 16% 50%;
 }
 
 .like_input:checked + .like_mark {
   border: 1px solid #BC9CFF;
-  background-image: url('/assets/img/svg/like_button.svg');
+  background-image: url('../img/svg/like_button.svg');
   background-repeat: no-repeat;
   background-position: 16% 50%;
 }
@@ -926,13 +926,13 @@
   width: 24px;
   height: 24px;
   margin-left: -1px;
-  background-image: url('/assets/img/svg/star_border.svg');
+  background-image: url('../img/svg/star_border.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .rate_input:checked + .rate_mark {
-  background-image: url('/assets/img/svg/star.svg');
+  background-image: url('../img/svg/star.svg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -1156,7 +1156,7 @@
 }
 
 .bullet_list {
-  list-style-image: url('/assets/img/svg/Ellipse.svg');
+  list-style-image: url('../img/svg/Ellipse.svg');
   margin-left: 18px;
   margin-top: -2px;
 }
