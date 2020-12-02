@@ -8,7 +8,8 @@ nav
       //-+header_menu_navbar("menu_standard-navbar_menu", "menu_standard-navbar_menu-list", "menu_standard-navbar_item",
         "menu_standard-navbar_item-img", "Home", "About Us", "Services", "Careers", "News", "Documentation" )
       .menu_standard-navbar_menu
-        include logo_menu
+        a(href='landing_page.html')
+          include logo_menu
         ul.menu_standard-navbar_menu-list.menu_standard-landing_page-navbar_menu-list 
           li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item.standard-item_elem1.landing_page-standard-item_elem1 О нас
           li.menu_standard-navbar_item.menu_standard-landing_page-navbar_item.landing_page-standard-item_elem2
@@ -26,9 +27,9 @@ nav
       .menu_standard-navbar_buttons.menu_standard-landing_page-navbar_buttons
         .standard-navbar_buttons-wrapper.standard-landing_page-navbar_buttons-wrapper
           button#login.navbar_btn-login.navbar_landing-page_btn-login
-            a.navbar_btn-login_text(href='http://localhost:8081/sign_in.html') Войти
+            a.navbar_btn-login_text(href='sign_in.html') Войти
           button#register.navbar_btn-register
-            a.navbar_btn-register_text.navbar_landing-page_btn-register_text(href='http://localhost:8081/registration.html') Зарегистрироваться
+            a.navbar_btn-register_text.navbar_landing-page_btn-register_text(href='registration.html') Зарегистрироваться
 
 
 
