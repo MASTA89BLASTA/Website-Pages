@@ -533,18 +533,24 @@
 
 //инпуты
 .email_input, .email_text-area {
-  padding: 13px 15px;
+  padding: 10px 12px;
   border: 1px solid $dark-shade25;
+  height: 46px;
   width: 100%;
   border-radius: 4px;
   @include placeholder {
     color: $dark-shade25;
     font-family: $mainFont;
     width: 200px;
-  }  
+  }
+}
+.email_input, .email_text-area:placeholder-shown {
+  color: $dark-shade75;
+  font-family: $mainFont;
 }
 .email_text-area {
   padding: 8px 12px 0px 12px;
+  height: 46px;
 }  
 
 .email_input-hover:hover {
@@ -554,13 +560,19 @@
   border-radius: 4px;
   @include placeholder {
     color: $dark-shade75;
-  }  
+  }
+}
+.email_input-hover:placeholder-shown{
+  color: $dark-shade75;
 }
 
 .email_input-guests {
   @include placeholder {
     color: $dark-shade75;
   } 
+}
+.email_input-guests:placeholder-shown {
+  color: $dark-shade75;
 }
 
 .email_input-date {
