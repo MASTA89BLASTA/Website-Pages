@@ -39,11 +39,11 @@ $(document).ready(function ($) {
   function myPlaceholderChecker() {
     if (buttonGetNumber[2] > 0) {
       let $my_input_3 = buttonGetNumber[0] + " спальни, " + buttonGetNumber[1] + " кровати," + "\n" + buttonGetNumber[2] + " ванные комнаты";
-      $(".email_text-area_dropdown-group").attr("placeholder", $my_input_3).css("line-height", "28px");
+      $(".email_text-area_dropdown-group").attr("placeholder", $my_input_3).css({"line-height": "28px",  "overflow" : "hidden", "height": "63px", "padding-bottom": "8px"});
       $(".email_text-area_btn-date_dropdown-group").css("bottom", "41px");
     } else {
       let $my_input_1_2 = buttonGetNumber[0] + " спальни" + ", " + buttonGetNumber[1] + " кровати..";
-      $(".email_text-area_dropdown-group").attr("placeholder", $my_input_1_2).css("line-height", "17px");
+      $(".email_text-area_dropdown-group").attr("placeholder", $my_input_1_2).css({"line-height": "17px", "height": "46px"});
       $(".email_text-area_btn-date_dropdown-group").css("bottom", "32px");
     }
   }
